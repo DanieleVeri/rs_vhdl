@@ -1,2 +1,2 @@
-# rs_vhdl
-VHDL implementation of Reed Solomon
+# Reed Solomon encoder-decoder
+All in 1
