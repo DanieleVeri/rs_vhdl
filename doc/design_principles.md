@@ -5,7 +5,6 @@
 - Configurability _(usability)_
 - Defensive design practice _(testability)_
 
-
 ### Code guidelines
 - Simple: constructs & clocking scheme
 - Consistent: coding style & naming conventions & process struct
