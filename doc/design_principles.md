@@ -9,7 +9,6 @@
 - Simple: constructs & clocking scheme
 - Consistent: coding style & naming conventions & process struct
 - Regular partition scheme
-##
 - Sensitivity list 
   - process: clock & reset
   - combinational: every right value
