@@ -1,5 +1,5 @@
 ## Design principles
-#
+
 ### IP design goals
 - Use of standard interfaces _(compatibility & reuse)_
 - Configurability _(usability)_
