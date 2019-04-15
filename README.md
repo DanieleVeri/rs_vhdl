@@ -1,2 +1,3 @@
 # Reed Solomon encoder-decoder
-All in 1
+
+Target board: Altera CycloneII - EP2C20F484C7

@@ -1,0 +1,11 @@
+# Ingore all but:
+*
+
+# Quartus project files
+!*.qpf
+!*.qsf
+# ISE project files
+!*.xise
+
+# Source files
+!*.vhd
