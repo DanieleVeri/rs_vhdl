@@ -13,6 +13,6 @@
 # ISE project files
 !*.xise
 # Script files
-!.sh
+!*.sh
 # Source files
 !*.vhd
