@@ -8,7 +8,7 @@ entity Register is
         clk: in std_logic;
         d_bus: in data_bus;
         q_bus: out data_bus);
-end Register;
+end entity;
 
 architecture RTL of Register is
 begin 
@@ -18,4 +18,4 @@ begin
             q_bus <= d_bus;
         end if;
     end process;
-end RTL;
+end architecture;

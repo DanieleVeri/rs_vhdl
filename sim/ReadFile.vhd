@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 entity ReadFile is
     port(
         data: out std_logic_vector(2 downto 0));
-end ReadFile;
+end entity;
 
 architecture RTL of ReadFile is
     signal bin_value : std_logic_vector(2 downto 0):="000";
@@ -40,4 +40,4 @@ begin
         file_close(file_pointer);
     end process;
 	data <= bin_value;
-end RTL;
+end architecture;

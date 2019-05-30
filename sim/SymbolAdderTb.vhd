@@ -21,4 +21,4 @@ begin
         wait for 10 ns;
         in_bus_0 <= (others => '1');
     end process;
-end SIM;
+end architecture;

@@ -7,6 +7,8 @@
 !sim/
 !gen/
 
+# Doc files
+!*.md
 # Quartus project files
 !*.qpf
 !*.qsf
@@ -14,5 +16,6 @@
 !*.xise
 # Script files
 !*.sh
+!*.py
 # Source files
 !*.vhd

@@ -9,11 +9,11 @@ entity Mux is
         in_bus_1: in data_bus;
         selector: in std_logic;
         out_bus: out data_bus);
-end Mux;
+end entity;
 
 architecture RTL of Mux is
 begin
     with selector select out_bus <= 
         in_bus_0 when '0', 
         in_bus_1 when others;
-end RTL;
+end architecture;

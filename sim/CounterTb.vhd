@@ -32,4 +32,4 @@ begin
         wait for 10 ns;
         clk <= '0';
     end process;
-end SIM;
+end architecture;

@@ -25,4 +25,4 @@ begin
         wait for 10 ns;
         selector <= '0';
     end process;
-end SIM;
+end architecture;
