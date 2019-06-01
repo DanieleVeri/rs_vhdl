@@ -78,12 +78,12 @@ file.close()
 
 file = open(sys.path[0]+"/pow_enc.out", "w") 
 for i in range(0, 255):
-    file.write("out_enc <= \"{}\" when \"{}\"\n".format("{:08b}".format(gf_log[i]), "{:08b}".format(i)))
-file.write("\"{}\" when others;\n".format('-'*8))
+    file.write("\"{}\" when \"{}\",\n".format("{:08b}".format(gf_log[i]), "{:08b}".format(i)))
+file.write("(others => '-') when others;\n")
 file.close() 
 
 file = open(sys.path[0]+"/pow_dec.out", "w") 
 for i in range(0, 255):
-    file.write("out_enc <= \"{}\" when \"{}\"\n".format("{:08b}".format(gf_exp[i]), "{:08b}".format(i)))
-file.write("\"{}\" when others;\n".format('-'*8))
+    file.write("\"{}\" when \"{}\",\n".format("{:08b}".format(gf_exp[i]), "{:08b}".format(i)))
+file.write("(others => '-') when others;\n")
 file.close() 

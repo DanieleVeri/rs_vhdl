@@ -2,9 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity ReadFile is
-    port(
-        data: out std_logic_vector(2 downto 0));
+entity ReadFile is port(
+    data: out std_logic_vector(2 downto 0));
 end entity;
 
 architecture RTL of ReadFile is

@@ -4,6 +4,7 @@
 # Project folders
 !doc/
 !src/
+!src/datapath/
 !sim/
 !gen/
 

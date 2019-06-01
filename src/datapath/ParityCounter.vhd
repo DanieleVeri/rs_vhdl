@@ -3,15 +3,17 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.ALL;
 use work.ReedSolomon_package.all;
 
-entity Counter is
-    port(
-        clk: in std_logic;
-        parity: out std_logic);
+entity ParityCounter is port(
+    clk: in std_logic;
+    parity: out std_logic);
 end entity;
 
-architecture RTL of Counter is
-    signal counter: std_logic_vector (M-1 downto 0) := (others => '0');
+architecture RTL of ParityCounter is
+
+    signal counter: data_bus := (others => '0');
+
 begin 
+
     COUNT_PROC: process(clk)
     begin
         if(rising_edge(clk)) then
@@ -28,4 +30,5 @@ begin
             end if;
         end if;
     end process;
+
 end architecture;
