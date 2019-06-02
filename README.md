@@ -14,14 +14,3 @@ Generator polynomial: g(z) =
     224z<sup>14</sup> + 158z<sup>15</sup> + 119z<sup>16</sup> + 13z<sup>17</sup> + 158z<sup>18</sup> + z<sup>19</sup> + 238z<sup>20</sup> + 164z<sup>21</sup> + 82z<sup>22</sup> + 43z<sup>23</sup> + 15z<sup>24</sup> + 232z<sup>25</sup> + 
     246z<sup>26</sup> + 142z<sup>27</sup> + 50z<sup>28</sup> + 189z<sup>29</sup> + 29z<sup>30</sup> + 232z<sup>31</sup> + z<sup>32</sup>
 
-Power encoder table:
-| |0|1|2|3|4|5|6|7|
-|-|-|-|-|-|-|-|-|-|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |

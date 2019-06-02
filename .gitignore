@@ -1,6 +1,7 @@
 # Ingore all but:
 *
 
+!.gitignore
 # Project folders
 !doc/
 !src/
