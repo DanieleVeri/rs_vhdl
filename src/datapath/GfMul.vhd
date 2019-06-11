@@ -43,7 +43,9 @@ architecture RTL of GfMul is
     signal encoded_1: data_bus;
 
     signal exp_sum: data_bus;
-    signal sum_carry: std_logic;
+    signal sum_carry_exp_adder: std_logic;
+	 signal sum_carry_exp_sub: std_logic;
+
     signal field_overflow: std_logic;
     signal exp_sub: data_bus;
 
@@ -56,10 +58,10 @@ begin
     encode_0: SymbolPowerEncoder port map(in_bus_0, encoded_0);
     encode_1: SymbolPowerEncoder port map(in_bus_1, encoded_1);
 
-    exp_adder: AddSub port map(encoded_0, encoded_1, '0', sum_carry, exp_sum);
+    exp_adder: AddSub port map(encoded_0, encoded_1, '0', sum_carry_exp_adder, exp_sum);
 
-    field_overflow <= '1' when (sum_carry = '1') or (exp_sum = all_ones) else '0';
-    field_norm: AddSub port map(exp_sum, all_ones, '1', sum_carry, exp_sub);
+    field_overflow <= '1' when (sum_carry_exp_adder = '1') or (exp_sum = all_ones) else '0';
+    field_norm: AddSub port map(exp_sum, all_ones, '1', sum_carry_exp_sub, exp_sub);
     mux_to_decoder: Mux port map(exp_sum, exp_sub, field_overflow, to_decode);
 
     decode: SymbolPowerDecoder port map(to_decode, decoded);

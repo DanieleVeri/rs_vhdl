@@ -3,13 +3,13 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.ALL;
 use work.ReedSolomon_package.all;
 
-entity Register is port(
+entity SymbolRegister is port(
     clk: in std_logic;
     d_bus: in data_bus;
     q_bus: out data_bus);
 end entity;
 
-architecture RTL of Register is
+architecture RTL of SymbolRegister is
 begin 
 
     process(clk)
