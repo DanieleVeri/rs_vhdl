@@ -1,23 +1,10 @@
-# Ingore all but:
-*
+# Folders
+.vscode/
+.sopc_builder/
+db/
+HostBridge_sim/
+incremental_db/
+output_files/
 
-!.gitignore
-# Project folders
-!doc/
-!src/
-!src/datapath/
-!sim/
-!gen/
-
-# Doc files
-!*.md
-# Quartus project files
-!*.qpf
-!*.qsf
-# ISE project files
-!*.xise
-# Script files
-!*.sh
-!*.py
-# Source files
-!*.vhd
+# Files
+*.bak

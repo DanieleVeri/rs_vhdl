@@ -40,7 +40,7 @@ def init_tables(prim=0x11d):
 def gf_mul(x,y):
     if x==0 or y==0:
         return 0
-    return gf_exp[gf_log[x] + gf_log[y]] 
+    return gf_exp[gf_log[x] + gf_log[y]]
 
 def gf_pow(x, power):
     return gf_exp[(gf_log[x] * power) % 255]
@@ -72,18 +72,23 @@ import sys
 
 init_tables(369)
 
-file = open(sys.path[0]+"/generator.out", "w") 
+file = open(sys.path[0]+"/generator.out", "w")
 file.write(str(rs_generator_poly(32)))
-file.close() 
+file.close()
 
-file = open(sys.path[0]+"/pow_enc.out", "w") 
+file = open(sys.path[0]+"/pow_enc.out", "w")
 for i in range(0, 255):
     file.write("\"{}\" when \"{}\",\n".format("{:08b}".format(gf_log[i]), "{:08b}".format(i)))
 file.write("(others => '-') when others;\n")
-file.close() 
+file.close()
 
-file = open(sys.path[0]+"/pow_dec.out", "w") 
+file = open(sys.path[0]+"/pow_dec.out", "w")
 for i in range(0, 255):
     file.write("\"{}\" when \"{}\",\n".format("{:08b}".format(gf_exp[i]), "{:08b}".format(i)))
 file.write("(others => '-') when others;\n")
-file.close() 
+file.close()
+
+m1=int(sys.stdin.readline())
+m2=int(sys.stdin.readline())
+
+print(gf_mul(m1, m2))
