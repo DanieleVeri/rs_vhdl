@@ -80,18 +80,28 @@
 
 #include "sys/alt_stdio.h"
 
-#define input (volatile char *) 0x0003010
-#define output (volatile char *) 0x0003000
+#define input (volatile char *) 0x0003010 // rs out
+#define output (volatile char *) 0x0003000 // rs in
+
+char *itoa(unsigned char byte)
+{
+	int i;
+	char *result = "000";
+	for(i = 0; i < 3; i++, byte /= 10) {
+		result[2 - i] = (byte % 10 ) + '0';
+	}
+	return result;
+}
 
 int main()
 { 
   while (1) {
 
-	  int c = alt_getchar();
+	  int c = alt_getchar() - '0';
 	  *output = c < 0 ? 0 : c > 255 ? 255 : c;
 	  alt_getchar(); // it consumes '\n'
 
-	  alt_putchar(*input);
+	  alt_printf("81xinput= %s", itoa(*input));
   }
   return 0;
 }
