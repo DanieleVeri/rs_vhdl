@@ -45,7 +45,6 @@ def gf_mul(x,y):
 def gf_pow(x, power):
     return gf_exp[(gf_log[x] * power) % 255]
 
-
 def gf_poly_mul(p,q):
     '''Multiply two polynomials, inside Galois Field'''
     # Pre-allocate the result array
@@ -58,7 +57,6 @@ def gf_poly_mul(p,q):
                                                          # -- you can see it's your usual polynomial multiplication
     return r
 
-
 def rs_generator_poly(nsym):
     '''Generate an irreducible generator polynomial (necessary to encode a message into Reed-Solomon)'''
     g = [1]
@@ -70,20 +68,20 @@ def rs_generator_poly(nsym):
 
 import sys
 
-init_tables(369)
+init_tables()
 
 file = open(sys.path[0]+"/generator.out", "w")
 file.write(str(rs_generator_poly(32)))
 file.close()
 
 file = open(sys.path[0]+"/pow_enc.out", "w")
-for i in range(0, 255):
+for i in range(0, 256):
     file.write("\"{}\" when \"{}\",\n".format("{:08b}".format(gf_log[i]), "{:08b}".format(i)))
 file.write("(others => '-') when others;\n")
 file.close()
 
 file = open(sys.path[0]+"/pow_dec.out", "w")
-for i in range(0, 255):
+for i in range(0, 256):
     file.write("\"{}\" when \"{}\",\n".format("{:08b}".format(gf_exp[i]), "{:08b}".format(i)))
 file.write("(others => '-') when others;\n")
 file.close()
