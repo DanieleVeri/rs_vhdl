@@ -497,6 +497,7 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE src/datapath/SymbolRegister.vhd
 set_global_assignment -name VHDL_FILE src/datapath/AdderModulo.vhd
 set_global_assignment -name QIP_FILE software/UART2CORE/mem_init/meminit.qip
 set_global_assignment -name VHDL_FILE cpu_0_test_bench.vhd
@@ -513,7 +514,6 @@ set_global_assignment -name VHDL_FILE cpu_0.vhd
 set_global_assignment -name VHDL_FILE src/datapath/SyndromeToError.vhd
 set_global_assignment -name VHDL_FILE src/datapath/SymbolPowerEncoder.vhd
 set_global_assignment -name VHDL_FILE src/datapath/SymbolPowerDecoder.vhd
-set_global_assignment -name VHDL_FILE src/datapath/Register.vhd
 set_global_assignment -name VHDL_FILE src/datapath/ParityCounter.vhd
 set_global_assignment -name VHDL_FILE src/datapath/Mux.vhd
 set_global_assignment -name VHDL_FILE src/datapath/GfSum.vhd

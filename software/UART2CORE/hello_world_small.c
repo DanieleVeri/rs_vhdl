@@ -80,8 +80,8 @@
 
 #include "sys/alt_stdio.h"
 
-#define input (volatile char *) 0x0003010 // rs out
-#define output (volatile char *) 0x0003000 // rs in
+#define rs_out (volatile char *) 0x0003010
+#define rs_in (volatile char *) 0x0003000
 
 char *itoa(unsigned char byte)
 {
@@ -97,11 +97,11 @@ int main()
 { 
   while (1) {
 
-	  int c = alt_getchar() - '0';
-	  *output = c < 0 ? 0 : c > 255 ? 255 : c;
+	  int c = alt_getchar();
+	  *rs_in = c < 0 ? 0 : c > 255 ? 255 : c;
 	  alt_getchar(); // it consumes '\n'
 
-	  alt_printf("81xinput= %s", itoa(*input));
+	  alt_printf("symbol: %s", itoa(*rs_out));
   }
   return 0;
 }

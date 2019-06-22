@@ -71,7 +71,11 @@ import sys
 init_tables()
 
 file = open(sys.path[0]+"/generator.out", "w")
-file.write(str(rs_generator_poly(32)))
+gen_poly=rs_generator_poly(32)
+i=len(gen_poly)-1
+while i > 0:
+    file.write("\"{}\",\n".format("{:08b}".format(gen_poly[i])))
+    i=i-1
 file.close()
 
 file = open(sys.path[0]+"/pow_enc.out", "w")
@@ -85,8 +89,3 @@ for i in range(0, 256):
     file.write("\"{}\" when \"{}\",\n".format("{:08b}".format(gf_exp[i]), "{:08b}".format(i)))
 file.write("(others => '-') when others;\n")
 file.close()
-
-m1=int(sys.stdin.readline())
-m2=int(sys.stdin.readline())
-
-print(gf_mul(m1, m2))
