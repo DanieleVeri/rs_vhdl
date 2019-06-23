@@ -80,6 +80,8 @@
 
 #include "sys/alt_stdio.h"
 
+#define FOREVER 1
+
 #define rs_out (volatile char *) 0x0003010
 #define rs_in (volatile char *) 0x0003000
 
@@ -94,14 +96,22 @@ char *itoa(unsigned char byte)
 }
 
 int main()
-{ 
-  while (1) {
-
-	  int c = alt_getchar();
-	  *rs_in = c < 0 ? 0 : c > 255 ? 255 : c;
-	  alt_getchar(); // it consumes '\n'
-
-	  alt_printf("symbol: %s", itoa(*rs_out));
-  }
+{
+  // while (FOREVER) {
+	  int symbol_count = 223;
+	  unsigned char symbols[223];
+	  while (symbol_count) {
+		  symbols[symbol_count--] = alt_getchar();
+	  }
+	  symbol_count = 223;
+	  while(symbol_count) {
+		  *rs_in = symbols[symbol_count--];
+		  alt_printf("symbol: %d %s\n", symbol_count, itoa(*rs_out));
+	  }
+	  //int c = alt_getchar();
+	  //*rs_in = c < 0 ? 0 : c > 255 ? 255 : c;
+	  //alt_getchar(); // it consumes '\n'
+	  //alt_printf("symbol: %s\n", itoa(*rs_out));
+  // }
   return 0;
 }

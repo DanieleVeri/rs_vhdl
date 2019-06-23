@@ -1,13 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
 
 entity FullAdder is port( 
-    in_0: in  std_logic;
-    in_1: in  std_logic;
-    in_carry: in  std_logic;
-    out_sum: out std_logic;
-    out_carry: out std_logic);
+	 in_0: in  std_logic;
+	 in_1: in  std_logic;
+	 in_carry: in  std_logic;
+	 out_sum: out std_logic;
+	 out_carry: out std_logic);
 end entity;
 
 architecture RTL of FullAdder is

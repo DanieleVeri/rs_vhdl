@@ -45,7 +45,7 @@ begin
 		fa: FullAdder port map(wider_bus_0(i), wider_bus_1(i), carry_sum(i), carry_sum(i+1), sum(i));
 	end generate;
 
-	overflow <= '1' when (to_integer(unsigned(sum)) > 254) else '0';
+	overflow <= '1' when (to_integer(unsigned(sum)) > gf_overflow) else '0';
 	
 	full_adders_mod: for i in 0 to wider_bus'length-1 generate
 		fa: FullAdder port map(sum(i), modulo_sub(i), carry_sub(i), carry_sub(i+1), sub(i));

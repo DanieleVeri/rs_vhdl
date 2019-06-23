@@ -1,5 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.ALL;
+
 use work.ReedSolomon_package.all;
 
 entity RSEncoder is port(
@@ -45,6 +47,8 @@ architecture RTL of RSEncoder is
 	signal ffq: parity_bus;
 	signal products: parity_bus;
 	
+	 signal qwerty: data_bus := (others => '0');
+	
 begin
 	parity_counter: ParityCounter port map(clk, parity_count);
 	feedback_mux: Mux port map(in_bus, ffq(parity_bus'length-1), parity_count, chain_input);
@@ -62,4 +66,12 @@ begin
 	fb_sum: GfSum port map(ffq(parity_bus'length-1), chain_input, feedback_sum);
 	
 	out_mux: Mux port map(in_bus, ffq(parity_bus'length-1), parity_count, out_bus);
+	
+	--COUNT_PROC: process(clk)
+   -- begin
+   --     if(rising_edge(clk)) then
+   --      qwerty <= std_logic_vector(unsigned(qwerty) + 1);
+   --     end if;
+   -- end process;
+	--out_bus <= qwerty;
 end architecture;
