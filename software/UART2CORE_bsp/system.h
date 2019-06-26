@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'HostBridge'
  * SOPC Builder design path: C:/Users/danie/Desktop/rs_vhdl/HostBridge.sopcinfo
  *
- * Generated: Sat Jun 15 11:33:21 GMT+01:00 2019
+ * Generated: Mon Jun 24 01:49:23 GMT+01:00 2019
  */
 
 /*
@@ -145,19 +145,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x3020
+#define ALT_STDERR_BASE 0x3040
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x3020
+#define ALT_STDIN_BASE 0x3040
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x3020
+#define ALT_STDOUT_BASE 0x3040
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -181,7 +181,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x3020
+#define JTAG_UART_0_BASE 0x3040
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -223,56 +223,110 @@
 
 
 /*
- * pio_0 configuration
+ * rs_in_symbol configuration
  *
  */
 
-#define ALT_MODULE_CLASS_pio_0 altera_avalon_pio
-#define PIO_0_BASE 0x3010
-#define PIO_0_BIT_CLEARING_EDGE_REGISTER 0
-#define PIO_0_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define PIO_0_CAPTURE 0
-#define PIO_0_DATA_WIDTH 8
-#define PIO_0_DO_TEST_BENCH_WIRING 0
-#define PIO_0_DRIVEN_SIM_VALUE 0x0
-#define PIO_0_EDGE_TYPE "NONE"
-#define PIO_0_FREQ 50000000u
-#define PIO_0_HAS_IN 1
-#define PIO_0_HAS_OUT 0
-#define PIO_0_HAS_TRI 0
-#define PIO_0_IRQ -1
-#define PIO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PIO_0_IRQ_TYPE "NONE"
-#define PIO_0_NAME "/dev/pio_0"
-#define PIO_0_RESET_VALUE 0x0
-#define PIO_0_SPAN 16
-#define PIO_0_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_rs_in_symbol altera_avalon_pio
+#define RS_IN_SYMBOL_BASE 0x3020
+#define RS_IN_SYMBOL_BIT_CLEARING_EDGE_REGISTER 0
+#define RS_IN_SYMBOL_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define RS_IN_SYMBOL_CAPTURE 0
+#define RS_IN_SYMBOL_DATA_WIDTH 8
+#define RS_IN_SYMBOL_DO_TEST_BENCH_WIRING 0
+#define RS_IN_SYMBOL_DRIVEN_SIM_VALUE 0x0
+#define RS_IN_SYMBOL_EDGE_TYPE "NONE"
+#define RS_IN_SYMBOL_FREQ 50000000u
+#define RS_IN_SYMBOL_HAS_IN 0
+#define RS_IN_SYMBOL_HAS_OUT 1
+#define RS_IN_SYMBOL_HAS_TRI 0
+#define RS_IN_SYMBOL_IRQ -1
+#define RS_IN_SYMBOL_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define RS_IN_SYMBOL_IRQ_TYPE "NONE"
+#define RS_IN_SYMBOL_NAME "/dev/rs_in_symbol"
+#define RS_IN_SYMBOL_RESET_VALUE 0x0
+#define RS_IN_SYMBOL_SPAN 16
+#define RS_IN_SYMBOL_TYPE "altera_avalon_pio"
 
 
 /*
- * pio_1 configuration
+ * rs_out_symbol configuration
  *
  */
 
-#define ALT_MODULE_CLASS_pio_1 altera_avalon_pio
-#define PIO_1_BASE 0x3000
-#define PIO_1_BIT_CLEARING_EDGE_REGISTER 0
-#define PIO_1_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define PIO_1_CAPTURE 0
-#define PIO_1_DATA_WIDTH 8
-#define PIO_1_DO_TEST_BENCH_WIRING 0
-#define PIO_1_DRIVEN_SIM_VALUE 0x0
-#define PIO_1_EDGE_TYPE "NONE"
-#define PIO_1_FREQ 50000000u
-#define PIO_1_HAS_IN 0
-#define PIO_1_HAS_OUT 1
-#define PIO_1_HAS_TRI 0
-#define PIO_1_IRQ -1
-#define PIO_1_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PIO_1_IRQ_TYPE "NONE"
-#define PIO_1_NAME "/dev/pio_1"
-#define PIO_1_RESET_VALUE 0x0
-#define PIO_1_SPAN 16
-#define PIO_1_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_rs_out_symbol altera_avalon_pio
+#define RS_OUT_SYMBOL_BASE 0x3030
+#define RS_OUT_SYMBOL_BIT_CLEARING_EDGE_REGISTER 0
+#define RS_OUT_SYMBOL_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define RS_OUT_SYMBOL_CAPTURE 0
+#define RS_OUT_SYMBOL_DATA_WIDTH 8
+#define RS_OUT_SYMBOL_DO_TEST_BENCH_WIRING 0
+#define RS_OUT_SYMBOL_DRIVEN_SIM_VALUE 0x0
+#define RS_OUT_SYMBOL_EDGE_TYPE "NONE"
+#define RS_OUT_SYMBOL_FREQ 50000000u
+#define RS_OUT_SYMBOL_HAS_IN 1
+#define RS_OUT_SYMBOL_HAS_OUT 0
+#define RS_OUT_SYMBOL_HAS_TRI 0
+#define RS_OUT_SYMBOL_IRQ -1
+#define RS_OUT_SYMBOL_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define RS_OUT_SYMBOL_IRQ_TYPE "NONE"
+#define RS_OUT_SYMBOL_NAME "/dev/rs_out_symbol"
+#define RS_OUT_SYMBOL_RESET_VALUE 0x0
+#define RS_OUT_SYMBOL_SPAN 16
+#define RS_OUT_SYMBOL_TYPE "altera_avalon_pio"
+
+
+/*
+ * symbol_ack configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_symbol_ack altera_avalon_pio
+#define SYMBOL_ACK_BASE 0x3010
+#define SYMBOL_ACK_BIT_CLEARING_EDGE_REGISTER 0
+#define SYMBOL_ACK_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SYMBOL_ACK_CAPTURE 0
+#define SYMBOL_ACK_DATA_WIDTH 1
+#define SYMBOL_ACK_DO_TEST_BENCH_WIRING 0
+#define SYMBOL_ACK_DRIVEN_SIM_VALUE 0x0
+#define SYMBOL_ACK_EDGE_TYPE "NONE"
+#define SYMBOL_ACK_FREQ 50000000u
+#define SYMBOL_ACK_HAS_IN 0
+#define SYMBOL_ACK_HAS_OUT 1
+#define SYMBOL_ACK_HAS_TRI 0
+#define SYMBOL_ACK_IRQ -1
+#define SYMBOL_ACK_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SYMBOL_ACK_IRQ_TYPE "NONE"
+#define SYMBOL_ACK_NAME "/dev/symbol_ack"
+#define SYMBOL_ACK_RESET_VALUE 0x0
+#define SYMBOL_ACK_SPAN 16
+#define SYMBOL_ACK_TYPE "altera_avalon_pio"
+
+
+/*
+ * symbol_strobe configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_symbol_strobe altera_avalon_pio
+#define SYMBOL_STROBE_BASE 0x3000
+#define SYMBOL_STROBE_BIT_CLEARING_EDGE_REGISTER 0
+#define SYMBOL_STROBE_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SYMBOL_STROBE_CAPTURE 0
+#define SYMBOL_STROBE_DATA_WIDTH 1
+#define SYMBOL_STROBE_DO_TEST_BENCH_WIRING 0
+#define SYMBOL_STROBE_DRIVEN_SIM_VALUE 0x0
+#define SYMBOL_STROBE_EDGE_TYPE "NONE"
+#define SYMBOL_STROBE_FREQ 50000000u
+#define SYMBOL_STROBE_HAS_IN 0
+#define SYMBOL_STROBE_HAS_OUT 1
+#define SYMBOL_STROBE_HAS_TRI 0
+#define SYMBOL_STROBE_IRQ -1
+#define SYMBOL_STROBE_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SYMBOL_STROBE_IRQ_TYPE "NONE"
+#define SYMBOL_STROBE_NAME "/dev/symbol_strobe"
+#define SYMBOL_STROBE_RESET_VALUE 0x0
+#define SYMBOL_STROBE_SPAN 16
+#define SYMBOL_STROBE_TYPE "altera_avalon_pio"
 
 #endif /* __SYSTEM_H_ */

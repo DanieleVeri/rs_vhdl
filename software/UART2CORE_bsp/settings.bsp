@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>15-Jun-2019 11:33:20</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1560594800459</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 24, 2019 1:49:22 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1561337362012</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\danie\Desktop\rs_vhdl\software\UART2CORE_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\danie\Desktop\rs_vhdl\HostBridge.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu_0</Cpu>
@@ -857,20 +857,32 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_1</slaveDescriptor>
+                <slaveDescriptor>symbol_strobe</slaveDescriptor>
                 <addressRange>0x00003000 - 0x0000300F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_0</slaveDescriptor>
+                <slaveDescriptor>symbol_ack</slaveDescriptor>
                 <addressRange>0x00003010 - 0x0000301F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>rs_in_symbol</slaveDescriptor>
+                <addressRange>0x00003020 - 0x0000302F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>rs_out_symbol</slaveDescriptor>
+                <addressRange>0x00003030 - 0x0000303F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00003020 - 0x00003027</addressRange>
+                <addressRange>0x00003040 - 0x00003047</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

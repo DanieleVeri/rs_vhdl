@@ -1,92 +1,11 @@
-/* 
- * "Small Hello World" example. 
- * 
- * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
- * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example 
- * designs. It requires a STDOUT  device in your system's hardware. 
- *
- * The purpose of this example is to demonstrate the smallest possible Hello 
- * World application, using the Nios II HAL library.  The memory footprint
- * of this hosted application is ~332 bytes by default using the standard 
- * reference design.  For a more fully featured Hello World application
- * example, see the example titled "Hello World".
- *
- * The memory footprint of this example has been reduced by making the
- * following changes to the normal "Hello World" example.
- * Check in the Nios II Software Developers Manual for a more complete 
- * description.
- * 
- * In the SW Application project (small_hello_world):
- *
- *  - In the C/C++ Build page
- * 
- *    - Set the Optimization Level to -Os
- * 
- * In System Library project (small_hello_world_syslib):
- *  - In the C/C++ Build page
- * 
- *    - Set the Optimization Level to -Os
- * 
- *    - Define the preprocessor option ALT_NO_INSTRUCTION_EMULATION 
- *      This removes software exception handling, which means that you cannot 
- *      run code compiled for Nios II cpu with a hardware multiplier on a core 
- *      without a the multiply unit. Check the Nios II Software Developers 
- *      Manual for more details.
- *
- *  - In the System Library page:
- *    - Set Periodic system timer and Timestamp timer to none
- *      This prevents the automatic inclusion of the timer driver.
- *
- *    - Set Max file descriptors to 4
- *      This reduces the size of the file handle pool.
- *
- *    - Check Main function does not exit
- *    - Uncheck Clean exit (flush buffers)
- *      This removes the unneeded call to exit when main returns, since it
- *      won't.
- *
- *    - Check Don't use C++
- *      This builds without the C++ support code.
- *
- *    - Check Small C library
- *      This uses a reduced functionality C library, which lacks  
- *      support for buffering, file IO, floating point and getch(), etc. 
- *      Check the Nios II Software Developers Manual for a complete list.
- *
- *    - Check Reduced device drivers
- *      This uses reduced functionality drivers if they're available. For the
- *      standard design this means you get polled UART and JTAG UART drivers,
- *      no support for the LCD driver and you lose the ability to program 
- *      CFI compliant flash devices.
- *
- *    - Check Access device drivers directly
- *      This bypasses the device file system to access device drivers directly.
- *      This eliminates the space required for the device file system services.
- *      It also provides a HAL version of libc services that access the drivers
- *      directly, further reducing space. Only a limited number of libc
- *      functions are available in this configuration.
- *
- *    - Use ALT versions of stdio routines:
- *
- *           Function                  Description
- *        ===============  =====================================
- *        alt_printf       Only supports %s, %x, and %c ( < 1 Kbyte)
- *        alt_putstr       Smaller overhead than puts with direct drivers
- *                         Note this function doesn't add a newline.
- *        alt_putchar      Smaller overhead than putchar with direct drivers
- *        alt_getchar      Smaller overhead than getchar with direct drivers
- *
- */
-
 #include "sys/alt_stdio.h"
 
-#define FOREVER 1
+#define rs_out (volatile char *) 0x0003030
+#define rs_in (volatile char *) 0x0003020
+#define ack (volatile char *) 0x0003010
+#define strobe (volatile char *) 0x0003000
 
-#define rs_out (volatile char *) 0x0003010
-#define rs_in (volatile char *) 0x0003000
-
-char *itoa(unsigned char byte)
-{
+char* itoa(unsigned char byte) {
 	int i;
 	char *result = "000";
 	for(i = 0; i < 3; i++, byte /= 10) {
@@ -95,23 +14,19 @@ char *itoa(unsigned char byte)
 	return result;
 }
 
-int main()
-{
-  // while (FOREVER) {
-	  int symbol_count = 223;
-	  unsigned char symbols[223];
-	  while (symbol_count) {
-		  symbols[symbol_count--] = alt_getchar();
-	  }
-	  symbol_count = 223;
-	  while(symbol_count) {
-		  *rs_in = symbols[symbol_count--];
-		  alt_printf("symbol: %d %s\n", symbol_count, itoa(*rs_out));
-	  }
-	  //int c = alt_getchar();
-	  //*rs_in = c < 0 ? 0 : c > 255 ? 255 : c;
-	  //alt_getchar(); // it consumes '\n'
-	  //alt_printf("symbol: %s\n", itoa(*rs_out));
-  // }
-  return 0;
+int main() {
+	int i;
+	for (i = 0; i < 223; i++) {
+		int c = alt_getchar();
+		*rs_in = c < 0 ? 0 : c > 255 ? 255 : c;
+		*ack = 1; *ack = 0;
+		alt_printf("sym %s:", itoa((unsigned char)(i+1)));
+		alt_printf("%s\n", itoa(*rs_out));
+	}
+	for (i = 0; i < 32; i++) {
+		alt_printf("sym %s:", itoa((unsigned char)(i+224)));
+		alt_printf("%s\n", itoa(*rs_out));
+		*ack = 1; *ack = 0;
+	}
+	return 0;
 }

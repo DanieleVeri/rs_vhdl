@@ -1,12 +1,11 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.ALL;
-
 use work.ReedSolomon_package.all;
 
 entity RSEncoder is port(
 	clk: in std_logic;
 	rst: in std_logic;
+	hold: in std_logic;
 	in_bus: in data_bus;
 	out_bus: out data_bus);
 end entity;
@@ -14,6 +13,7 @@ end entity;
 architecture RTL of RSEncoder is
 	component ParityCounter is port(
 		 clk: in std_logic;
+		 enable: in std_logic;
 		 parity: out std_logic);
 	end component;
 	component SymbolRegister is port(
@@ -38,23 +38,24 @@ architecture RTL of RSEncoder is
 		 out_bus: out data_bus);
 	end component;
 
-	signal parity_count: std_logic;
+	signal parity_count: std_logic := '0';
 	
-	signal chain_input: data_bus;
-	signal feedback_sum: data_bus;
+	signal chain_input: data_bus := (others=>'0');
+	signal feedback_sum: data_bus := (others=>'0');
 
-	signal ffd: parity_bus;
-	signal ffq: parity_bus;
-	signal products: parity_bus;
+	signal ffd: parity_bus := (others=>(others=>'0'));
+	signal ffq: parity_bus := (others=>(others=>'0'));
+	signal products: parity_bus := (others=>(others=>'0'));
 	
-	 signal qwerty: data_bus := (others => '0');
+	signal ffhold: parity_bus := (others=>(others=>'0'));
 	
 begin
-	parity_counter: ParityCounter port map(clk, parity_count);
+	parity_counter: ParityCounter port map(clk, not hold, parity_count);
 	feedback_mux: Mux port map(in_bus, ffq(parity_bus'length-1), parity_count, chain_input);
 	
 	galois_multipliers: for i in 0 to parity_bus'length-1 generate
-		ff: SymbolRegister port map(clk, ffd(i), ffq(i));
+		ffhold(i) <= ffd(i) when hold = '0' else ffq(i);
+		ff: SymbolRegister port map(clk, ffhold(i), ffq(i));
 		gf_mul: GfMul port map(generator_polynomial(i), feedback_sum, products(i));
 	end generate;
 	
@@ -66,12 +67,4 @@ begin
 	fb_sum: GfSum port map(ffq(parity_bus'length-1), chain_input, feedback_sum);
 	
 	out_mux: Mux port map(in_bus, ffq(parity_bus'length-1), parity_count, out_bus);
-	
-	--COUNT_PROC: process(clk)
-   -- begin
-   --     if(rising_edge(clk)) then
-   --      qwerty <= std_logic_vector(unsigned(qwerty) + 1);
-   --     end if;
-   -- end process;
-	--out_bus <= qwerty;
 end architecture;

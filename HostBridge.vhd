@@ -427,39 +427,51 @@ entity cpu_0_data_master_arbitrator is
                  signal cpu_0_data_master_granted_cpu_0_jtag_debug_module : IN STD_LOGIC;
                  signal cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                  signal cpu_0_data_master_granted_onchip_memory2_0_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_granted_pio_0_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_granted_pio_1_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_granted_rs_in_symbol_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_granted_rs_out_symbol_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_granted_symbol_ack_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_granted_symbol_strobe_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_onchip_memory2_0_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_qualified_request_pio_0_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_qualified_request_pio_1_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_qualified_request_rs_in_symbol_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_qualified_request_rs_out_symbol_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_qualified_request_symbol_ack_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_qualified_request_symbol_strobe_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_read : IN STD_LOGIC;
                  signal cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module : IN STD_LOGIC;
                  signal cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                  signal cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_read_data_valid_pio_0_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_read_data_valid_pio_1_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_read_data_valid_rs_in_symbol_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_read_data_valid_rs_out_symbol_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_read_data_valid_symbol_ack_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_cpu_0_jtag_debug_module : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_onchip_memory2_0_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_requests_pio_0_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_requests_pio_1_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_requests_rs_in_symbol_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_requests_rs_out_symbol_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_requests_symbol_ack_s1 : IN STD_LOGIC;
+                 signal cpu_0_data_master_requests_symbol_strobe_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_write : IN STD_LOGIC;
                  signal cpu_0_jtag_debug_module_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal d1_cpu_0_jtag_debug_module_end_xfer : IN STD_LOGIC;
                  signal d1_jtag_uart_0_avalon_jtag_slave_end_xfer : IN STD_LOGIC;
                  signal d1_onchip_memory2_0_s1_end_xfer : IN STD_LOGIC;
-                 signal d1_pio_0_s1_end_xfer : IN STD_LOGIC;
-                 signal d1_pio_1_s1_end_xfer : IN STD_LOGIC;
+                 signal d1_rs_in_symbol_s1_end_xfer : IN STD_LOGIC;
+                 signal d1_rs_out_symbol_s1_end_xfer : IN STD_LOGIC;
+                 signal d1_symbol_ack_s1_end_xfer : IN STD_LOGIC;
+                 signal d1_symbol_strobe_s1_end_xfer : IN STD_LOGIC;
                  signal jtag_uart_0_avalon_jtag_slave_irq_from_sa : IN STD_LOGIC;
                  signal jtag_uart_0_avalon_jtag_slave_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa : IN STD_LOGIC;
                  signal onchip_memory2_0_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal pio_0_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal pio_1_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 : IN STD_LOGIC;
                  signal reset_n : IN STD_LOGIC;
+                 signal rs_in_symbol_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal rs_out_symbol_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal symbol_ack_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal symbol_strobe_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 
               -- outputs:
                  signal cpu_0_data_master_address_to_slave : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
@@ -482,15 +494,15 @@ architecture europa of cpu_0_data_master_arbitrator is
 begin
 
   --r_0 master_run cascaded wait assignment, which is an e_assign
-  r_0 <= Vector_To_Std_Logic((((((((((((((((((((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module OR NOT cpu_0_data_master_requests_cpu_0_jtag_debug_module)))))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_granted_cpu_0_jtag_debug_module OR NOT cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave OR NOT cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave OR NOT ((cpu_0_data_master_read OR cpu_0_data_master_write)))))) OR (((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(NOT jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa)))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_read OR cpu_0_data_master_write)))))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave OR NOT ((cpu_0_data_master_read OR cpu_0_data_master_write)))))) OR (((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(NOT jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa)))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_read OR cpu_0_data_master_write)))))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((((cpu_0_data_master_qualified_request_onchip_memory2_0_s1 OR registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1) OR NOT cpu_0_data_master_requests_onchip_memory2_0_s1)))))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_granted_onchip_memory2_0_s1 OR NOT cpu_0_data_master_qualified_request_onchip_memory2_0_s1)))))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((((NOT cpu_0_data_master_qualified_request_onchip_memory2_0_s1 OR NOT cpu_0_data_master_read) OR ((registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 AND cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_onchip_memory2_0_s1 OR NOT ((cpu_0_data_master_read OR cpu_0_data_master_write)))))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_read OR cpu_0_data_master_write)))))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_pio_0_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_pio_0_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_pio_1_s1 OR NOT cpu_0_data_master_requests_pio_1_s1)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_pio_1_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))));
+  r_0 <= Vector_To_Std_Logic((((((((((((((((((((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module OR NOT cpu_0_data_master_requests_cpu_0_jtag_debug_module)))))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_granted_cpu_0_jtag_debug_module OR NOT cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave OR NOT cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave OR NOT ((cpu_0_data_master_read OR cpu_0_data_master_write)))))) OR (((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(NOT jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa)))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_read OR cpu_0_data_master_write)))))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave OR NOT ((cpu_0_data_master_read OR cpu_0_data_master_write)))))) OR (((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(NOT jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa)))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_read OR cpu_0_data_master_write)))))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((((cpu_0_data_master_qualified_request_onchip_memory2_0_s1 OR registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1) OR NOT cpu_0_data_master_requests_onchip_memory2_0_s1)))))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_granted_onchip_memory2_0_s1 OR NOT cpu_0_data_master_qualified_request_onchip_memory2_0_s1)))))) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((((NOT cpu_0_data_master_qualified_request_onchip_memory2_0_s1 OR NOT cpu_0_data_master_read) OR ((registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 AND cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_onchip_memory2_0_s1 OR NOT ((cpu_0_data_master_read OR cpu_0_data_master_write)))))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_read OR cpu_0_data_master_write)))))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_rs_in_symbol_s1 OR NOT cpu_0_data_master_requests_rs_in_symbol_s1)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_rs_in_symbol_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_rs_in_symbol_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_rs_out_symbol_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))));
   --cascaded wait assignment, which is an e_assign
   cpu_0_data_master_run <= r_0 AND r_1;
   --r_1 master_run cascaded wait assignment, which is an e_assign
-  r_1 <= Vector_To_Std_Logic(((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_pio_1_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))));
+  r_1 <= Vector_To_Std_Logic((((((((((((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_rs_out_symbol_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_requests_symbol_ack_s1)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_symbol_strobe_s1 OR NOT cpu_0_data_master_requests_symbol_strobe_s1)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_strobe_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_strobe_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))));
   --optimize select-logic by passing only those address bits which matter.
   internal_cpu_0_data_master_address_to_slave <= cpu_0_data_master_address(13 DOWNTO 0);
   --cpu_0/data_master readdata mux, which is an e_mux
-  cpu_0_data_master_readdata <= (((((A_REP(NOT cpu_0_data_master_requests_cpu_0_jtag_debug_module, 32) OR cpu_0_jtag_debug_module_readdata_from_sa)) AND ((A_REP(NOT cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave, 32) OR registered_cpu_0_data_master_readdata))) AND ((A_REP(NOT cpu_0_data_master_requests_onchip_memory2_0_s1, 32) OR onchip_memory2_0_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_pio_0_s1, 32) OR pio_0_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_pio_1_s1, 32) OR pio_1_s1_readdata_from_sa));
+  cpu_0_data_master_readdata <= (((((((A_REP(NOT cpu_0_data_master_requests_cpu_0_jtag_debug_module, 32) OR cpu_0_jtag_debug_module_readdata_from_sa)) AND ((A_REP(NOT cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave, 32) OR registered_cpu_0_data_master_readdata))) AND ((A_REP(NOT cpu_0_data_master_requests_onchip_memory2_0_s1, 32) OR onchip_memory2_0_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_rs_in_symbol_s1, 32) OR rs_in_symbol_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_rs_out_symbol_s1, 32) OR rs_out_symbol_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_symbol_ack_s1, 32) OR symbol_ack_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_symbol_strobe_s1, 32) OR symbol_strobe_s1_readdata_from_sa));
   --actual waitrequest port, which is an e_register
   process (clk, reset_n)
   begin
@@ -778,7 +790,7 @@ begin
   jtag_uart_0_avalon_jtag_slave_begins_xfer <= NOT d1_reasons_to_wait AND (internal_cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave);
   --assign jtag_uart_0_avalon_jtag_slave_readdata_from_sa = jtag_uart_0_avalon_jtag_slave_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
   jtag_uart_0_avalon_jtag_slave_readdata_from_sa <= jtag_uart_0_avalon_jtag_slave_readdata;
-  internal_cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave <= to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 3) & std_logic_vector'("000")) = std_logic_vector'("11000000100000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write));
+  internal_cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave <= to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 3) & std_logic_vector'("000")) = std_logic_vector'("11000001000000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write));
   --assign jtag_uart_0_avalon_jtag_slave_dataavailable_from_sa = jtag_uart_0_avalon_jtag_slave_dataavailable so that symbol knows where to group signals which may go to master only, which is an e_assign
   jtag_uart_0_avalon_jtag_slave_dataavailable_from_sa <= jtag_uart_0_avalon_jtag_slave_dataavailable;
   --assign jtag_uart_0_avalon_jtag_slave_readyfordata_from_sa = jtag_uart_0_avalon_jtag_slave_readyfordata so that symbol knows where to group signals which may go to master only, which is an e_assign
@@ -1370,67 +1382,72 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity pio_0_s1_arbitrator is 
+entity rs_in_symbol_s1_arbitrator is 
         port (
               -- inputs:
                  signal clk : IN STD_LOGIC;
                  signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
                  signal cpu_0_data_master_read : IN STD_LOGIC;
+                 signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
                  signal cpu_0_data_master_write : IN STD_LOGIC;
-                 signal pio_0_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal reset_n : IN STD_LOGIC;
+                 signal rs_in_symbol_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 
               -- outputs:
-                 signal cpu_0_data_master_granted_pio_0_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_qualified_request_pio_0_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_read_data_valid_pio_0_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_requests_pio_0_s1 : OUT STD_LOGIC;
-                 signal d1_pio_0_s1_end_xfer : OUT STD_LOGIC;
-                 signal pio_0_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-                 signal pio_0_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal pio_0_s1_reset_n : OUT STD_LOGIC
+                 signal cpu_0_data_master_granted_rs_in_symbol_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_qualified_request_rs_in_symbol_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_read_data_valid_rs_in_symbol_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_requests_rs_in_symbol_s1 : OUT STD_LOGIC;
+                 signal d1_rs_in_symbol_s1_end_xfer : OUT STD_LOGIC;
+                 signal rs_in_symbol_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+                 signal rs_in_symbol_s1_chipselect : OUT STD_LOGIC;
+                 signal rs_in_symbol_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal rs_in_symbol_s1_reset_n : OUT STD_LOGIC;
+                 signal rs_in_symbol_s1_write_n : OUT STD_LOGIC;
+                 signal rs_in_symbol_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
               );
-end entity pio_0_s1_arbitrator;
+end entity rs_in_symbol_s1_arbitrator;
 
 
-architecture europa of pio_0_s1_arbitrator is
+architecture europa of rs_in_symbol_s1_arbitrator is
                 signal cpu_0_data_master_arbiterlock :  STD_LOGIC;
                 signal cpu_0_data_master_arbiterlock2 :  STD_LOGIC;
                 signal cpu_0_data_master_continuerequest :  STD_LOGIC;
-                signal cpu_0_data_master_saved_grant_pio_0_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_saved_grant_rs_in_symbol_s1 :  STD_LOGIC;
                 signal d1_reasons_to_wait :  STD_LOGIC;
                 signal enable_nonzero_assertions :  STD_LOGIC;
-                signal end_xfer_arb_share_counter_term_pio_0_s1 :  STD_LOGIC;
+                signal end_xfer_arb_share_counter_term_rs_in_symbol_s1 :  STD_LOGIC;
                 signal in_a_read_cycle :  STD_LOGIC;
                 signal in_a_write_cycle :  STD_LOGIC;
-                signal internal_cpu_0_data_master_granted_pio_0_s1 :  STD_LOGIC;
-                signal internal_cpu_0_data_master_qualified_request_pio_0_s1 :  STD_LOGIC;
-                signal internal_cpu_0_data_master_requests_pio_0_s1 :  STD_LOGIC;
-                signal pio_0_s1_allgrants :  STD_LOGIC;
-                signal pio_0_s1_allow_new_arb_cycle :  STD_LOGIC;
-                signal pio_0_s1_any_bursting_master_saved_grant :  STD_LOGIC;
-                signal pio_0_s1_any_continuerequest :  STD_LOGIC;
-                signal pio_0_s1_arb_counter_enable :  STD_LOGIC;
-                signal pio_0_s1_arb_share_counter :  STD_LOGIC;
-                signal pio_0_s1_arb_share_counter_next_value :  STD_LOGIC;
-                signal pio_0_s1_arb_share_set_values :  STD_LOGIC;
-                signal pio_0_s1_beginbursttransfer_internal :  STD_LOGIC;
-                signal pio_0_s1_begins_xfer :  STD_LOGIC;
-                signal pio_0_s1_end_xfer :  STD_LOGIC;
-                signal pio_0_s1_firsttransfer :  STD_LOGIC;
-                signal pio_0_s1_grant_vector :  STD_LOGIC;
-                signal pio_0_s1_in_a_read_cycle :  STD_LOGIC;
-                signal pio_0_s1_in_a_write_cycle :  STD_LOGIC;
-                signal pio_0_s1_master_qreq_vector :  STD_LOGIC;
-                signal pio_0_s1_non_bursting_master_requests :  STD_LOGIC;
-                signal pio_0_s1_reg_firsttransfer :  STD_LOGIC;
-                signal pio_0_s1_slavearbiterlockenable :  STD_LOGIC;
-                signal pio_0_s1_slavearbiterlockenable2 :  STD_LOGIC;
-                signal pio_0_s1_unreg_firsttransfer :  STD_LOGIC;
-                signal pio_0_s1_waits_for_read :  STD_LOGIC;
-                signal pio_0_s1_waits_for_write :  STD_LOGIC;
-                signal shifted_address_to_pio_0_s1_from_cpu_0_data_master :  STD_LOGIC_VECTOR (13 DOWNTO 0);
-                signal wait_for_pio_0_s1_counter :  STD_LOGIC;
+                signal internal_cpu_0_data_master_granted_rs_in_symbol_s1 :  STD_LOGIC;
+                signal internal_cpu_0_data_master_qualified_request_rs_in_symbol_s1 :  STD_LOGIC;
+                signal internal_cpu_0_data_master_requests_rs_in_symbol_s1 :  STD_LOGIC;
+                signal rs_in_symbol_s1_allgrants :  STD_LOGIC;
+                signal rs_in_symbol_s1_allow_new_arb_cycle :  STD_LOGIC;
+                signal rs_in_symbol_s1_any_bursting_master_saved_grant :  STD_LOGIC;
+                signal rs_in_symbol_s1_any_continuerequest :  STD_LOGIC;
+                signal rs_in_symbol_s1_arb_counter_enable :  STD_LOGIC;
+                signal rs_in_symbol_s1_arb_share_counter :  STD_LOGIC;
+                signal rs_in_symbol_s1_arb_share_counter_next_value :  STD_LOGIC;
+                signal rs_in_symbol_s1_arb_share_set_values :  STD_LOGIC;
+                signal rs_in_symbol_s1_beginbursttransfer_internal :  STD_LOGIC;
+                signal rs_in_symbol_s1_begins_xfer :  STD_LOGIC;
+                signal rs_in_symbol_s1_end_xfer :  STD_LOGIC;
+                signal rs_in_symbol_s1_firsttransfer :  STD_LOGIC;
+                signal rs_in_symbol_s1_grant_vector :  STD_LOGIC;
+                signal rs_in_symbol_s1_in_a_read_cycle :  STD_LOGIC;
+                signal rs_in_symbol_s1_in_a_write_cycle :  STD_LOGIC;
+                signal rs_in_symbol_s1_master_qreq_vector :  STD_LOGIC;
+                signal rs_in_symbol_s1_non_bursting_master_requests :  STD_LOGIC;
+                signal rs_in_symbol_s1_reg_firsttransfer :  STD_LOGIC;
+                signal rs_in_symbol_s1_slavearbiterlockenable :  STD_LOGIC;
+                signal rs_in_symbol_s1_slavearbiterlockenable2 :  STD_LOGIC;
+                signal rs_in_symbol_s1_unreg_firsttransfer :  STD_LOGIC;
+                signal rs_in_symbol_s1_waits_for_read :  STD_LOGIC;
+                signal rs_in_symbol_s1_waits_for_write :  STD_LOGIC;
+                signal shifted_address_to_rs_in_symbol_s1_from_cpu_0_data_master :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal wait_for_rs_in_symbol_s1_counter :  STD_LOGIC;
 
 begin
 
@@ -1439,134 +1456,139 @@ begin
     if reset_n = '0' then
       d1_reasons_to_wait <= std_logic'('0');
     elsif clk'event and clk = '1' then
-      d1_reasons_to_wait <= NOT pio_0_s1_end_xfer;
+      d1_reasons_to_wait <= NOT rs_in_symbol_s1_end_xfer;
     end if;
 
   end process;
 
-  pio_0_s1_begins_xfer <= NOT d1_reasons_to_wait AND (internal_cpu_0_data_master_qualified_request_pio_0_s1);
-  --assign pio_0_s1_readdata_from_sa = pio_0_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
-  pio_0_s1_readdata_from_sa <= pio_0_s1_readdata;
-  internal_cpu_0_data_master_requests_pio_0_s1 <= ((to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 4) & std_logic_vector'("0000")) = std_logic_vector'("11000000010000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write)))) AND cpu_0_data_master_read;
-  --pio_0_s1_arb_share_counter set values, which is an e_mux
-  pio_0_s1_arb_share_set_values <= std_logic'('1');
-  --pio_0_s1_non_bursting_master_requests mux, which is an e_mux
-  pio_0_s1_non_bursting_master_requests <= internal_cpu_0_data_master_requests_pio_0_s1;
-  --pio_0_s1_any_bursting_master_saved_grant mux, which is an e_mux
-  pio_0_s1_any_bursting_master_saved_grant <= std_logic'('0');
-  --pio_0_s1_arb_share_counter_next_value assignment, which is an e_assign
-  pio_0_s1_arb_share_counter_next_value <= Vector_To_Std_Logic(A_WE_StdLogicVector((std_logic'(pio_0_s1_firsttransfer) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(pio_0_s1_arb_share_set_values))) - std_logic_vector'("000000000000000000000000000000001"))), A_WE_StdLogicVector((std_logic'(pio_0_s1_arb_share_counter) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(pio_0_s1_arb_share_counter))) - std_logic_vector'("000000000000000000000000000000001"))), std_logic_vector'("000000000000000000000000000000000"))));
-  --pio_0_s1_allgrants all slave grants, which is an e_mux
-  pio_0_s1_allgrants <= pio_0_s1_grant_vector;
-  --pio_0_s1_end_xfer assignment, which is an e_assign
-  pio_0_s1_end_xfer <= NOT ((pio_0_s1_waits_for_read OR pio_0_s1_waits_for_write));
-  --end_xfer_arb_share_counter_term_pio_0_s1 arb share counter enable term, which is an e_assign
-  end_xfer_arb_share_counter_term_pio_0_s1 <= pio_0_s1_end_xfer AND (((NOT pio_0_s1_any_bursting_master_saved_grant OR in_a_read_cycle) OR in_a_write_cycle));
-  --pio_0_s1_arb_share_counter arbitration counter enable, which is an e_assign
-  pio_0_s1_arb_counter_enable <= ((end_xfer_arb_share_counter_term_pio_0_s1 AND pio_0_s1_allgrants)) OR ((end_xfer_arb_share_counter_term_pio_0_s1 AND NOT pio_0_s1_non_bursting_master_requests));
-  --pio_0_s1_arb_share_counter counter, which is an e_register
+  rs_in_symbol_s1_begins_xfer <= NOT d1_reasons_to_wait AND (internal_cpu_0_data_master_qualified_request_rs_in_symbol_s1);
+  --assign rs_in_symbol_s1_readdata_from_sa = rs_in_symbol_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  rs_in_symbol_s1_readdata_from_sa <= rs_in_symbol_s1_readdata;
+  internal_cpu_0_data_master_requests_rs_in_symbol_s1 <= to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 4) & std_logic_vector'("0000")) = std_logic_vector'("11000000100000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write));
+  --rs_in_symbol_s1_arb_share_counter set values, which is an e_mux
+  rs_in_symbol_s1_arb_share_set_values <= std_logic'('1');
+  --rs_in_symbol_s1_non_bursting_master_requests mux, which is an e_mux
+  rs_in_symbol_s1_non_bursting_master_requests <= internal_cpu_0_data_master_requests_rs_in_symbol_s1;
+  --rs_in_symbol_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  rs_in_symbol_s1_any_bursting_master_saved_grant <= std_logic'('0');
+  --rs_in_symbol_s1_arb_share_counter_next_value assignment, which is an e_assign
+  rs_in_symbol_s1_arb_share_counter_next_value <= Vector_To_Std_Logic(A_WE_StdLogicVector((std_logic'(rs_in_symbol_s1_firsttransfer) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(rs_in_symbol_s1_arb_share_set_values))) - std_logic_vector'("000000000000000000000000000000001"))), A_WE_StdLogicVector((std_logic'(rs_in_symbol_s1_arb_share_counter) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(rs_in_symbol_s1_arb_share_counter))) - std_logic_vector'("000000000000000000000000000000001"))), std_logic_vector'("000000000000000000000000000000000"))));
+  --rs_in_symbol_s1_allgrants all slave grants, which is an e_mux
+  rs_in_symbol_s1_allgrants <= rs_in_symbol_s1_grant_vector;
+  --rs_in_symbol_s1_end_xfer assignment, which is an e_assign
+  rs_in_symbol_s1_end_xfer <= NOT ((rs_in_symbol_s1_waits_for_read OR rs_in_symbol_s1_waits_for_write));
+  --end_xfer_arb_share_counter_term_rs_in_symbol_s1 arb share counter enable term, which is an e_assign
+  end_xfer_arb_share_counter_term_rs_in_symbol_s1 <= rs_in_symbol_s1_end_xfer AND (((NOT rs_in_symbol_s1_any_bursting_master_saved_grant OR in_a_read_cycle) OR in_a_write_cycle));
+  --rs_in_symbol_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  rs_in_symbol_s1_arb_counter_enable <= ((end_xfer_arb_share_counter_term_rs_in_symbol_s1 AND rs_in_symbol_s1_allgrants)) OR ((end_xfer_arb_share_counter_term_rs_in_symbol_s1 AND NOT rs_in_symbol_s1_non_bursting_master_requests));
+  --rs_in_symbol_s1_arb_share_counter counter, which is an e_register
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      pio_0_s1_arb_share_counter <= std_logic'('0');
+      rs_in_symbol_s1_arb_share_counter <= std_logic'('0');
     elsif clk'event and clk = '1' then
-      if std_logic'(pio_0_s1_arb_counter_enable) = '1' then 
-        pio_0_s1_arb_share_counter <= pio_0_s1_arb_share_counter_next_value;
+      if std_logic'(rs_in_symbol_s1_arb_counter_enable) = '1' then 
+        rs_in_symbol_s1_arb_share_counter <= rs_in_symbol_s1_arb_share_counter_next_value;
       end if;
     end if;
 
   end process;
 
-  --pio_0_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  --rs_in_symbol_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      pio_0_s1_slavearbiterlockenable <= std_logic'('0');
+      rs_in_symbol_s1_slavearbiterlockenable <= std_logic'('0');
     elsif clk'event and clk = '1' then
-      if std_logic'((((pio_0_s1_master_qreq_vector AND end_xfer_arb_share_counter_term_pio_0_s1)) OR ((end_xfer_arb_share_counter_term_pio_0_s1 AND NOT pio_0_s1_non_bursting_master_requests)))) = '1' then 
-        pio_0_s1_slavearbiterlockenable <= pio_0_s1_arb_share_counter_next_value;
+      if std_logic'((((rs_in_symbol_s1_master_qreq_vector AND end_xfer_arb_share_counter_term_rs_in_symbol_s1)) OR ((end_xfer_arb_share_counter_term_rs_in_symbol_s1 AND NOT rs_in_symbol_s1_non_bursting_master_requests)))) = '1' then 
+        rs_in_symbol_s1_slavearbiterlockenable <= rs_in_symbol_s1_arb_share_counter_next_value;
       end if;
     end if;
 
   end process;
 
-  --cpu_0/data_master pio_0/s1 arbiterlock, which is an e_assign
-  cpu_0_data_master_arbiterlock <= pio_0_s1_slavearbiterlockenable AND cpu_0_data_master_continuerequest;
-  --pio_0_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
-  pio_0_s1_slavearbiterlockenable2 <= pio_0_s1_arb_share_counter_next_value;
-  --cpu_0/data_master pio_0/s1 arbiterlock2, which is an e_assign
-  cpu_0_data_master_arbiterlock2 <= pio_0_s1_slavearbiterlockenable2 AND cpu_0_data_master_continuerequest;
-  --pio_0_s1_any_continuerequest at least one master continues requesting, which is an e_assign
-  pio_0_s1_any_continuerequest <= std_logic'('1');
+  --cpu_0/data_master rs_in_symbol/s1 arbiterlock, which is an e_assign
+  cpu_0_data_master_arbiterlock <= rs_in_symbol_s1_slavearbiterlockenable AND cpu_0_data_master_continuerequest;
+  --rs_in_symbol_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  rs_in_symbol_s1_slavearbiterlockenable2 <= rs_in_symbol_s1_arb_share_counter_next_value;
+  --cpu_0/data_master rs_in_symbol/s1 arbiterlock2, which is an e_assign
+  cpu_0_data_master_arbiterlock2 <= rs_in_symbol_s1_slavearbiterlockenable2 AND cpu_0_data_master_continuerequest;
+  --rs_in_symbol_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  rs_in_symbol_s1_any_continuerequest <= std_logic'('1');
   --cpu_0_data_master_continuerequest continued request, which is an e_assign
   cpu_0_data_master_continuerequest <= std_logic'('1');
-  internal_cpu_0_data_master_qualified_request_pio_0_s1 <= internal_cpu_0_data_master_requests_pio_0_s1;
+  internal_cpu_0_data_master_qualified_request_rs_in_symbol_s1 <= internal_cpu_0_data_master_requests_rs_in_symbol_s1 AND NOT (((NOT cpu_0_data_master_waitrequest) AND cpu_0_data_master_write));
+  --rs_in_symbol_s1_writedata mux, which is an e_mux
+  rs_in_symbol_s1_writedata <= cpu_0_data_master_writedata;
   --master is always granted when requested
-  internal_cpu_0_data_master_granted_pio_0_s1 <= internal_cpu_0_data_master_qualified_request_pio_0_s1;
-  --cpu_0/data_master saved-grant pio_0/s1, which is an e_assign
-  cpu_0_data_master_saved_grant_pio_0_s1 <= internal_cpu_0_data_master_requests_pio_0_s1;
-  --allow new arb cycle for pio_0/s1, which is an e_assign
-  pio_0_s1_allow_new_arb_cycle <= std_logic'('1');
+  internal_cpu_0_data_master_granted_rs_in_symbol_s1 <= internal_cpu_0_data_master_qualified_request_rs_in_symbol_s1;
+  --cpu_0/data_master saved-grant rs_in_symbol/s1, which is an e_assign
+  cpu_0_data_master_saved_grant_rs_in_symbol_s1 <= internal_cpu_0_data_master_requests_rs_in_symbol_s1;
+  --allow new arb cycle for rs_in_symbol/s1, which is an e_assign
+  rs_in_symbol_s1_allow_new_arb_cycle <= std_logic'('1');
   --placeholder chosen master
-  pio_0_s1_grant_vector <= std_logic'('1');
+  rs_in_symbol_s1_grant_vector <= std_logic'('1');
   --placeholder vector of master qualified-requests
-  pio_0_s1_master_qreq_vector <= std_logic'('1');
-  --pio_0_s1_reset_n assignment, which is an e_assign
-  pio_0_s1_reset_n <= reset_n;
-  --pio_0_s1_firsttransfer first transaction, which is an e_assign
-  pio_0_s1_firsttransfer <= A_WE_StdLogic((std_logic'(pio_0_s1_begins_xfer) = '1'), pio_0_s1_unreg_firsttransfer, pio_0_s1_reg_firsttransfer);
-  --pio_0_s1_unreg_firsttransfer first transaction, which is an e_assign
-  pio_0_s1_unreg_firsttransfer <= NOT ((pio_0_s1_slavearbiterlockenable AND pio_0_s1_any_continuerequest));
-  --pio_0_s1_reg_firsttransfer first transaction, which is an e_register
+  rs_in_symbol_s1_master_qreq_vector <= std_logic'('1');
+  --rs_in_symbol_s1_reset_n assignment, which is an e_assign
+  rs_in_symbol_s1_reset_n <= reset_n;
+  rs_in_symbol_s1_chipselect <= internal_cpu_0_data_master_granted_rs_in_symbol_s1;
+  --rs_in_symbol_s1_firsttransfer first transaction, which is an e_assign
+  rs_in_symbol_s1_firsttransfer <= A_WE_StdLogic((std_logic'(rs_in_symbol_s1_begins_xfer) = '1'), rs_in_symbol_s1_unreg_firsttransfer, rs_in_symbol_s1_reg_firsttransfer);
+  --rs_in_symbol_s1_unreg_firsttransfer first transaction, which is an e_assign
+  rs_in_symbol_s1_unreg_firsttransfer <= NOT ((rs_in_symbol_s1_slavearbiterlockenable AND rs_in_symbol_s1_any_continuerequest));
+  --rs_in_symbol_s1_reg_firsttransfer first transaction, which is an e_register
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      pio_0_s1_reg_firsttransfer <= std_logic'('1');
+      rs_in_symbol_s1_reg_firsttransfer <= std_logic'('1');
     elsif clk'event and clk = '1' then
-      if std_logic'(pio_0_s1_begins_xfer) = '1' then 
-        pio_0_s1_reg_firsttransfer <= pio_0_s1_unreg_firsttransfer;
+      if std_logic'(rs_in_symbol_s1_begins_xfer) = '1' then 
+        rs_in_symbol_s1_reg_firsttransfer <= rs_in_symbol_s1_unreg_firsttransfer;
       end if;
     end if;
 
   end process;
 
-  --pio_0_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
-  pio_0_s1_beginbursttransfer_internal <= pio_0_s1_begins_xfer;
-  shifted_address_to_pio_0_s1_from_cpu_0_data_master <= cpu_0_data_master_address_to_slave;
-  --pio_0_s1_address mux, which is an e_mux
-  pio_0_s1_address <= A_EXT (A_SRL(shifted_address_to_pio_0_s1_from_cpu_0_data_master,std_logic_vector'("00000000000000000000000000000010")), 2);
-  --d1_pio_0_s1_end_xfer register, which is an e_register
+  --rs_in_symbol_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  rs_in_symbol_s1_beginbursttransfer_internal <= rs_in_symbol_s1_begins_xfer;
+  --~rs_in_symbol_s1_write_n assignment, which is an e_mux
+  rs_in_symbol_s1_write_n <= NOT ((internal_cpu_0_data_master_granted_rs_in_symbol_s1 AND cpu_0_data_master_write));
+  shifted_address_to_rs_in_symbol_s1_from_cpu_0_data_master <= cpu_0_data_master_address_to_slave;
+  --rs_in_symbol_s1_address mux, which is an e_mux
+  rs_in_symbol_s1_address <= A_EXT (A_SRL(shifted_address_to_rs_in_symbol_s1_from_cpu_0_data_master,std_logic_vector'("00000000000000000000000000000010")), 2);
+  --d1_rs_in_symbol_s1_end_xfer register, which is an e_register
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      d1_pio_0_s1_end_xfer <= std_logic'('1');
+      d1_rs_in_symbol_s1_end_xfer <= std_logic'('1');
     elsif clk'event and clk = '1' then
-      d1_pio_0_s1_end_xfer <= pio_0_s1_end_xfer;
+      d1_rs_in_symbol_s1_end_xfer <= rs_in_symbol_s1_end_xfer;
     end if;
 
   end process;
 
-  --pio_0_s1_waits_for_read in a cycle, which is an e_mux
-  pio_0_s1_waits_for_read <= pio_0_s1_in_a_read_cycle AND pio_0_s1_begins_xfer;
-  --pio_0_s1_in_a_read_cycle assignment, which is an e_assign
-  pio_0_s1_in_a_read_cycle <= internal_cpu_0_data_master_granted_pio_0_s1 AND cpu_0_data_master_read;
+  --rs_in_symbol_s1_waits_for_read in a cycle, which is an e_mux
+  rs_in_symbol_s1_waits_for_read <= rs_in_symbol_s1_in_a_read_cycle AND rs_in_symbol_s1_begins_xfer;
+  --rs_in_symbol_s1_in_a_read_cycle assignment, which is an e_assign
+  rs_in_symbol_s1_in_a_read_cycle <= internal_cpu_0_data_master_granted_rs_in_symbol_s1 AND cpu_0_data_master_read;
   --in_a_read_cycle assignment, which is an e_mux
-  in_a_read_cycle <= pio_0_s1_in_a_read_cycle;
-  --pio_0_s1_waits_for_write in a cycle, which is an e_mux
-  pio_0_s1_waits_for_write <= Vector_To_Std_Logic(((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(pio_0_s1_in_a_write_cycle))) AND std_logic_vector'("00000000000000000000000000000000")));
-  --pio_0_s1_in_a_write_cycle assignment, which is an e_assign
-  pio_0_s1_in_a_write_cycle <= internal_cpu_0_data_master_granted_pio_0_s1 AND cpu_0_data_master_write;
+  in_a_read_cycle <= rs_in_symbol_s1_in_a_read_cycle;
+  --rs_in_symbol_s1_waits_for_write in a cycle, which is an e_mux
+  rs_in_symbol_s1_waits_for_write <= Vector_To_Std_Logic(((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(rs_in_symbol_s1_in_a_write_cycle))) AND std_logic_vector'("00000000000000000000000000000000")));
+  --rs_in_symbol_s1_in_a_write_cycle assignment, which is an e_assign
+  rs_in_symbol_s1_in_a_write_cycle <= internal_cpu_0_data_master_granted_rs_in_symbol_s1 AND cpu_0_data_master_write;
   --in_a_write_cycle assignment, which is an e_mux
-  in_a_write_cycle <= pio_0_s1_in_a_write_cycle;
-  wait_for_pio_0_s1_counter <= std_logic'('0');
+  in_a_write_cycle <= rs_in_symbol_s1_in_a_write_cycle;
+  wait_for_rs_in_symbol_s1_counter <= std_logic'('0');
   --vhdl renameroo for output signals
-  cpu_0_data_master_granted_pio_0_s1 <= internal_cpu_0_data_master_granted_pio_0_s1;
+  cpu_0_data_master_granted_rs_in_symbol_s1 <= internal_cpu_0_data_master_granted_rs_in_symbol_s1;
   --vhdl renameroo for output signals
-  cpu_0_data_master_qualified_request_pio_0_s1 <= internal_cpu_0_data_master_qualified_request_pio_0_s1;
+  cpu_0_data_master_qualified_request_rs_in_symbol_s1 <= internal_cpu_0_data_master_qualified_request_rs_in_symbol_s1;
   --vhdl renameroo for output signals
-  cpu_0_data_master_requests_pio_0_s1 <= internal_cpu_0_data_master_requests_pio_0_s1;
+  cpu_0_data_master_requests_rs_in_symbol_s1 <= internal_cpu_0_data_master_requests_rs_in_symbol_s1;
 --synthesis translate_off
-    --pio_0/s1 enable non-zero assertions, which is an e_register
+    --rs_in_symbol/s1 enable non-zero assertions, which is an e_register
     process (clk, reset_n)
     begin
       if reset_n = '0' then
@@ -1598,72 +1620,67 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity pio_1_s1_arbitrator is 
+entity rs_out_symbol_s1_arbitrator is 
         port (
               -- inputs:
                  signal clk : IN STD_LOGIC;
                  signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
                  signal cpu_0_data_master_read : IN STD_LOGIC;
-                 signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
                  signal cpu_0_data_master_write : IN STD_LOGIC;
-                 signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal pio_1_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal reset_n : IN STD_LOGIC;
+                 signal rs_out_symbol_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 
               -- outputs:
-                 signal cpu_0_data_master_granted_pio_1_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_qualified_request_pio_1_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_read_data_valid_pio_1_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_requests_pio_1_s1 : OUT STD_LOGIC;
-                 signal d1_pio_1_s1_end_xfer : OUT STD_LOGIC;
-                 signal pio_1_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-                 signal pio_1_s1_chipselect : OUT STD_LOGIC;
-                 signal pio_1_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal pio_1_s1_reset_n : OUT STD_LOGIC;
-                 signal pio_1_s1_write_n : OUT STD_LOGIC;
-                 signal pio_1_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+                 signal cpu_0_data_master_granted_rs_out_symbol_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_qualified_request_rs_out_symbol_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_read_data_valid_rs_out_symbol_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_requests_rs_out_symbol_s1 : OUT STD_LOGIC;
+                 signal d1_rs_out_symbol_s1_end_xfer : OUT STD_LOGIC;
+                 signal rs_out_symbol_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+                 signal rs_out_symbol_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal rs_out_symbol_s1_reset_n : OUT STD_LOGIC
               );
-end entity pio_1_s1_arbitrator;
+end entity rs_out_symbol_s1_arbitrator;
 
 
-architecture europa of pio_1_s1_arbitrator is
+architecture europa of rs_out_symbol_s1_arbitrator is
                 signal cpu_0_data_master_arbiterlock :  STD_LOGIC;
                 signal cpu_0_data_master_arbiterlock2 :  STD_LOGIC;
                 signal cpu_0_data_master_continuerequest :  STD_LOGIC;
-                signal cpu_0_data_master_saved_grant_pio_1_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_saved_grant_rs_out_symbol_s1 :  STD_LOGIC;
                 signal d1_reasons_to_wait :  STD_LOGIC;
                 signal enable_nonzero_assertions :  STD_LOGIC;
-                signal end_xfer_arb_share_counter_term_pio_1_s1 :  STD_LOGIC;
+                signal end_xfer_arb_share_counter_term_rs_out_symbol_s1 :  STD_LOGIC;
                 signal in_a_read_cycle :  STD_LOGIC;
                 signal in_a_write_cycle :  STD_LOGIC;
-                signal internal_cpu_0_data_master_granted_pio_1_s1 :  STD_LOGIC;
-                signal internal_cpu_0_data_master_qualified_request_pio_1_s1 :  STD_LOGIC;
-                signal internal_cpu_0_data_master_requests_pio_1_s1 :  STD_LOGIC;
-                signal pio_1_s1_allgrants :  STD_LOGIC;
-                signal pio_1_s1_allow_new_arb_cycle :  STD_LOGIC;
-                signal pio_1_s1_any_bursting_master_saved_grant :  STD_LOGIC;
-                signal pio_1_s1_any_continuerequest :  STD_LOGIC;
-                signal pio_1_s1_arb_counter_enable :  STD_LOGIC;
-                signal pio_1_s1_arb_share_counter :  STD_LOGIC;
-                signal pio_1_s1_arb_share_counter_next_value :  STD_LOGIC;
-                signal pio_1_s1_arb_share_set_values :  STD_LOGIC;
-                signal pio_1_s1_beginbursttransfer_internal :  STD_LOGIC;
-                signal pio_1_s1_begins_xfer :  STD_LOGIC;
-                signal pio_1_s1_end_xfer :  STD_LOGIC;
-                signal pio_1_s1_firsttransfer :  STD_LOGIC;
-                signal pio_1_s1_grant_vector :  STD_LOGIC;
-                signal pio_1_s1_in_a_read_cycle :  STD_LOGIC;
-                signal pio_1_s1_in_a_write_cycle :  STD_LOGIC;
-                signal pio_1_s1_master_qreq_vector :  STD_LOGIC;
-                signal pio_1_s1_non_bursting_master_requests :  STD_LOGIC;
-                signal pio_1_s1_reg_firsttransfer :  STD_LOGIC;
-                signal pio_1_s1_slavearbiterlockenable :  STD_LOGIC;
-                signal pio_1_s1_slavearbiterlockenable2 :  STD_LOGIC;
-                signal pio_1_s1_unreg_firsttransfer :  STD_LOGIC;
-                signal pio_1_s1_waits_for_read :  STD_LOGIC;
-                signal pio_1_s1_waits_for_write :  STD_LOGIC;
-                signal shifted_address_to_pio_1_s1_from_cpu_0_data_master :  STD_LOGIC_VECTOR (13 DOWNTO 0);
-                signal wait_for_pio_1_s1_counter :  STD_LOGIC;
+                signal internal_cpu_0_data_master_granted_rs_out_symbol_s1 :  STD_LOGIC;
+                signal internal_cpu_0_data_master_qualified_request_rs_out_symbol_s1 :  STD_LOGIC;
+                signal internal_cpu_0_data_master_requests_rs_out_symbol_s1 :  STD_LOGIC;
+                signal rs_out_symbol_s1_allgrants :  STD_LOGIC;
+                signal rs_out_symbol_s1_allow_new_arb_cycle :  STD_LOGIC;
+                signal rs_out_symbol_s1_any_bursting_master_saved_grant :  STD_LOGIC;
+                signal rs_out_symbol_s1_any_continuerequest :  STD_LOGIC;
+                signal rs_out_symbol_s1_arb_counter_enable :  STD_LOGIC;
+                signal rs_out_symbol_s1_arb_share_counter :  STD_LOGIC;
+                signal rs_out_symbol_s1_arb_share_counter_next_value :  STD_LOGIC;
+                signal rs_out_symbol_s1_arb_share_set_values :  STD_LOGIC;
+                signal rs_out_symbol_s1_beginbursttransfer_internal :  STD_LOGIC;
+                signal rs_out_symbol_s1_begins_xfer :  STD_LOGIC;
+                signal rs_out_symbol_s1_end_xfer :  STD_LOGIC;
+                signal rs_out_symbol_s1_firsttransfer :  STD_LOGIC;
+                signal rs_out_symbol_s1_grant_vector :  STD_LOGIC;
+                signal rs_out_symbol_s1_in_a_read_cycle :  STD_LOGIC;
+                signal rs_out_symbol_s1_in_a_write_cycle :  STD_LOGIC;
+                signal rs_out_symbol_s1_master_qreq_vector :  STD_LOGIC;
+                signal rs_out_symbol_s1_non_bursting_master_requests :  STD_LOGIC;
+                signal rs_out_symbol_s1_reg_firsttransfer :  STD_LOGIC;
+                signal rs_out_symbol_s1_slavearbiterlockenable :  STD_LOGIC;
+                signal rs_out_symbol_s1_slavearbiterlockenable2 :  STD_LOGIC;
+                signal rs_out_symbol_s1_unreg_firsttransfer :  STD_LOGIC;
+                signal rs_out_symbol_s1_waits_for_read :  STD_LOGIC;
+                signal rs_out_symbol_s1_waits_for_write :  STD_LOGIC;
+                signal shifted_address_to_rs_out_symbol_s1_from_cpu_0_data_master :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal wait_for_rs_out_symbol_s1_counter :  STD_LOGIC;
 
 begin
 
@@ -1672,139 +1689,610 @@ begin
     if reset_n = '0' then
       d1_reasons_to_wait <= std_logic'('0');
     elsif clk'event and clk = '1' then
-      d1_reasons_to_wait <= NOT pio_1_s1_end_xfer;
+      d1_reasons_to_wait <= NOT rs_out_symbol_s1_end_xfer;
     end if;
 
   end process;
 
-  pio_1_s1_begins_xfer <= NOT d1_reasons_to_wait AND (internal_cpu_0_data_master_qualified_request_pio_1_s1);
-  --assign pio_1_s1_readdata_from_sa = pio_1_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
-  pio_1_s1_readdata_from_sa <= pio_1_s1_readdata;
-  internal_cpu_0_data_master_requests_pio_1_s1 <= to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 4) & std_logic_vector'("0000")) = std_logic_vector'("11000000000000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write));
-  --pio_1_s1_arb_share_counter set values, which is an e_mux
-  pio_1_s1_arb_share_set_values <= std_logic'('1');
-  --pio_1_s1_non_bursting_master_requests mux, which is an e_mux
-  pio_1_s1_non_bursting_master_requests <= internal_cpu_0_data_master_requests_pio_1_s1;
-  --pio_1_s1_any_bursting_master_saved_grant mux, which is an e_mux
-  pio_1_s1_any_bursting_master_saved_grant <= std_logic'('0');
-  --pio_1_s1_arb_share_counter_next_value assignment, which is an e_assign
-  pio_1_s1_arb_share_counter_next_value <= Vector_To_Std_Logic(A_WE_StdLogicVector((std_logic'(pio_1_s1_firsttransfer) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(pio_1_s1_arb_share_set_values))) - std_logic_vector'("000000000000000000000000000000001"))), A_WE_StdLogicVector((std_logic'(pio_1_s1_arb_share_counter) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(pio_1_s1_arb_share_counter))) - std_logic_vector'("000000000000000000000000000000001"))), std_logic_vector'("000000000000000000000000000000000"))));
-  --pio_1_s1_allgrants all slave grants, which is an e_mux
-  pio_1_s1_allgrants <= pio_1_s1_grant_vector;
-  --pio_1_s1_end_xfer assignment, which is an e_assign
-  pio_1_s1_end_xfer <= NOT ((pio_1_s1_waits_for_read OR pio_1_s1_waits_for_write));
-  --end_xfer_arb_share_counter_term_pio_1_s1 arb share counter enable term, which is an e_assign
-  end_xfer_arb_share_counter_term_pio_1_s1 <= pio_1_s1_end_xfer AND (((NOT pio_1_s1_any_bursting_master_saved_grant OR in_a_read_cycle) OR in_a_write_cycle));
-  --pio_1_s1_arb_share_counter arbitration counter enable, which is an e_assign
-  pio_1_s1_arb_counter_enable <= ((end_xfer_arb_share_counter_term_pio_1_s1 AND pio_1_s1_allgrants)) OR ((end_xfer_arb_share_counter_term_pio_1_s1 AND NOT pio_1_s1_non_bursting_master_requests));
-  --pio_1_s1_arb_share_counter counter, which is an e_register
+  rs_out_symbol_s1_begins_xfer <= NOT d1_reasons_to_wait AND (internal_cpu_0_data_master_qualified_request_rs_out_symbol_s1);
+  --assign rs_out_symbol_s1_readdata_from_sa = rs_out_symbol_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  rs_out_symbol_s1_readdata_from_sa <= rs_out_symbol_s1_readdata;
+  internal_cpu_0_data_master_requests_rs_out_symbol_s1 <= ((to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 4) & std_logic_vector'("0000")) = std_logic_vector'("11000000110000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write)))) AND cpu_0_data_master_read;
+  --rs_out_symbol_s1_arb_share_counter set values, which is an e_mux
+  rs_out_symbol_s1_arb_share_set_values <= std_logic'('1');
+  --rs_out_symbol_s1_non_bursting_master_requests mux, which is an e_mux
+  rs_out_symbol_s1_non_bursting_master_requests <= internal_cpu_0_data_master_requests_rs_out_symbol_s1;
+  --rs_out_symbol_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  rs_out_symbol_s1_any_bursting_master_saved_grant <= std_logic'('0');
+  --rs_out_symbol_s1_arb_share_counter_next_value assignment, which is an e_assign
+  rs_out_symbol_s1_arb_share_counter_next_value <= Vector_To_Std_Logic(A_WE_StdLogicVector((std_logic'(rs_out_symbol_s1_firsttransfer) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(rs_out_symbol_s1_arb_share_set_values))) - std_logic_vector'("000000000000000000000000000000001"))), A_WE_StdLogicVector((std_logic'(rs_out_symbol_s1_arb_share_counter) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(rs_out_symbol_s1_arb_share_counter))) - std_logic_vector'("000000000000000000000000000000001"))), std_logic_vector'("000000000000000000000000000000000"))));
+  --rs_out_symbol_s1_allgrants all slave grants, which is an e_mux
+  rs_out_symbol_s1_allgrants <= rs_out_symbol_s1_grant_vector;
+  --rs_out_symbol_s1_end_xfer assignment, which is an e_assign
+  rs_out_symbol_s1_end_xfer <= NOT ((rs_out_symbol_s1_waits_for_read OR rs_out_symbol_s1_waits_for_write));
+  --end_xfer_arb_share_counter_term_rs_out_symbol_s1 arb share counter enable term, which is an e_assign
+  end_xfer_arb_share_counter_term_rs_out_symbol_s1 <= rs_out_symbol_s1_end_xfer AND (((NOT rs_out_symbol_s1_any_bursting_master_saved_grant OR in_a_read_cycle) OR in_a_write_cycle));
+  --rs_out_symbol_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  rs_out_symbol_s1_arb_counter_enable <= ((end_xfer_arb_share_counter_term_rs_out_symbol_s1 AND rs_out_symbol_s1_allgrants)) OR ((end_xfer_arb_share_counter_term_rs_out_symbol_s1 AND NOT rs_out_symbol_s1_non_bursting_master_requests));
+  --rs_out_symbol_s1_arb_share_counter counter, which is an e_register
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      pio_1_s1_arb_share_counter <= std_logic'('0');
+      rs_out_symbol_s1_arb_share_counter <= std_logic'('0');
     elsif clk'event and clk = '1' then
-      if std_logic'(pio_1_s1_arb_counter_enable) = '1' then 
-        pio_1_s1_arb_share_counter <= pio_1_s1_arb_share_counter_next_value;
+      if std_logic'(rs_out_symbol_s1_arb_counter_enable) = '1' then 
+        rs_out_symbol_s1_arb_share_counter <= rs_out_symbol_s1_arb_share_counter_next_value;
       end if;
     end if;
 
   end process;
 
-  --pio_1_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  --rs_out_symbol_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      pio_1_s1_slavearbiterlockenable <= std_logic'('0');
+      rs_out_symbol_s1_slavearbiterlockenable <= std_logic'('0');
     elsif clk'event and clk = '1' then
-      if std_logic'((((pio_1_s1_master_qreq_vector AND end_xfer_arb_share_counter_term_pio_1_s1)) OR ((end_xfer_arb_share_counter_term_pio_1_s1 AND NOT pio_1_s1_non_bursting_master_requests)))) = '1' then 
-        pio_1_s1_slavearbiterlockenable <= pio_1_s1_arb_share_counter_next_value;
+      if std_logic'((((rs_out_symbol_s1_master_qreq_vector AND end_xfer_arb_share_counter_term_rs_out_symbol_s1)) OR ((end_xfer_arb_share_counter_term_rs_out_symbol_s1 AND NOT rs_out_symbol_s1_non_bursting_master_requests)))) = '1' then 
+        rs_out_symbol_s1_slavearbiterlockenable <= rs_out_symbol_s1_arb_share_counter_next_value;
       end if;
     end if;
 
   end process;
 
-  --cpu_0/data_master pio_1/s1 arbiterlock, which is an e_assign
-  cpu_0_data_master_arbiterlock <= pio_1_s1_slavearbiterlockenable AND cpu_0_data_master_continuerequest;
-  --pio_1_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
-  pio_1_s1_slavearbiterlockenable2 <= pio_1_s1_arb_share_counter_next_value;
-  --cpu_0/data_master pio_1/s1 arbiterlock2, which is an e_assign
-  cpu_0_data_master_arbiterlock2 <= pio_1_s1_slavearbiterlockenable2 AND cpu_0_data_master_continuerequest;
-  --pio_1_s1_any_continuerequest at least one master continues requesting, which is an e_assign
-  pio_1_s1_any_continuerequest <= std_logic'('1');
+  --cpu_0/data_master rs_out_symbol/s1 arbiterlock, which is an e_assign
+  cpu_0_data_master_arbiterlock <= rs_out_symbol_s1_slavearbiterlockenable AND cpu_0_data_master_continuerequest;
+  --rs_out_symbol_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  rs_out_symbol_s1_slavearbiterlockenable2 <= rs_out_symbol_s1_arb_share_counter_next_value;
+  --cpu_0/data_master rs_out_symbol/s1 arbiterlock2, which is an e_assign
+  cpu_0_data_master_arbiterlock2 <= rs_out_symbol_s1_slavearbiterlockenable2 AND cpu_0_data_master_continuerequest;
+  --rs_out_symbol_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  rs_out_symbol_s1_any_continuerequest <= std_logic'('1');
   --cpu_0_data_master_continuerequest continued request, which is an e_assign
   cpu_0_data_master_continuerequest <= std_logic'('1');
-  internal_cpu_0_data_master_qualified_request_pio_1_s1 <= internal_cpu_0_data_master_requests_pio_1_s1 AND NOT (((NOT cpu_0_data_master_waitrequest) AND cpu_0_data_master_write));
-  --pio_1_s1_writedata mux, which is an e_mux
-  pio_1_s1_writedata <= cpu_0_data_master_writedata;
+  internal_cpu_0_data_master_qualified_request_rs_out_symbol_s1 <= internal_cpu_0_data_master_requests_rs_out_symbol_s1;
   --master is always granted when requested
-  internal_cpu_0_data_master_granted_pio_1_s1 <= internal_cpu_0_data_master_qualified_request_pio_1_s1;
-  --cpu_0/data_master saved-grant pio_1/s1, which is an e_assign
-  cpu_0_data_master_saved_grant_pio_1_s1 <= internal_cpu_0_data_master_requests_pio_1_s1;
-  --allow new arb cycle for pio_1/s1, which is an e_assign
-  pio_1_s1_allow_new_arb_cycle <= std_logic'('1');
+  internal_cpu_0_data_master_granted_rs_out_symbol_s1 <= internal_cpu_0_data_master_qualified_request_rs_out_symbol_s1;
+  --cpu_0/data_master saved-grant rs_out_symbol/s1, which is an e_assign
+  cpu_0_data_master_saved_grant_rs_out_symbol_s1 <= internal_cpu_0_data_master_requests_rs_out_symbol_s1;
+  --allow new arb cycle for rs_out_symbol/s1, which is an e_assign
+  rs_out_symbol_s1_allow_new_arb_cycle <= std_logic'('1');
   --placeholder chosen master
-  pio_1_s1_grant_vector <= std_logic'('1');
+  rs_out_symbol_s1_grant_vector <= std_logic'('1');
   --placeholder vector of master qualified-requests
-  pio_1_s1_master_qreq_vector <= std_logic'('1');
-  --pio_1_s1_reset_n assignment, which is an e_assign
-  pio_1_s1_reset_n <= reset_n;
-  pio_1_s1_chipselect <= internal_cpu_0_data_master_granted_pio_1_s1;
-  --pio_1_s1_firsttransfer first transaction, which is an e_assign
-  pio_1_s1_firsttransfer <= A_WE_StdLogic((std_logic'(pio_1_s1_begins_xfer) = '1'), pio_1_s1_unreg_firsttransfer, pio_1_s1_reg_firsttransfer);
-  --pio_1_s1_unreg_firsttransfer first transaction, which is an e_assign
-  pio_1_s1_unreg_firsttransfer <= NOT ((pio_1_s1_slavearbiterlockenable AND pio_1_s1_any_continuerequest));
-  --pio_1_s1_reg_firsttransfer first transaction, which is an e_register
+  rs_out_symbol_s1_master_qreq_vector <= std_logic'('1');
+  --rs_out_symbol_s1_reset_n assignment, which is an e_assign
+  rs_out_symbol_s1_reset_n <= reset_n;
+  --rs_out_symbol_s1_firsttransfer first transaction, which is an e_assign
+  rs_out_symbol_s1_firsttransfer <= A_WE_StdLogic((std_logic'(rs_out_symbol_s1_begins_xfer) = '1'), rs_out_symbol_s1_unreg_firsttransfer, rs_out_symbol_s1_reg_firsttransfer);
+  --rs_out_symbol_s1_unreg_firsttransfer first transaction, which is an e_assign
+  rs_out_symbol_s1_unreg_firsttransfer <= NOT ((rs_out_symbol_s1_slavearbiterlockenable AND rs_out_symbol_s1_any_continuerequest));
+  --rs_out_symbol_s1_reg_firsttransfer first transaction, which is an e_register
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      pio_1_s1_reg_firsttransfer <= std_logic'('1');
+      rs_out_symbol_s1_reg_firsttransfer <= std_logic'('1');
     elsif clk'event and clk = '1' then
-      if std_logic'(pio_1_s1_begins_xfer) = '1' then 
-        pio_1_s1_reg_firsttransfer <= pio_1_s1_unreg_firsttransfer;
+      if std_logic'(rs_out_symbol_s1_begins_xfer) = '1' then 
+        rs_out_symbol_s1_reg_firsttransfer <= rs_out_symbol_s1_unreg_firsttransfer;
       end if;
     end if;
 
   end process;
 
-  --pio_1_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
-  pio_1_s1_beginbursttransfer_internal <= pio_1_s1_begins_xfer;
-  --~pio_1_s1_write_n assignment, which is an e_mux
-  pio_1_s1_write_n <= NOT ((internal_cpu_0_data_master_granted_pio_1_s1 AND cpu_0_data_master_write));
-  shifted_address_to_pio_1_s1_from_cpu_0_data_master <= cpu_0_data_master_address_to_slave;
-  --pio_1_s1_address mux, which is an e_mux
-  pio_1_s1_address <= A_EXT (A_SRL(shifted_address_to_pio_1_s1_from_cpu_0_data_master,std_logic_vector'("00000000000000000000000000000010")), 2);
-  --d1_pio_1_s1_end_xfer register, which is an e_register
+  --rs_out_symbol_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  rs_out_symbol_s1_beginbursttransfer_internal <= rs_out_symbol_s1_begins_xfer;
+  shifted_address_to_rs_out_symbol_s1_from_cpu_0_data_master <= cpu_0_data_master_address_to_slave;
+  --rs_out_symbol_s1_address mux, which is an e_mux
+  rs_out_symbol_s1_address <= A_EXT (A_SRL(shifted_address_to_rs_out_symbol_s1_from_cpu_0_data_master,std_logic_vector'("00000000000000000000000000000010")), 2);
+  --d1_rs_out_symbol_s1_end_xfer register, which is an e_register
   process (clk, reset_n)
   begin
     if reset_n = '0' then
-      d1_pio_1_s1_end_xfer <= std_logic'('1');
+      d1_rs_out_symbol_s1_end_xfer <= std_logic'('1');
     elsif clk'event and clk = '1' then
-      d1_pio_1_s1_end_xfer <= pio_1_s1_end_xfer;
+      d1_rs_out_symbol_s1_end_xfer <= rs_out_symbol_s1_end_xfer;
     end if;
 
   end process;
 
-  --pio_1_s1_waits_for_read in a cycle, which is an e_mux
-  pio_1_s1_waits_for_read <= pio_1_s1_in_a_read_cycle AND pio_1_s1_begins_xfer;
-  --pio_1_s1_in_a_read_cycle assignment, which is an e_assign
-  pio_1_s1_in_a_read_cycle <= internal_cpu_0_data_master_granted_pio_1_s1 AND cpu_0_data_master_read;
+  --rs_out_symbol_s1_waits_for_read in a cycle, which is an e_mux
+  rs_out_symbol_s1_waits_for_read <= rs_out_symbol_s1_in_a_read_cycle AND rs_out_symbol_s1_begins_xfer;
+  --rs_out_symbol_s1_in_a_read_cycle assignment, which is an e_assign
+  rs_out_symbol_s1_in_a_read_cycle <= internal_cpu_0_data_master_granted_rs_out_symbol_s1 AND cpu_0_data_master_read;
   --in_a_read_cycle assignment, which is an e_mux
-  in_a_read_cycle <= pio_1_s1_in_a_read_cycle;
-  --pio_1_s1_waits_for_write in a cycle, which is an e_mux
-  pio_1_s1_waits_for_write <= Vector_To_Std_Logic(((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(pio_1_s1_in_a_write_cycle))) AND std_logic_vector'("00000000000000000000000000000000")));
-  --pio_1_s1_in_a_write_cycle assignment, which is an e_assign
-  pio_1_s1_in_a_write_cycle <= internal_cpu_0_data_master_granted_pio_1_s1 AND cpu_0_data_master_write;
+  in_a_read_cycle <= rs_out_symbol_s1_in_a_read_cycle;
+  --rs_out_symbol_s1_waits_for_write in a cycle, which is an e_mux
+  rs_out_symbol_s1_waits_for_write <= Vector_To_Std_Logic(((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(rs_out_symbol_s1_in_a_write_cycle))) AND std_logic_vector'("00000000000000000000000000000000")));
+  --rs_out_symbol_s1_in_a_write_cycle assignment, which is an e_assign
+  rs_out_symbol_s1_in_a_write_cycle <= internal_cpu_0_data_master_granted_rs_out_symbol_s1 AND cpu_0_data_master_write;
   --in_a_write_cycle assignment, which is an e_mux
-  in_a_write_cycle <= pio_1_s1_in_a_write_cycle;
-  wait_for_pio_1_s1_counter <= std_logic'('0');
+  in_a_write_cycle <= rs_out_symbol_s1_in_a_write_cycle;
+  wait_for_rs_out_symbol_s1_counter <= std_logic'('0');
   --vhdl renameroo for output signals
-  cpu_0_data_master_granted_pio_1_s1 <= internal_cpu_0_data_master_granted_pio_1_s1;
+  cpu_0_data_master_granted_rs_out_symbol_s1 <= internal_cpu_0_data_master_granted_rs_out_symbol_s1;
   --vhdl renameroo for output signals
-  cpu_0_data_master_qualified_request_pio_1_s1 <= internal_cpu_0_data_master_qualified_request_pio_1_s1;
+  cpu_0_data_master_qualified_request_rs_out_symbol_s1 <= internal_cpu_0_data_master_qualified_request_rs_out_symbol_s1;
   --vhdl renameroo for output signals
-  cpu_0_data_master_requests_pio_1_s1 <= internal_cpu_0_data_master_requests_pio_1_s1;
+  cpu_0_data_master_requests_rs_out_symbol_s1 <= internal_cpu_0_data_master_requests_rs_out_symbol_s1;
 --synthesis translate_off
-    --pio_1/s1 enable non-zero assertions, which is an e_register
+    --rs_out_symbol/s1 enable non-zero assertions, which is an e_register
+    process (clk, reset_n)
+    begin
+      if reset_n = '0' then
+        enable_nonzero_assertions <= std_logic'('0');
+      elsif clk'event and clk = '1' then
+        enable_nonzero_assertions <= std_logic'('1');
+      end if;
+
+    end process;
+
+--synthesis translate_on
+
+end europa;
+
+
+
+-- turn off superfluous VHDL processor warnings 
+-- altera message_level Level1 
+-- altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+library altera;
+use altera.altera_europa_support_lib.all;
+
+library altera_mf;
+use altera_mf.altera_mf_components.all;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity symbol_ack_s1_arbitrator is 
+        port (
+              -- inputs:
+                 signal clk : IN STD_LOGIC;
+                 signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal cpu_0_data_master_read : IN STD_LOGIC;
+                 signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
+                 signal cpu_0_data_master_write : IN STD_LOGIC;
+                 signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal reset_n : IN STD_LOGIC;
+                 signal symbol_ack_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+              -- outputs:
+                 signal cpu_0_data_master_granted_symbol_ack_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_qualified_request_symbol_ack_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_read_data_valid_symbol_ack_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_requests_symbol_ack_s1 : OUT STD_LOGIC;
+                 signal d1_symbol_ack_s1_end_xfer : OUT STD_LOGIC;
+                 signal symbol_ack_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+                 signal symbol_ack_s1_chipselect : OUT STD_LOGIC;
+                 signal symbol_ack_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal symbol_ack_s1_reset_n : OUT STD_LOGIC;
+                 signal symbol_ack_s1_write_n : OUT STD_LOGIC;
+                 signal symbol_ack_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+              );
+end entity symbol_ack_s1_arbitrator;
+
+
+architecture europa of symbol_ack_s1_arbitrator is
+                signal cpu_0_data_master_arbiterlock :  STD_LOGIC;
+                signal cpu_0_data_master_arbiterlock2 :  STD_LOGIC;
+                signal cpu_0_data_master_continuerequest :  STD_LOGIC;
+                signal cpu_0_data_master_saved_grant_symbol_ack_s1 :  STD_LOGIC;
+                signal d1_reasons_to_wait :  STD_LOGIC;
+                signal enable_nonzero_assertions :  STD_LOGIC;
+                signal end_xfer_arb_share_counter_term_symbol_ack_s1 :  STD_LOGIC;
+                signal in_a_read_cycle :  STD_LOGIC;
+                signal in_a_write_cycle :  STD_LOGIC;
+                signal internal_cpu_0_data_master_granted_symbol_ack_s1 :  STD_LOGIC;
+                signal internal_cpu_0_data_master_qualified_request_symbol_ack_s1 :  STD_LOGIC;
+                signal internal_cpu_0_data_master_requests_symbol_ack_s1 :  STD_LOGIC;
+                signal shifted_address_to_symbol_ack_s1_from_cpu_0_data_master :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal symbol_ack_s1_allgrants :  STD_LOGIC;
+                signal symbol_ack_s1_allow_new_arb_cycle :  STD_LOGIC;
+                signal symbol_ack_s1_any_bursting_master_saved_grant :  STD_LOGIC;
+                signal symbol_ack_s1_any_continuerequest :  STD_LOGIC;
+                signal symbol_ack_s1_arb_counter_enable :  STD_LOGIC;
+                signal symbol_ack_s1_arb_share_counter :  STD_LOGIC;
+                signal symbol_ack_s1_arb_share_counter_next_value :  STD_LOGIC;
+                signal symbol_ack_s1_arb_share_set_values :  STD_LOGIC;
+                signal symbol_ack_s1_beginbursttransfer_internal :  STD_LOGIC;
+                signal symbol_ack_s1_begins_xfer :  STD_LOGIC;
+                signal symbol_ack_s1_end_xfer :  STD_LOGIC;
+                signal symbol_ack_s1_firsttransfer :  STD_LOGIC;
+                signal symbol_ack_s1_grant_vector :  STD_LOGIC;
+                signal symbol_ack_s1_in_a_read_cycle :  STD_LOGIC;
+                signal symbol_ack_s1_in_a_write_cycle :  STD_LOGIC;
+                signal symbol_ack_s1_master_qreq_vector :  STD_LOGIC;
+                signal symbol_ack_s1_non_bursting_master_requests :  STD_LOGIC;
+                signal symbol_ack_s1_reg_firsttransfer :  STD_LOGIC;
+                signal symbol_ack_s1_slavearbiterlockenable :  STD_LOGIC;
+                signal symbol_ack_s1_slavearbiterlockenable2 :  STD_LOGIC;
+                signal symbol_ack_s1_unreg_firsttransfer :  STD_LOGIC;
+                signal symbol_ack_s1_waits_for_read :  STD_LOGIC;
+                signal symbol_ack_s1_waits_for_write :  STD_LOGIC;
+                signal wait_for_symbol_ack_s1_counter :  STD_LOGIC;
+
+begin
+
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      d1_reasons_to_wait <= std_logic'('0');
+    elsif clk'event and clk = '1' then
+      d1_reasons_to_wait <= NOT symbol_ack_s1_end_xfer;
+    end if;
+
+  end process;
+
+  symbol_ack_s1_begins_xfer <= NOT d1_reasons_to_wait AND (internal_cpu_0_data_master_qualified_request_symbol_ack_s1);
+  --assign symbol_ack_s1_readdata_from_sa = symbol_ack_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  symbol_ack_s1_readdata_from_sa <= symbol_ack_s1_readdata;
+  internal_cpu_0_data_master_requests_symbol_ack_s1 <= to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 4) & std_logic_vector'("0000")) = std_logic_vector'("11000000010000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write));
+  --symbol_ack_s1_arb_share_counter set values, which is an e_mux
+  symbol_ack_s1_arb_share_set_values <= std_logic'('1');
+  --symbol_ack_s1_non_bursting_master_requests mux, which is an e_mux
+  symbol_ack_s1_non_bursting_master_requests <= internal_cpu_0_data_master_requests_symbol_ack_s1;
+  --symbol_ack_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  symbol_ack_s1_any_bursting_master_saved_grant <= std_logic'('0');
+  --symbol_ack_s1_arb_share_counter_next_value assignment, which is an e_assign
+  symbol_ack_s1_arb_share_counter_next_value <= Vector_To_Std_Logic(A_WE_StdLogicVector((std_logic'(symbol_ack_s1_firsttransfer) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_ack_s1_arb_share_set_values))) - std_logic_vector'("000000000000000000000000000000001"))), A_WE_StdLogicVector((std_logic'(symbol_ack_s1_arb_share_counter) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_ack_s1_arb_share_counter))) - std_logic_vector'("000000000000000000000000000000001"))), std_logic_vector'("000000000000000000000000000000000"))));
+  --symbol_ack_s1_allgrants all slave grants, which is an e_mux
+  symbol_ack_s1_allgrants <= symbol_ack_s1_grant_vector;
+  --symbol_ack_s1_end_xfer assignment, which is an e_assign
+  symbol_ack_s1_end_xfer <= NOT ((symbol_ack_s1_waits_for_read OR symbol_ack_s1_waits_for_write));
+  --end_xfer_arb_share_counter_term_symbol_ack_s1 arb share counter enable term, which is an e_assign
+  end_xfer_arb_share_counter_term_symbol_ack_s1 <= symbol_ack_s1_end_xfer AND (((NOT symbol_ack_s1_any_bursting_master_saved_grant OR in_a_read_cycle) OR in_a_write_cycle));
+  --symbol_ack_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  symbol_ack_s1_arb_counter_enable <= ((end_xfer_arb_share_counter_term_symbol_ack_s1 AND symbol_ack_s1_allgrants)) OR ((end_xfer_arb_share_counter_term_symbol_ack_s1 AND NOT symbol_ack_s1_non_bursting_master_requests));
+  --symbol_ack_s1_arb_share_counter counter, which is an e_register
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      symbol_ack_s1_arb_share_counter <= std_logic'('0');
+    elsif clk'event and clk = '1' then
+      if std_logic'(symbol_ack_s1_arb_counter_enable) = '1' then 
+        symbol_ack_s1_arb_share_counter <= symbol_ack_s1_arb_share_counter_next_value;
+      end if;
+    end if;
+
+  end process;
+
+  --symbol_ack_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      symbol_ack_s1_slavearbiterlockenable <= std_logic'('0');
+    elsif clk'event and clk = '1' then
+      if std_logic'((((symbol_ack_s1_master_qreq_vector AND end_xfer_arb_share_counter_term_symbol_ack_s1)) OR ((end_xfer_arb_share_counter_term_symbol_ack_s1 AND NOT symbol_ack_s1_non_bursting_master_requests)))) = '1' then 
+        symbol_ack_s1_slavearbiterlockenable <= symbol_ack_s1_arb_share_counter_next_value;
+      end if;
+    end if;
+
+  end process;
+
+  --cpu_0/data_master symbol_ack/s1 arbiterlock, which is an e_assign
+  cpu_0_data_master_arbiterlock <= symbol_ack_s1_slavearbiterlockenable AND cpu_0_data_master_continuerequest;
+  --symbol_ack_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  symbol_ack_s1_slavearbiterlockenable2 <= symbol_ack_s1_arb_share_counter_next_value;
+  --cpu_0/data_master symbol_ack/s1 arbiterlock2, which is an e_assign
+  cpu_0_data_master_arbiterlock2 <= symbol_ack_s1_slavearbiterlockenable2 AND cpu_0_data_master_continuerequest;
+  --symbol_ack_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  symbol_ack_s1_any_continuerequest <= std_logic'('1');
+  --cpu_0_data_master_continuerequest continued request, which is an e_assign
+  cpu_0_data_master_continuerequest <= std_logic'('1');
+  internal_cpu_0_data_master_qualified_request_symbol_ack_s1 <= internal_cpu_0_data_master_requests_symbol_ack_s1 AND NOT (((NOT cpu_0_data_master_waitrequest) AND cpu_0_data_master_write));
+  --symbol_ack_s1_writedata mux, which is an e_mux
+  symbol_ack_s1_writedata <= cpu_0_data_master_writedata;
+  --master is always granted when requested
+  internal_cpu_0_data_master_granted_symbol_ack_s1 <= internal_cpu_0_data_master_qualified_request_symbol_ack_s1;
+  --cpu_0/data_master saved-grant symbol_ack/s1, which is an e_assign
+  cpu_0_data_master_saved_grant_symbol_ack_s1 <= internal_cpu_0_data_master_requests_symbol_ack_s1;
+  --allow new arb cycle for symbol_ack/s1, which is an e_assign
+  symbol_ack_s1_allow_new_arb_cycle <= std_logic'('1');
+  --placeholder chosen master
+  symbol_ack_s1_grant_vector <= std_logic'('1');
+  --placeholder vector of master qualified-requests
+  symbol_ack_s1_master_qreq_vector <= std_logic'('1');
+  --symbol_ack_s1_reset_n assignment, which is an e_assign
+  symbol_ack_s1_reset_n <= reset_n;
+  symbol_ack_s1_chipselect <= internal_cpu_0_data_master_granted_symbol_ack_s1;
+  --symbol_ack_s1_firsttransfer first transaction, which is an e_assign
+  symbol_ack_s1_firsttransfer <= A_WE_StdLogic((std_logic'(symbol_ack_s1_begins_xfer) = '1'), symbol_ack_s1_unreg_firsttransfer, symbol_ack_s1_reg_firsttransfer);
+  --symbol_ack_s1_unreg_firsttransfer first transaction, which is an e_assign
+  symbol_ack_s1_unreg_firsttransfer <= NOT ((symbol_ack_s1_slavearbiterlockenable AND symbol_ack_s1_any_continuerequest));
+  --symbol_ack_s1_reg_firsttransfer first transaction, which is an e_register
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      symbol_ack_s1_reg_firsttransfer <= std_logic'('1');
+    elsif clk'event and clk = '1' then
+      if std_logic'(symbol_ack_s1_begins_xfer) = '1' then 
+        symbol_ack_s1_reg_firsttransfer <= symbol_ack_s1_unreg_firsttransfer;
+      end if;
+    end if;
+
+  end process;
+
+  --symbol_ack_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  symbol_ack_s1_beginbursttransfer_internal <= symbol_ack_s1_begins_xfer;
+  --~symbol_ack_s1_write_n assignment, which is an e_mux
+  symbol_ack_s1_write_n <= NOT ((internal_cpu_0_data_master_granted_symbol_ack_s1 AND cpu_0_data_master_write));
+  shifted_address_to_symbol_ack_s1_from_cpu_0_data_master <= cpu_0_data_master_address_to_slave;
+  --symbol_ack_s1_address mux, which is an e_mux
+  symbol_ack_s1_address <= A_EXT (A_SRL(shifted_address_to_symbol_ack_s1_from_cpu_0_data_master,std_logic_vector'("00000000000000000000000000000010")), 2);
+  --d1_symbol_ack_s1_end_xfer register, which is an e_register
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      d1_symbol_ack_s1_end_xfer <= std_logic'('1');
+    elsif clk'event and clk = '1' then
+      d1_symbol_ack_s1_end_xfer <= symbol_ack_s1_end_xfer;
+    end if;
+
+  end process;
+
+  --symbol_ack_s1_waits_for_read in a cycle, which is an e_mux
+  symbol_ack_s1_waits_for_read <= symbol_ack_s1_in_a_read_cycle AND symbol_ack_s1_begins_xfer;
+  --symbol_ack_s1_in_a_read_cycle assignment, which is an e_assign
+  symbol_ack_s1_in_a_read_cycle <= internal_cpu_0_data_master_granted_symbol_ack_s1 AND cpu_0_data_master_read;
+  --in_a_read_cycle assignment, which is an e_mux
+  in_a_read_cycle <= symbol_ack_s1_in_a_read_cycle;
+  --symbol_ack_s1_waits_for_write in a cycle, which is an e_mux
+  symbol_ack_s1_waits_for_write <= Vector_To_Std_Logic(((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_ack_s1_in_a_write_cycle))) AND std_logic_vector'("00000000000000000000000000000000")));
+  --symbol_ack_s1_in_a_write_cycle assignment, which is an e_assign
+  symbol_ack_s1_in_a_write_cycle <= internal_cpu_0_data_master_granted_symbol_ack_s1 AND cpu_0_data_master_write;
+  --in_a_write_cycle assignment, which is an e_mux
+  in_a_write_cycle <= symbol_ack_s1_in_a_write_cycle;
+  wait_for_symbol_ack_s1_counter <= std_logic'('0');
+  --vhdl renameroo for output signals
+  cpu_0_data_master_granted_symbol_ack_s1 <= internal_cpu_0_data_master_granted_symbol_ack_s1;
+  --vhdl renameroo for output signals
+  cpu_0_data_master_qualified_request_symbol_ack_s1 <= internal_cpu_0_data_master_qualified_request_symbol_ack_s1;
+  --vhdl renameroo for output signals
+  cpu_0_data_master_requests_symbol_ack_s1 <= internal_cpu_0_data_master_requests_symbol_ack_s1;
+--synthesis translate_off
+    --symbol_ack/s1 enable non-zero assertions, which is an e_register
+    process (clk, reset_n)
+    begin
+      if reset_n = '0' then
+        enable_nonzero_assertions <= std_logic'('0');
+      elsif clk'event and clk = '1' then
+        enable_nonzero_assertions <= std_logic'('1');
+      end if;
+
+    end process;
+
+--synthesis translate_on
+
+end europa;
+
+
+
+-- turn off superfluous VHDL processor warnings 
+-- altera message_level Level1 
+-- altera message_off 10034 10035 10036 10037 10230 10240 10030 
+
+library altera;
+use altera.altera_europa_support_lib.all;
+
+library altera_mf;
+use altera_mf.altera_mf_components.all;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity symbol_strobe_s1_arbitrator is 
+        port (
+              -- inputs:
+                 signal clk : IN STD_LOGIC;
+                 signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                 signal cpu_0_data_master_read : IN STD_LOGIC;
+                 signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
+                 signal cpu_0_data_master_write : IN STD_LOGIC;
+                 signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal reset_n : IN STD_LOGIC;
+                 signal symbol_strobe_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+              -- outputs:
+                 signal cpu_0_data_master_granted_symbol_strobe_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_qualified_request_symbol_strobe_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 : OUT STD_LOGIC;
+                 signal cpu_0_data_master_requests_symbol_strobe_s1 : OUT STD_LOGIC;
+                 signal d1_symbol_strobe_s1_end_xfer : OUT STD_LOGIC;
+                 signal symbol_strobe_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+                 signal symbol_strobe_s1_chipselect : OUT STD_LOGIC;
+                 signal symbol_strobe_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+                 signal symbol_strobe_s1_reset_n : OUT STD_LOGIC;
+                 signal symbol_strobe_s1_write_n : OUT STD_LOGIC;
+                 signal symbol_strobe_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+              );
+end entity symbol_strobe_s1_arbitrator;
+
+
+architecture europa of symbol_strobe_s1_arbitrator is
+                signal cpu_0_data_master_arbiterlock :  STD_LOGIC;
+                signal cpu_0_data_master_arbiterlock2 :  STD_LOGIC;
+                signal cpu_0_data_master_continuerequest :  STD_LOGIC;
+                signal cpu_0_data_master_saved_grant_symbol_strobe_s1 :  STD_LOGIC;
+                signal d1_reasons_to_wait :  STD_LOGIC;
+                signal enable_nonzero_assertions :  STD_LOGIC;
+                signal end_xfer_arb_share_counter_term_symbol_strobe_s1 :  STD_LOGIC;
+                signal in_a_read_cycle :  STD_LOGIC;
+                signal in_a_write_cycle :  STD_LOGIC;
+                signal internal_cpu_0_data_master_granted_symbol_strobe_s1 :  STD_LOGIC;
+                signal internal_cpu_0_data_master_qualified_request_symbol_strobe_s1 :  STD_LOGIC;
+                signal internal_cpu_0_data_master_requests_symbol_strobe_s1 :  STD_LOGIC;
+                signal shifted_address_to_symbol_strobe_s1_from_cpu_0_data_master :  STD_LOGIC_VECTOR (13 DOWNTO 0);
+                signal symbol_strobe_s1_allgrants :  STD_LOGIC;
+                signal symbol_strobe_s1_allow_new_arb_cycle :  STD_LOGIC;
+                signal symbol_strobe_s1_any_bursting_master_saved_grant :  STD_LOGIC;
+                signal symbol_strobe_s1_any_continuerequest :  STD_LOGIC;
+                signal symbol_strobe_s1_arb_counter_enable :  STD_LOGIC;
+                signal symbol_strobe_s1_arb_share_counter :  STD_LOGIC;
+                signal symbol_strobe_s1_arb_share_counter_next_value :  STD_LOGIC;
+                signal symbol_strobe_s1_arb_share_set_values :  STD_LOGIC;
+                signal symbol_strobe_s1_beginbursttransfer_internal :  STD_LOGIC;
+                signal symbol_strobe_s1_begins_xfer :  STD_LOGIC;
+                signal symbol_strobe_s1_end_xfer :  STD_LOGIC;
+                signal symbol_strobe_s1_firsttransfer :  STD_LOGIC;
+                signal symbol_strobe_s1_grant_vector :  STD_LOGIC;
+                signal symbol_strobe_s1_in_a_read_cycle :  STD_LOGIC;
+                signal symbol_strobe_s1_in_a_write_cycle :  STD_LOGIC;
+                signal symbol_strobe_s1_master_qreq_vector :  STD_LOGIC;
+                signal symbol_strobe_s1_non_bursting_master_requests :  STD_LOGIC;
+                signal symbol_strobe_s1_reg_firsttransfer :  STD_LOGIC;
+                signal symbol_strobe_s1_slavearbiterlockenable :  STD_LOGIC;
+                signal symbol_strobe_s1_slavearbiterlockenable2 :  STD_LOGIC;
+                signal symbol_strobe_s1_unreg_firsttransfer :  STD_LOGIC;
+                signal symbol_strobe_s1_waits_for_read :  STD_LOGIC;
+                signal symbol_strobe_s1_waits_for_write :  STD_LOGIC;
+                signal wait_for_symbol_strobe_s1_counter :  STD_LOGIC;
+
+begin
+
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      d1_reasons_to_wait <= std_logic'('0');
+    elsif clk'event and clk = '1' then
+      d1_reasons_to_wait <= NOT symbol_strobe_s1_end_xfer;
+    end if;
+
+  end process;
+
+  symbol_strobe_s1_begins_xfer <= NOT d1_reasons_to_wait AND (internal_cpu_0_data_master_qualified_request_symbol_strobe_s1);
+  --assign symbol_strobe_s1_readdata_from_sa = symbol_strobe_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
+  symbol_strobe_s1_readdata_from_sa <= symbol_strobe_s1_readdata;
+  internal_cpu_0_data_master_requests_symbol_strobe_s1 <= to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 4) & std_logic_vector'("0000")) = std_logic_vector'("11000000000000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write));
+  --symbol_strobe_s1_arb_share_counter set values, which is an e_mux
+  symbol_strobe_s1_arb_share_set_values <= std_logic'('1');
+  --symbol_strobe_s1_non_bursting_master_requests mux, which is an e_mux
+  symbol_strobe_s1_non_bursting_master_requests <= internal_cpu_0_data_master_requests_symbol_strobe_s1;
+  --symbol_strobe_s1_any_bursting_master_saved_grant mux, which is an e_mux
+  symbol_strobe_s1_any_bursting_master_saved_grant <= std_logic'('0');
+  --symbol_strobe_s1_arb_share_counter_next_value assignment, which is an e_assign
+  symbol_strobe_s1_arb_share_counter_next_value <= Vector_To_Std_Logic(A_WE_StdLogicVector((std_logic'(symbol_strobe_s1_firsttransfer) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_strobe_s1_arb_share_set_values))) - std_logic_vector'("000000000000000000000000000000001"))), A_WE_StdLogicVector((std_logic'(symbol_strobe_s1_arb_share_counter) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_strobe_s1_arb_share_counter))) - std_logic_vector'("000000000000000000000000000000001"))), std_logic_vector'("000000000000000000000000000000000"))));
+  --symbol_strobe_s1_allgrants all slave grants, which is an e_mux
+  symbol_strobe_s1_allgrants <= symbol_strobe_s1_grant_vector;
+  --symbol_strobe_s1_end_xfer assignment, which is an e_assign
+  symbol_strobe_s1_end_xfer <= NOT ((symbol_strobe_s1_waits_for_read OR symbol_strobe_s1_waits_for_write));
+  --end_xfer_arb_share_counter_term_symbol_strobe_s1 arb share counter enable term, which is an e_assign
+  end_xfer_arb_share_counter_term_symbol_strobe_s1 <= symbol_strobe_s1_end_xfer AND (((NOT symbol_strobe_s1_any_bursting_master_saved_grant OR in_a_read_cycle) OR in_a_write_cycle));
+  --symbol_strobe_s1_arb_share_counter arbitration counter enable, which is an e_assign
+  symbol_strobe_s1_arb_counter_enable <= ((end_xfer_arb_share_counter_term_symbol_strobe_s1 AND symbol_strobe_s1_allgrants)) OR ((end_xfer_arb_share_counter_term_symbol_strobe_s1 AND NOT symbol_strobe_s1_non_bursting_master_requests));
+  --symbol_strobe_s1_arb_share_counter counter, which is an e_register
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      symbol_strobe_s1_arb_share_counter <= std_logic'('0');
+    elsif clk'event and clk = '1' then
+      if std_logic'(symbol_strobe_s1_arb_counter_enable) = '1' then 
+        symbol_strobe_s1_arb_share_counter <= symbol_strobe_s1_arb_share_counter_next_value;
+      end if;
+    end if;
+
+  end process;
+
+  --symbol_strobe_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      symbol_strobe_s1_slavearbiterlockenable <= std_logic'('0');
+    elsif clk'event and clk = '1' then
+      if std_logic'((((symbol_strobe_s1_master_qreq_vector AND end_xfer_arb_share_counter_term_symbol_strobe_s1)) OR ((end_xfer_arb_share_counter_term_symbol_strobe_s1 AND NOT symbol_strobe_s1_non_bursting_master_requests)))) = '1' then 
+        symbol_strobe_s1_slavearbiterlockenable <= symbol_strobe_s1_arb_share_counter_next_value;
+      end if;
+    end if;
+
+  end process;
+
+  --cpu_0/data_master symbol_strobe/s1 arbiterlock, which is an e_assign
+  cpu_0_data_master_arbiterlock <= symbol_strobe_s1_slavearbiterlockenable AND cpu_0_data_master_continuerequest;
+  --symbol_strobe_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
+  symbol_strobe_s1_slavearbiterlockenable2 <= symbol_strobe_s1_arb_share_counter_next_value;
+  --cpu_0/data_master symbol_strobe/s1 arbiterlock2, which is an e_assign
+  cpu_0_data_master_arbiterlock2 <= symbol_strobe_s1_slavearbiterlockenable2 AND cpu_0_data_master_continuerequest;
+  --symbol_strobe_s1_any_continuerequest at least one master continues requesting, which is an e_assign
+  symbol_strobe_s1_any_continuerequest <= std_logic'('1');
+  --cpu_0_data_master_continuerequest continued request, which is an e_assign
+  cpu_0_data_master_continuerequest <= std_logic'('1');
+  internal_cpu_0_data_master_qualified_request_symbol_strobe_s1 <= internal_cpu_0_data_master_requests_symbol_strobe_s1 AND NOT (((NOT cpu_0_data_master_waitrequest) AND cpu_0_data_master_write));
+  --symbol_strobe_s1_writedata mux, which is an e_mux
+  symbol_strobe_s1_writedata <= cpu_0_data_master_writedata;
+  --master is always granted when requested
+  internal_cpu_0_data_master_granted_symbol_strobe_s1 <= internal_cpu_0_data_master_qualified_request_symbol_strobe_s1;
+  --cpu_0/data_master saved-grant symbol_strobe/s1, which is an e_assign
+  cpu_0_data_master_saved_grant_symbol_strobe_s1 <= internal_cpu_0_data_master_requests_symbol_strobe_s1;
+  --allow new arb cycle for symbol_strobe/s1, which is an e_assign
+  symbol_strobe_s1_allow_new_arb_cycle <= std_logic'('1');
+  --placeholder chosen master
+  symbol_strobe_s1_grant_vector <= std_logic'('1');
+  --placeholder vector of master qualified-requests
+  symbol_strobe_s1_master_qreq_vector <= std_logic'('1');
+  --symbol_strobe_s1_reset_n assignment, which is an e_assign
+  symbol_strobe_s1_reset_n <= reset_n;
+  symbol_strobe_s1_chipselect <= internal_cpu_0_data_master_granted_symbol_strobe_s1;
+  --symbol_strobe_s1_firsttransfer first transaction, which is an e_assign
+  symbol_strobe_s1_firsttransfer <= A_WE_StdLogic((std_logic'(symbol_strobe_s1_begins_xfer) = '1'), symbol_strobe_s1_unreg_firsttransfer, symbol_strobe_s1_reg_firsttransfer);
+  --symbol_strobe_s1_unreg_firsttransfer first transaction, which is an e_assign
+  symbol_strobe_s1_unreg_firsttransfer <= NOT ((symbol_strobe_s1_slavearbiterlockenable AND symbol_strobe_s1_any_continuerequest));
+  --symbol_strobe_s1_reg_firsttransfer first transaction, which is an e_register
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      symbol_strobe_s1_reg_firsttransfer <= std_logic'('1');
+    elsif clk'event and clk = '1' then
+      if std_logic'(symbol_strobe_s1_begins_xfer) = '1' then 
+        symbol_strobe_s1_reg_firsttransfer <= symbol_strobe_s1_unreg_firsttransfer;
+      end if;
+    end if;
+
+  end process;
+
+  --symbol_strobe_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
+  symbol_strobe_s1_beginbursttransfer_internal <= symbol_strobe_s1_begins_xfer;
+  --~symbol_strobe_s1_write_n assignment, which is an e_mux
+  symbol_strobe_s1_write_n <= NOT ((internal_cpu_0_data_master_granted_symbol_strobe_s1 AND cpu_0_data_master_write));
+  shifted_address_to_symbol_strobe_s1_from_cpu_0_data_master <= cpu_0_data_master_address_to_slave;
+  --symbol_strobe_s1_address mux, which is an e_mux
+  symbol_strobe_s1_address <= A_EXT (A_SRL(shifted_address_to_symbol_strobe_s1_from_cpu_0_data_master,std_logic_vector'("00000000000000000000000000000010")), 2);
+  --d1_symbol_strobe_s1_end_xfer register, which is an e_register
+  process (clk, reset_n)
+  begin
+    if reset_n = '0' then
+      d1_symbol_strobe_s1_end_xfer <= std_logic'('1');
+    elsif clk'event and clk = '1' then
+      d1_symbol_strobe_s1_end_xfer <= symbol_strobe_s1_end_xfer;
+    end if;
+
+  end process;
+
+  --symbol_strobe_s1_waits_for_read in a cycle, which is an e_mux
+  symbol_strobe_s1_waits_for_read <= symbol_strobe_s1_in_a_read_cycle AND symbol_strobe_s1_begins_xfer;
+  --symbol_strobe_s1_in_a_read_cycle assignment, which is an e_assign
+  symbol_strobe_s1_in_a_read_cycle <= internal_cpu_0_data_master_granted_symbol_strobe_s1 AND cpu_0_data_master_read;
+  --in_a_read_cycle assignment, which is an e_mux
+  in_a_read_cycle <= symbol_strobe_s1_in_a_read_cycle;
+  --symbol_strobe_s1_waits_for_write in a cycle, which is an e_mux
+  symbol_strobe_s1_waits_for_write <= Vector_To_Std_Logic(((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_strobe_s1_in_a_write_cycle))) AND std_logic_vector'("00000000000000000000000000000000")));
+  --symbol_strobe_s1_in_a_write_cycle assignment, which is an e_assign
+  symbol_strobe_s1_in_a_write_cycle <= internal_cpu_0_data_master_granted_symbol_strobe_s1 AND cpu_0_data_master_write;
+  --in_a_write_cycle assignment, which is an e_mux
+  in_a_write_cycle <= symbol_strobe_s1_in_a_write_cycle;
+  wait_for_symbol_strobe_s1_counter <= std_logic'('0');
+  --vhdl renameroo for output signals
+  cpu_0_data_master_granted_symbol_strobe_s1 <= internal_cpu_0_data_master_granted_symbol_strobe_s1;
+  --vhdl renameroo for output signals
+  cpu_0_data_master_qualified_request_symbol_strobe_s1 <= internal_cpu_0_data_master_qualified_request_symbol_strobe_s1;
+  --vhdl renameroo for output signals
+  cpu_0_data_master_requests_symbol_strobe_s1 <= internal_cpu_0_data_master_requests_symbol_strobe_s1;
+--synthesis translate_off
+    --symbol_strobe/s1 enable non-zero assertions, which is an e_register
     process (clk, reset_n)
     begin
       if reset_n = '0' then
@@ -1903,11 +2391,17 @@ entity HostBridge is
                  signal clk_0 : IN STD_LOGIC;
                  signal reset_n : IN STD_LOGIC;
 
-              -- the_pio_0
-                 signal in_port_to_the_pio_0 : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+              -- the_rs_in_symbol
+                 signal out_port_from_the_rs_in_symbol : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
 
-              -- the_pio_1
-                 signal out_port_from_the_pio_1 : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+              -- the_rs_out_symbol
+                 signal in_port_to_the_rs_out_symbol : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+
+              -- the_symbol_ack
+                 signal out_port_from_the_symbol_ack : OUT STD_LOGIC;
+
+              -- the_symbol_strobe
+                 signal out_port_from_the_symbol_strobe : OUT STD_LOGIC
               );
 end entity HostBridge;
 
@@ -1961,39 +2455,51 @@ component cpu_0_data_master_arbitrator is
                     signal cpu_0_data_master_granted_cpu_0_jtag_debug_module : IN STD_LOGIC;
                     signal cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                     signal cpu_0_data_master_granted_onchip_memory2_0_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_granted_pio_0_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_granted_pio_1_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_granted_rs_in_symbol_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_granted_rs_out_symbol_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_granted_symbol_ack_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_granted_symbol_strobe_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_onchip_memory2_0_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_qualified_request_pio_0_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_qualified_request_pio_1_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_qualified_request_rs_in_symbol_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_qualified_request_rs_out_symbol_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_qualified_request_symbol_ack_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_qualified_request_symbol_strobe_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_read : IN STD_LOGIC;
                     signal cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module : IN STD_LOGIC;
                     signal cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                     signal cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_read_data_valid_pio_0_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_read_data_valid_pio_1_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_read_data_valid_rs_in_symbol_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_read_data_valid_rs_out_symbol_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_read_data_valid_symbol_ack_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_cpu_0_jtag_debug_module : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_onchip_memory2_0_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_requests_pio_0_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_requests_pio_1_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_requests_rs_in_symbol_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_requests_rs_out_symbol_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_requests_symbol_ack_s1 : IN STD_LOGIC;
+                    signal cpu_0_data_master_requests_symbol_strobe_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_write : IN STD_LOGIC;
                     signal cpu_0_jtag_debug_module_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal d1_cpu_0_jtag_debug_module_end_xfer : IN STD_LOGIC;
                     signal d1_jtag_uart_0_avalon_jtag_slave_end_xfer : IN STD_LOGIC;
                     signal d1_onchip_memory2_0_s1_end_xfer : IN STD_LOGIC;
-                    signal d1_pio_0_s1_end_xfer : IN STD_LOGIC;
-                    signal d1_pio_1_s1_end_xfer : IN STD_LOGIC;
+                    signal d1_rs_in_symbol_s1_end_xfer : IN STD_LOGIC;
+                    signal d1_rs_out_symbol_s1_end_xfer : IN STD_LOGIC;
+                    signal d1_symbol_ack_s1_end_xfer : IN STD_LOGIC;
+                    signal d1_symbol_strobe_s1_end_xfer : IN STD_LOGIC;
                     signal jtag_uart_0_avalon_jtag_slave_irq_from_sa : IN STD_LOGIC;
                     signal jtag_uart_0_avalon_jtag_slave_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa : IN STD_LOGIC;
                     signal onchip_memory2_0_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal pio_0_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal pio_1_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 : IN STD_LOGIC;
                     signal reset_n : IN STD_LOGIC;
+                    signal rs_in_symbol_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal rs_out_symbol_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal symbol_ack_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal symbol_strobe_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 
                  -- outputs:
                     signal cpu_0_data_master_address_to_slave : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
@@ -2172,42 +2678,7 @@ component onchip_memory2_0 is
                  );
 end component onchip_memory2_0;
 
-component pio_0_s1_arbitrator is 
-           port (
-                 -- inputs:
-                    signal clk : IN STD_LOGIC;
-                    signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
-                    signal cpu_0_data_master_read : IN STD_LOGIC;
-                    signal cpu_0_data_master_write : IN STD_LOGIC;
-                    signal pio_0_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal reset_n : IN STD_LOGIC;
-
-                 -- outputs:
-                    signal cpu_0_data_master_granted_pio_0_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_qualified_request_pio_0_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_read_data_valid_pio_0_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_requests_pio_0_s1 : OUT STD_LOGIC;
-                    signal d1_pio_0_s1_end_xfer : OUT STD_LOGIC;
-                    signal pio_0_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-                    signal pio_0_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal pio_0_s1_reset_n : OUT STD_LOGIC
-                 );
-end component pio_0_s1_arbitrator;
-
-component pio_0 is 
-           port (
-                 -- inputs:
-                    signal address : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
-                    signal clk : IN STD_LOGIC;
-                    signal in_port : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-                    signal reset_n : IN STD_LOGIC;
-
-                 -- outputs:
-                    signal readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
-                 );
-end component pio_0;
-
-component pio_1_s1_arbitrator is 
+component rs_in_symbol_s1_arbitrator is 
            port (
                  -- inputs:
                     signal clk : IN STD_LOGIC;
@@ -2216,25 +2687,25 @@ component pio_1_s1_arbitrator is
                     signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
                     signal cpu_0_data_master_write : IN STD_LOGIC;
                     signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal pio_1_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal reset_n : IN STD_LOGIC;
+                    signal rs_in_symbol_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 
                  -- outputs:
-                    signal cpu_0_data_master_granted_pio_1_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_qualified_request_pio_1_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_read_data_valid_pio_1_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_requests_pio_1_s1 : OUT STD_LOGIC;
-                    signal d1_pio_1_s1_end_xfer : OUT STD_LOGIC;
-                    signal pio_1_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-                    signal pio_1_s1_chipselect : OUT STD_LOGIC;
-                    signal pio_1_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal pio_1_s1_reset_n : OUT STD_LOGIC;
-                    signal pio_1_s1_write_n : OUT STD_LOGIC;
-                    signal pio_1_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+                    signal cpu_0_data_master_granted_rs_in_symbol_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_qualified_request_rs_in_symbol_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_read_data_valid_rs_in_symbol_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_requests_rs_in_symbol_s1 : OUT STD_LOGIC;
+                    signal d1_rs_in_symbol_s1_end_xfer : OUT STD_LOGIC;
+                    signal rs_in_symbol_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+                    signal rs_in_symbol_s1_chipselect : OUT STD_LOGIC;
+                    signal rs_in_symbol_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal rs_in_symbol_s1_reset_n : OUT STD_LOGIC;
+                    signal rs_in_symbol_s1_write_n : OUT STD_LOGIC;
+                    signal rs_in_symbol_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
                  );
-end component pio_1_s1_arbitrator;
+end component rs_in_symbol_s1_arbitrator;
 
-component pio_1 is 
+component rs_in_symbol is 
            port (
                  -- inputs:
                     signal address : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
@@ -2248,7 +2719,128 @@ component pio_1 is
                     signal out_port : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
                     signal readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
                  );
-end component pio_1;
+end component rs_in_symbol;
+
+component rs_out_symbol_s1_arbitrator is 
+           port (
+                 -- inputs:
+                    signal clk : IN STD_LOGIC;
+                    signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal cpu_0_data_master_read : IN STD_LOGIC;
+                    signal cpu_0_data_master_write : IN STD_LOGIC;
+                    signal reset_n : IN STD_LOGIC;
+                    signal rs_out_symbol_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+                 -- outputs:
+                    signal cpu_0_data_master_granted_rs_out_symbol_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_qualified_request_rs_out_symbol_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_read_data_valid_rs_out_symbol_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_requests_rs_out_symbol_s1 : OUT STD_LOGIC;
+                    signal d1_rs_out_symbol_s1_end_xfer : OUT STD_LOGIC;
+                    signal rs_out_symbol_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+                    signal rs_out_symbol_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal rs_out_symbol_s1_reset_n : OUT STD_LOGIC
+                 );
+end component rs_out_symbol_s1_arbitrator;
+
+component rs_out_symbol is 
+           port (
+                 -- inputs:
+                    signal address : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+                    signal clk : IN STD_LOGIC;
+                    signal in_port : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+                    signal reset_n : IN STD_LOGIC;
+
+                 -- outputs:
+                    signal readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+                 );
+end component rs_out_symbol;
+
+component symbol_ack_s1_arbitrator is 
+           port (
+                 -- inputs:
+                    signal clk : IN STD_LOGIC;
+                    signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal cpu_0_data_master_read : IN STD_LOGIC;
+                    signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
+                    signal cpu_0_data_master_write : IN STD_LOGIC;
+                    signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal reset_n : IN STD_LOGIC;
+                    signal symbol_ack_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+                 -- outputs:
+                    signal cpu_0_data_master_granted_symbol_ack_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_qualified_request_symbol_ack_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_read_data_valid_symbol_ack_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_requests_symbol_ack_s1 : OUT STD_LOGIC;
+                    signal d1_symbol_ack_s1_end_xfer : OUT STD_LOGIC;
+                    signal symbol_ack_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+                    signal symbol_ack_s1_chipselect : OUT STD_LOGIC;
+                    signal symbol_ack_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal symbol_ack_s1_reset_n : OUT STD_LOGIC;
+                    signal symbol_ack_s1_write_n : OUT STD_LOGIC;
+                    signal symbol_ack_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+                 );
+end component symbol_ack_s1_arbitrator;
+
+component symbol_ack is 
+           port (
+                 -- inputs:
+                    signal address : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+                    signal chipselect : IN STD_LOGIC;
+                    signal clk : IN STD_LOGIC;
+                    signal reset_n : IN STD_LOGIC;
+                    signal write_n : IN STD_LOGIC;
+                    signal writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+                 -- outputs:
+                    signal out_port : OUT STD_LOGIC;
+                    signal readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+                 );
+end component symbol_ack;
+
+component symbol_strobe_s1_arbitrator is 
+           port (
+                 -- inputs:
+                    signal clk : IN STD_LOGIC;
+                    signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
+                    signal cpu_0_data_master_read : IN STD_LOGIC;
+                    signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
+                    signal cpu_0_data_master_write : IN STD_LOGIC;
+                    signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal reset_n : IN STD_LOGIC;
+                    signal symbol_strobe_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+                 -- outputs:
+                    signal cpu_0_data_master_granted_symbol_strobe_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_qualified_request_symbol_strobe_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 : OUT STD_LOGIC;
+                    signal cpu_0_data_master_requests_symbol_strobe_s1 : OUT STD_LOGIC;
+                    signal d1_symbol_strobe_s1_end_xfer : OUT STD_LOGIC;
+                    signal symbol_strobe_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+                    signal symbol_strobe_s1_chipselect : OUT STD_LOGIC;
+                    signal symbol_strobe_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+                    signal symbol_strobe_s1_reset_n : OUT STD_LOGIC;
+                    signal symbol_strobe_s1_write_n : OUT STD_LOGIC;
+                    signal symbol_strobe_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+                 );
+end component symbol_strobe_s1_arbitrator;
+
+component symbol_strobe is 
+           port (
+                 -- inputs:
+                    signal address : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+                    signal chipselect : IN STD_LOGIC;
+                    signal clk : IN STD_LOGIC;
+                    signal reset_n : IN STD_LOGIC;
+                    signal write_n : IN STD_LOGIC;
+                    signal writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+                 -- outputs:
+                    signal out_port : OUT STD_LOGIC;
+                    signal readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+                 );
+end component symbol_strobe;
 
 component HostBridge_reset_clk_0_domain_synch_module is 
            port (
@@ -2270,26 +2862,34 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal cpu_0_data_master_granted_cpu_0_jtag_debug_module :  STD_LOGIC;
                 signal cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave :  STD_LOGIC;
                 signal cpu_0_data_master_granted_onchip_memory2_0_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_granted_pio_0_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_granted_pio_1_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_granted_rs_in_symbol_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_granted_rs_out_symbol_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_granted_symbol_ack_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_granted_symbol_strobe_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_irq :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module :  STD_LOGIC;
                 signal cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave :  STD_LOGIC;
                 signal cpu_0_data_master_qualified_request_onchip_memory2_0_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_qualified_request_pio_0_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_qualified_request_pio_1_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_qualified_request_rs_in_symbol_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_qualified_request_rs_out_symbol_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_qualified_request_symbol_ack_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_qualified_request_symbol_strobe_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_read :  STD_LOGIC;
                 signal cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module :  STD_LOGIC;
                 signal cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave :  STD_LOGIC;
                 signal cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_read_data_valid_pio_0_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_read_data_valid_pio_1_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_read_data_valid_rs_in_symbol_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_read_data_valid_rs_out_symbol_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_read_data_valid_symbol_ack_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal cpu_0_data_master_requests_cpu_0_jtag_debug_module :  STD_LOGIC;
                 signal cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave :  STD_LOGIC;
                 signal cpu_0_data_master_requests_onchip_memory2_0_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_requests_pio_0_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_requests_pio_1_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_requests_rs_in_symbol_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_requests_rs_out_symbol_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_requests_symbol_ack_s1 :  STD_LOGIC;
+                signal cpu_0_data_master_requests_symbol_strobe_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_waitrequest :  STD_LOGIC;
                 signal cpu_0_data_master_write :  STD_LOGIC;
                 signal cpu_0_data_master_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -2321,9 +2921,13 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal d1_cpu_0_jtag_debug_module_end_xfer :  STD_LOGIC;
                 signal d1_jtag_uart_0_avalon_jtag_slave_end_xfer :  STD_LOGIC;
                 signal d1_onchip_memory2_0_s1_end_xfer :  STD_LOGIC;
-                signal d1_pio_0_s1_end_xfer :  STD_LOGIC;
-                signal d1_pio_1_s1_end_xfer :  STD_LOGIC;
-                signal internal_out_port_from_the_pio_1 :  STD_LOGIC_VECTOR (7 DOWNTO 0);
+                signal d1_rs_in_symbol_s1_end_xfer :  STD_LOGIC;
+                signal d1_rs_out_symbol_s1_end_xfer :  STD_LOGIC;
+                signal d1_symbol_ack_s1_end_xfer :  STD_LOGIC;
+                signal d1_symbol_strobe_s1_end_xfer :  STD_LOGIC;
+                signal internal_out_port_from_the_rs_in_symbol :  STD_LOGIC_VECTOR (7 DOWNTO 0);
+                signal internal_out_port_from_the_symbol_ack :  STD_LOGIC;
+                signal internal_out_port_from_the_symbol_strobe :  STD_LOGIC;
                 signal jtag_uart_0_avalon_jtag_slave_address :  STD_LOGIC;
                 signal jtag_uart_0_avalon_jtag_slave_chipselect :  STD_LOGIC;
                 signal jtag_uart_0_avalon_jtag_slave_dataavailable :  STD_LOGIC;
@@ -2350,19 +2954,33 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal onchip_memory2_0_s1_reset :  STD_LOGIC;
                 signal onchip_memory2_0_s1_write :  STD_LOGIC;
                 signal onchip_memory2_0_s1_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal pio_0_s1_address :  STD_LOGIC_VECTOR (1 DOWNTO 0);
-                signal pio_0_s1_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal pio_0_s1_readdata_from_sa :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal pio_0_s1_reset_n :  STD_LOGIC;
-                signal pio_1_s1_address :  STD_LOGIC_VECTOR (1 DOWNTO 0);
-                signal pio_1_s1_chipselect :  STD_LOGIC;
-                signal pio_1_s1_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal pio_1_s1_readdata_from_sa :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal pio_1_s1_reset_n :  STD_LOGIC;
-                signal pio_1_s1_write_n :  STD_LOGIC;
-                signal pio_1_s1_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 :  STD_LOGIC;
                 signal reset_n_sources :  STD_LOGIC;
+                signal rs_in_symbol_s1_address :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+                signal rs_in_symbol_s1_chipselect :  STD_LOGIC;
+                signal rs_in_symbol_s1_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal rs_in_symbol_s1_readdata_from_sa :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal rs_in_symbol_s1_reset_n :  STD_LOGIC;
+                signal rs_in_symbol_s1_write_n :  STD_LOGIC;
+                signal rs_in_symbol_s1_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal rs_out_symbol_s1_address :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+                signal rs_out_symbol_s1_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal rs_out_symbol_s1_readdata_from_sa :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal rs_out_symbol_s1_reset_n :  STD_LOGIC;
+                signal symbol_ack_s1_address :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+                signal symbol_ack_s1_chipselect :  STD_LOGIC;
+                signal symbol_ack_s1_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal symbol_ack_s1_readdata_from_sa :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal symbol_ack_s1_reset_n :  STD_LOGIC;
+                signal symbol_ack_s1_write_n :  STD_LOGIC;
+                signal symbol_ack_s1_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal symbol_strobe_s1_address :  STD_LOGIC_VECTOR (1 DOWNTO 0);
+                signal symbol_strobe_s1_chipselect :  STD_LOGIC;
+                signal symbol_strobe_s1_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal symbol_strobe_s1_readdata_from_sa :  STD_LOGIC_VECTOR (31 DOWNTO 0);
+                signal symbol_strobe_s1_reset_n :  STD_LOGIC;
+                signal symbol_strobe_s1_write_n :  STD_LOGIC;
+                signal symbol_strobe_s1_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
 
 begin
 
@@ -2416,39 +3034,51 @@ begin
       cpu_0_data_master_granted_cpu_0_jtag_debug_module => cpu_0_data_master_granted_cpu_0_jtag_debug_module,
       cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave => cpu_0_data_master_granted_jtag_uart_0_avalon_jtag_slave,
       cpu_0_data_master_granted_onchip_memory2_0_s1 => cpu_0_data_master_granted_onchip_memory2_0_s1,
-      cpu_0_data_master_granted_pio_0_s1 => cpu_0_data_master_granted_pio_0_s1,
-      cpu_0_data_master_granted_pio_1_s1 => cpu_0_data_master_granted_pio_1_s1,
+      cpu_0_data_master_granted_rs_in_symbol_s1 => cpu_0_data_master_granted_rs_in_symbol_s1,
+      cpu_0_data_master_granted_rs_out_symbol_s1 => cpu_0_data_master_granted_rs_out_symbol_s1,
+      cpu_0_data_master_granted_symbol_ack_s1 => cpu_0_data_master_granted_symbol_ack_s1,
+      cpu_0_data_master_granted_symbol_strobe_s1 => cpu_0_data_master_granted_symbol_strobe_s1,
       cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module => cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module,
       cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave => cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave,
       cpu_0_data_master_qualified_request_onchip_memory2_0_s1 => cpu_0_data_master_qualified_request_onchip_memory2_0_s1,
-      cpu_0_data_master_qualified_request_pio_0_s1 => cpu_0_data_master_qualified_request_pio_0_s1,
-      cpu_0_data_master_qualified_request_pio_1_s1 => cpu_0_data_master_qualified_request_pio_1_s1,
+      cpu_0_data_master_qualified_request_rs_in_symbol_s1 => cpu_0_data_master_qualified_request_rs_in_symbol_s1,
+      cpu_0_data_master_qualified_request_rs_out_symbol_s1 => cpu_0_data_master_qualified_request_rs_out_symbol_s1,
+      cpu_0_data_master_qualified_request_symbol_ack_s1 => cpu_0_data_master_qualified_request_symbol_ack_s1,
+      cpu_0_data_master_qualified_request_symbol_strobe_s1 => cpu_0_data_master_qualified_request_symbol_strobe_s1,
       cpu_0_data_master_read => cpu_0_data_master_read,
       cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module => cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module,
       cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave => cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave,
       cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 => cpu_0_data_master_read_data_valid_onchip_memory2_0_s1,
-      cpu_0_data_master_read_data_valid_pio_0_s1 => cpu_0_data_master_read_data_valid_pio_0_s1,
-      cpu_0_data_master_read_data_valid_pio_1_s1 => cpu_0_data_master_read_data_valid_pio_1_s1,
+      cpu_0_data_master_read_data_valid_rs_in_symbol_s1 => cpu_0_data_master_read_data_valid_rs_in_symbol_s1,
+      cpu_0_data_master_read_data_valid_rs_out_symbol_s1 => cpu_0_data_master_read_data_valid_rs_out_symbol_s1,
+      cpu_0_data_master_read_data_valid_symbol_ack_s1 => cpu_0_data_master_read_data_valid_symbol_ack_s1,
+      cpu_0_data_master_read_data_valid_symbol_strobe_s1 => cpu_0_data_master_read_data_valid_symbol_strobe_s1,
       cpu_0_data_master_requests_cpu_0_jtag_debug_module => cpu_0_data_master_requests_cpu_0_jtag_debug_module,
       cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave => cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave,
       cpu_0_data_master_requests_onchip_memory2_0_s1 => cpu_0_data_master_requests_onchip_memory2_0_s1,
-      cpu_0_data_master_requests_pio_0_s1 => cpu_0_data_master_requests_pio_0_s1,
-      cpu_0_data_master_requests_pio_1_s1 => cpu_0_data_master_requests_pio_1_s1,
+      cpu_0_data_master_requests_rs_in_symbol_s1 => cpu_0_data_master_requests_rs_in_symbol_s1,
+      cpu_0_data_master_requests_rs_out_symbol_s1 => cpu_0_data_master_requests_rs_out_symbol_s1,
+      cpu_0_data_master_requests_symbol_ack_s1 => cpu_0_data_master_requests_symbol_ack_s1,
+      cpu_0_data_master_requests_symbol_strobe_s1 => cpu_0_data_master_requests_symbol_strobe_s1,
       cpu_0_data_master_write => cpu_0_data_master_write,
       cpu_0_jtag_debug_module_readdata_from_sa => cpu_0_jtag_debug_module_readdata_from_sa,
       d1_cpu_0_jtag_debug_module_end_xfer => d1_cpu_0_jtag_debug_module_end_xfer,
       d1_jtag_uart_0_avalon_jtag_slave_end_xfer => d1_jtag_uart_0_avalon_jtag_slave_end_xfer,
       d1_onchip_memory2_0_s1_end_xfer => d1_onchip_memory2_0_s1_end_xfer,
-      d1_pio_0_s1_end_xfer => d1_pio_0_s1_end_xfer,
-      d1_pio_1_s1_end_xfer => d1_pio_1_s1_end_xfer,
+      d1_rs_in_symbol_s1_end_xfer => d1_rs_in_symbol_s1_end_xfer,
+      d1_rs_out_symbol_s1_end_xfer => d1_rs_out_symbol_s1_end_xfer,
+      d1_symbol_ack_s1_end_xfer => d1_symbol_ack_s1_end_xfer,
+      d1_symbol_strobe_s1_end_xfer => d1_symbol_strobe_s1_end_xfer,
       jtag_uart_0_avalon_jtag_slave_irq_from_sa => jtag_uart_0_avalon_jtag_slave_irq_from_sa,
       jtag_uart_0_avalon_jtag_slave_readdata_from_sa => jtag_uart_0_avalon_jtag_slave_readdata_from_sa,
       jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa => jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa,
       onchip_memory2_0_s1_readdata_from_sa => onchip_memory2_0_s1_readdata_from_sa,
-      pio_0_s1_readdata_from_sa => pio_0_s1_readdata_from_sa,
-      pio_1_s1_readdata_from_sa => pio_1_s1_readdata_from_sa,
       registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1 => registered_cpu_0_data_master_read_data_valid_onchip_memory2_0_s1,
-      reset_n => clk_0_reset_n
+      reset_n => clk_0_reset_n,
+      rs_in_symbol_s1_readdata_from_sa => rs_in_symbol_s1_readdata_from_sa,
+      rs_out_symbol_s1_readdata_from_sa => rs_out_symbol_s1_readdata_from_sa,
+      symbol_ack_s1_readdata_from_sa => symbol_ack_s1_readdata_from_sa,
+      symbol_strobe_s1_readdata_from_sa => symbol_strobe_s1_readdata_from_sa
     );
 
 
@@ -2609,73 +3239,151 @@ begin
     );
 
 
-  --the_pio_0_s1, which is an e_instance
-  the_pio_0_s1 : pio_0_s1_arbitrator
+  --the_rs_in_symbol_s1, which is an e_instance
+  the_rs_in_symbol_s1 : rs_in_symbol_s1_arbitrator
     port map(
-      cpu_0_data_master_granted_pio_0_s1 => cpu_0_data_master_granted_pio_0_s1,
-      cpu_0_data_master_qualified_request_pio_0_s1 => cpu_0_data_master_qualified_request_pio_0_s1,
-      cpu_0_data_master_read_data_valid_pio_0_s1 => cpu_0_data_master_read_data_valid_pio_0_s1,
-      cpu_0_data_master_requests_pio_0_s1 => cpu_0_data_master_requests_pio_0_s1,
-      d1_pio_0_s1_end_xfer => d1_pio_0_s1_end_xfer,
-      pio_0_s1_address => pio_0_s1_address,
-      pio_0_s1_readdata_from_sa => pio_0_s1_readdata_from_sa,
-      pio_0_s1_reset_n => pio_0_s1_reset_n,
-      clk => clk_0,
-      cpu_0_data_master_address_to_slave => cpu_0_data_master_address_to_slave,
-      cpu_0_data_master_read => cpu_0_data_master_read,
-      cpu_0_data_master_write => cpu_0_data_master_write,
-      pio_0_s1_readdata => pio_0_s1_readdata,
-      reset_n => clk_0_reset_n
-    );
-
-
-  --the_pio_0, which is an e_ptf_instance
-  the_pio_0 : pio_0
-    port map(
-      readdata => pio_0_s1_readdata,
-      address => pio_0_s1_address,
-      clk => clk_0,
-      in_port => in_port_to_the_pio_0,
-      reset_n => pio_0_s1_reset_n
-    );
-
-
-  --the_pio_1_s1, which is an e_instance
-  the_pio_1_s1 : pio_1_s1_arbitrator
-    port map(
-      cpu_0_data_master_granted_pio_1_s1 => cpu_0_data_master_granted_pio_1_s1,
-      cpu_0_data_master_qualified_request_pio_1_s1 => cpu_0_data_master_qualified_request_pio_1_s1,
-      cpu_0_data_master_read_data_valid_pio_1_s1 => cpu_0_data_master_read_data_valid_pio_1_s1,
-      cpu_0_data_master_requests_pio_1_s1 => cpu_0_data_master_requests_pio_1_s1,
-      d1_pio_1_s1_end_xfer => d1_pio_1_s1_end_xfer,
-      pio_1_s1_address => pio_1_s1_address,
-      pio_1_s1_chipselect => pio_1_s1_chipselect,
-      pio_1_s1_readdata_from_sa => pio_1_s1_readdata_from_sa,
-      pio_1_s1_reset_n => pio_1_s1_reset_n,
-      pio_1_s1_write_n => pio_1_s1_write_n,
-      pio_1_s1_writedata => pio_1_s1_writedata,
+      cpu_0_data_master_granted_rs_in_symbol_s1 => cpu_0_data_master_granted_rs_in_symbol_s1,
+      cpu_0_data_master_qualified_request_rs_in_symbol_s1 => cpu_0_data_master_qualified_request_rs_in_symbol_s1,
+      cpu_0_data_master_read_data_valid_rs_in_symbol_s1 => cpu_0_data_master_read_data_valid_rs_in_symbol_s1,
+      cpu_0_data_master_requests_rs_in_symbol_s1 => cpu_0_data_master_requests_rs_in_symbol_s1,
+      d1_rs_in_symbol_s1_end_xfer => d1_rs_in_symbol_s1_end_xfer,
+      rs_in_symbol_s1_address => rs_in_symbol_s1_address,
+      rs_in_symbol_s1_chipselect => rs_in_symbol_s1_chipselect,
+      rs_in_symbol_s1_readdata_from_sa => rs_in_symbol_s1_readdata_from_sa,
+      rs_in_symbol_s1_reset_n => rs_in_symbol_s1_reset_n,
+      rs_in_symbol_s1_write_n => rs_in_symbol_s1_write_n,
+      rs_in_symbol_s1_writedata => rs_in_symbol_s1_writedata,
       clk => clk_0,
       cpu_0_data_master_address_to_slave => cpu_0_data_master_address_to_slave,
       cpu_0_data_master_read => cpu_0_data_master_read,
       cpu_0_data_master_waitrequest => cpu_0_data_master_waitrequest,
       cpu_0_data_master_write => cpu_0_data_master_write,
       cpu_0_data_master_writedata => cpu_0_data_master_writedata,
-      pio_1_s1_readdata => pio_1_s1_readdata,
-      reset_n => clk_0_reset_n
+      reset_n => clk_0_reset_n,
+      rs_in_symbol_s1_readdata => rs_in_symbol_s1_readdata
     );
 
 
-  --the_pio_1, which is an e_ptf_instance
-  the_pio_1 : pio_1
+  --the_rs_in_symbol, which is an e_ptf_instance
+  the_rs_in_symbol : rs_in_symbol
     port map(
-      out_port => internal_out_port_from_the_pio_1,
-      readdata => pio_1_s1_readdata,
-      address => pio_1_s1_address,
-      chipselect => pio_1_s1_chipselect,
+      out_port => internal_out_port_from_the_rs_in_symbol,
+      readdata => rs_in_symbol_s1_readdata,
+      address => rs_in_symbol_s1_address,
+      chipselect => rs_in_symbol_s1_chipselect,
       clk => clk_0,
-      reset_n => pio_1_s1_reset_n,
-      write_n => pio_1_s1_write_n,
-      writedata => pio_1_s1_writedata
+      reset_n => rs_in_symbol_s1_reset_n,
+      write_n => rs_in_symbol_s1_write_n,
+      writedata => rs_in_symbol_s1_writedata
+    );
+
+
+  --the_rs_out_symbol_s1, which is an e_instance
+  the_rs_out_symbol_s1 : rs_out_symbol_s1_arbitrator
+    port map(
+      cpu_0_data_master_granted_rs_out_symbol_s1 => cpu_0_data_master_granted_rs_out_symbol_s1,
+      cpu_0_data_master_qualified_request_rs_out_symbol_s1 => cpu_0_data_master_qualified_request_rs_out_symbol_s1,
+      cpu_0_data_master_read_data_valid_rs_out_symbol_s1 => cpu_0_data_master_read_data_valid_rs_out_symbol_s1,
+      cpu_0_data_master_requests_rs_out_symbol_s1 => cpu_0_data_master_requests_rs_out_symbol_s1,
+      d1_rs_out_symbol_s1_end_xfer => d1_rs_out_symbol_s1_end_xfer,
+      rs_out_symbol_s1_address => rs_out_symbol_s1_address,
+      rs_out_symbol_s1_readdata_from_sa => rs_out_symbol_s1_readdata_from_sa,
+      rs_out_symbol_s1_reset_n => rs_out_symbol_s1_reset_n,
+      clk => clk_0,
+      cpu_0_data_master_address_to_slave => cpu_0_data_master_address_to_slave,
+      cpu_0_data_master_read => cpu_0_data_master_read,
+      cpu_0_data_master_write => cpu_0_data_master_write,
+      reset_n => clk_0_reset_n,
+      rs_out_symbol_s1_readdata => rs_out_symbol_s1_readdata
+    );
+
+
+  --the_rs_out_symbol, which is an e_ptf_instance
+  the_rs_out_symbol : rs_out_symbol
+    port map(
+      readdata => rs_out_symbol_s1_readdata,
+      address => rs_out_symbol_s1_address,
+      clk => clk_0,
+      in_port => in_port_to_the_rs_out_symbol,
+      reset_n => rs_out_symbol_s1_reset_n
+    );
+
+
+  --the_symbol_ack_s1, which is an e_instance
+  the_symbol_ack_s1 : symbol_ack_s1_arbitrator
+    port map(
+      cpu_0_data_master_granted_symbol_ack_s1 => cpu_0_data_master_granted_symbol_ack_s1,
+      cpu_0_data_master_qualified_request_symbol_ack_s1 => cpu_0_data_master_qualified_request_symbol_ack_s1,
+      cpu_0_data_master_read_data_valid_symbol_ack_s1 => cpu_0_data_master_read_data_valid_symbol_ack_s1,
+      cpu_0_data_master_requests_symbol_ack_s1 => cpu_0_data_master_requests_symbol_ack_s1,
+      d1_symbol_ack_s1_end_xfer => d1_symbol_ack_s1_end_xfer,
+      symbol_ack_s1_address => symbol_ack_s1_address,
+      symbol_ack_s1_chipselect => symbol_ack_s1_chipselect,
+      symbol_ack_s1_readdata_from_sa => symbol_ack_s1_readdata_from_sa,
+      symbol_ack_s1_reset_n => symbol_ack_s1_reset_n,
+      symbol_ack_s1_write_n => symbol_ack_s1_write_n,
+      symbol_ack_s1_writedata => symbol_ack_s1_writedata,
+      clk => clk_0,
+      cpu_0_data_master_address_to_slave => cpu_0_data_master_address_to_slave,
+      cpu_0_data_master_read => cpu_0_data_master_read,
+      cpu_0_data_master_waitrequest => cpu_0_data_master_waitrequest,
+      cpu_0_data_master_write => cpu_0_data_master_write,
+      cpu_0_data_master_writedata => cpu_0_data_master_writedata,
+      reset_n => clk_0_reset_n,
+      symbol_ack_s1_readdata => symbol_ack_s1_readdata
+    );
+
+
+  --the_symbol_ack, which is an e_ptf_instance
+  the_symbol_ack : symbol_ack
+    port map(
+      out_port => internal_out_port_from_the_symbol_ack,
+      readdata => symbol_ack_s1_readdata,
+      address => symbol_ack_s1_address,
+      chipselect => symbol_ack_s1_chipselect,
+      clk => clk_0,
+      reset_n => symbol_ack_s1_reset_n,
+      write_n => symbol_ack_s1_write_n,
+      writedata => symbol_ack_s1_writedata
+    );
+
+
+  --the_symbol_strobe_s1, which is an e_instance
+  the_symbol_strobe_s1 : symbol_strobe_s1_arbitrator
+    port map(
+      cpu_0_data_master_granted_symbol_strobe_s1 => cpu_0_data_master_granted_symbol_strobe_s1,
+      cpu_0_data_master_qualified_request_symbol_strobe_s1 => cpu_0_data_master_qualified_request_symbol_strobe_s1,
+      cpu_0_data_master_read_data_valid_symbol_strobe_s1 => cpu_0_data_master_read_data_valid_symbol_strobe_s1,
+      cpu_0_data_master_requests_symbol_strobe_s1 => cpu_0_data_master_requests_symbol_strobe_s1,
+      d1_symbol_strobe_s1_end_xfer => d1_symbol_strobe_s1_end_xfer,
+      symbol_strobe_s1_address => symbol_strobe_s1_address,
+      symbol_strobe_s1_chipselect => symbol_strobe_s1_chipselect,
+      symbol_strobe_s1_readdata_from_sa => symbol_strobe_s1_readdata_from_sa,
+      symbol_strobe_s1_reset_n => symbol_strobe_s1_reset_n,
+      symbol_strobe_s1_write_n => symbol_strobe_s1_write_n,
+      symbol_strobe_s1_writedata => symbol_strobe_s1_writedata,
+      clk => clk_0,
+      cpu_0_data_master_address_to_slave => cpu_0_data_master_address_to_slave,
+      cpu_0_data_master_read => cpu_0_data_master_read,
+      cpu_0_data_master_waitrequest => cpu_0_data_master_waitrequest,
+      cpu_0_data_master_write => cpu_0_data_master_write,
+      cpu_0_data_master_writedata => cpu_0_data_master_writedata,
+      reset_n => clk_0_reset_n,
+      symbol_strobe_s1_readdata => symbol_strobe_s1_readdata
+    );
+
+
+  --the_symbol_strobe, which is an e_ptf_instance
+  the_symbol_strobe : symbol_strobe
+    port map(
+      out_port => internal_out_port_from_the_symbol_strobe,
+      readdata => symbol_strobe_s1_readdata,
+      address => symbol_strobe_s1_address,
+      chipselect => symbol_strobe_s1_chipselect,
+      clk => clk_0,
+      reset_n => symbol_strobe_s1_reset_n,
+      write_n => symbol_strobe_s1_write_n,
+      writedata => symbol_strobe_s1_writedata
     );
 
 
@@ -2693,7 +3401,11 @@ begin
   --reset sources mux, which is an e_mux
   reset_n_sources <= Vector_To_Std_Logic(NOT (((((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(NOT reset_n))) OR std_logic_vector'("00000000000000000000000000000000")) OR (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_jtag_debug_module_resetrequest_from_sa)))) OR (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_jtag_debug_module_resetrequest_from_sa))))));
   --vhdl renameroo for output signals
-  out_port_from_the_pio_1 <= internal_out_port_from_the_pio_1;
+  out_port_from_the_rs_in_symbol <= internal_out_port_from_the_rs_in_symbol;
+  --vhdl renameroo for output signals
+  out_port_from_the_symbol_ack <= internal_out_port_from_the_symbol_ack;
+  --vhdl renameroo for output signals
+  out_port_from_the_symbol_strobe <= internal_out_port_from_the_symbol_strobe;
 
 end europa;
 
@@ -2728,20 +3440,28 @@ component HostBridge is
                     signal clk_0 : IN STD_LOGIC;
                     signal reset_n : IN STD_LOGIC;
 
-                 -- the_pio_0
-                    signal in_port_to_the_pio_0 : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+                 -- the_rs_in_symbol
+                    signal out_port_from_the_rs_in_symbol : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
 
-                 -- the_pio_1
-                    signal out_port_from_the_pio_1 : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+                 -- the_rs_out_symbol
+                    signal in_port_to_the_rs_out_symbol : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+
+                 -- the_symbol_ack
+                    signal out_port_from_the_symbol_ack : OUT STD_LOGIC;
+
+                 -- the_symbol_strobe
+                    signal out_port_from_the_symbol_strobe : OUT STD_LOGIC
                  );
 end component HostBridge;
 
                 signal clk :  STD_LOGIC;
                 signal clk_0 :  STD_LOGIC;
-                signal in_port_to_the_pio_0 :  STD_LOGIC_VECTOR (7 DOWNTO 0);
+                signal in_port_to_the_rs_out_symbol :  STD_LOGIC_VECTOR (7 DOWNTO 0);
                 signal jtag_uart_0_avalon_jtag_slave_dataavailable_from_sa :  STD_LOGIC;
                 signal jtag_uart_0_avalon_jtag_slave_readyfordata_from_sa :  STD_LOGIC;
-                signal out_port_from_the_pio_1 :  STD_LOGIC_VECTOR (7 DOWNTO 0);
+                signal out_port_from_the_rs_in_symbol :  STD_LOGIC_VECTOR (7 DOWNTO 0);
+                signal out_port_from_the_symbol_ack :  STD_LOGIC;
+                signal out_port_from_the_symbol_strobe :  STD_LOGIC;
                 signal reset_n :  STD_LOGIC;
 
 
@@ -2755,9 +3475,11 @@ begin
   --Set us up the Dut
   DUT : HostBridge
     port map(
-      out_port_from_the_pio_1 => out_port_from_the_pio_1,
+      out_port_from_the_rs_in_symbol => out_port_from_the_rs_in_symbol,
+      out_port_from_the_symbol_ack => out_port_from_the_symbol_ack,
+      out_port_from_the_symbol_strobe => out_port_from_the_symbol_strobe,
       clk_0 => clk_0,
-      in_port_to_the_pio_0 => in_port_to_the_pio_0,
+      in_port_to_the_rs_out_symbol => in_port_to_the_rs_out_symbol,
       reset_n => reset_n
     );
 

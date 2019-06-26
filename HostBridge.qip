@@ -3,11 +3,13 @@
 set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) "cpu_0.sdc"]
 set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) "cpu_0.ocp"]
 # onchip_memory2_0
-# pio_0
-# pio_1
+# rs_out_symbol
+# rs_in_symbol
 # jtag_uart_0
+# symbol_ack
+# symbol_strobe
 # null
-set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID "FEA2661A6F590000016B57357F67"
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID "FEA2661A6F590000016B86EE90EE"
 set_global_assignment -entity "HostBridge" -name IP_TOOL_NAME "sopc"
 set_global_assignment -entity "HostBridge" -name IP_TOOL_VERSION "12.1"
 set_global_assignment -entity "HostBridge" -name IP_TOOL_ENV "sopc"

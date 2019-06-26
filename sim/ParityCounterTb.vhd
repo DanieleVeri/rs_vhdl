@@ -13,6 +13,7 @@ begin
     clk <= not clk after 10 ns;
     counter: entity work.ParityCounter(RTL) port map(
         clk => clk,
+		  enable => '1',
         parity => parity);
 
 end architecture;
