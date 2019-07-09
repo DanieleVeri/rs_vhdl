@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'HostBridge'
  * SOPC Builder design path: C:/Users/danie/Desktop/rs_vhdl/HostBridge.sopcinfo
  *
- * Generated: Mon Jun 24 01:49:23 GMT+01:00 2019
+ * Generated: Sun Jun 30 17:08:39 GMT+01:00 2019
  */
 
 /*
@@ -301,32 +301,5 @@
 #define SYMBOL_ACK_RESET_VALUE 0x0
 #define SYMBOL_ACK_SPAN 16
 #define SYMBOL_ACK_TYPE "altera_avalon_pio"
-
-
-/*
- * symbol_strobe configuration
- *
- */
-
-#define ALT_MODULE_CLASS_symbol_strobe altera_avalon_pio
-#define SYMBOL_STROBE_BASE 0x3000
-#define SYMBOL_STROBE_BIT_CLEARING_EDGE_REGISTER 0
-#define SYMBOL_STROBE_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define SYMBOL_STROBE_CAPTURE 0
-#define SYMBOL_STROBE_DATA_WIDTH 1
-#define SYMBOL_STROBE_DO_TEST_BENCH_WIRING 0
-#define SYMBOL_STROBE_DRIVEN_SIM_VALUE 0x0
-#define SYMBOL_STROBE_EDGE_TYPE "NONE"
-#define SYMBOL_STROBE_FREQ 50000000u
-#define SYMBOL_STROBE_HAS_IN 0
-#define SYMBOL_STROBE_HAS_OUT 1
-#define SYMBOL_STROBE_HAS_TRI 0
-#define SYMBOL_STROBE_IRQ -1
-#define SYMBOL_STROBE_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define SYMBOL_STROBE_IRQ_TYPE "NONE"
-#define SYMBOL_STROBE_NAME "/dev/symbol_strobe"
-#define SYMBOL_STROBE_RESET_VALUE 0x0
-#define SYMBOL_STROBE_SPAN 16
-#define SYMBOL_STROBE_TYPE "altera_avalon_pio"
 
 #endif /* __SYSTEM_H_ */

@@ -72,10 +72,8 @@ init_tables()
 
 file = open(sys.path[0]+"/generator.out", "w")
 gen_poly=rs_generator_poly(32)
-i=len(gen_poly)-1
-while i > 0:
+for i in range(1, 33):
     file.write("\"{}\",\n".format("{:08b}".format(gen_poly[i])))
-    i=i-1
 file.close()
 
 file = open(sys.path[0]+"/pow_enc.out", "w")

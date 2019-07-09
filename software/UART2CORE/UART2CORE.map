@@ -83,7 +83,7 @@ LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1
                 0x00001020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x00001020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x00001020      0x644
+.text           0x00001020      0x66c
                 0x00001020                PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -130,167 +130,167 @@ LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x00001020       0x3c ../UART2CORE_bsp//obj/HAL/src/crt0.o
                 0x00001020                _start
- .text          0x0000105c      0x15c obj/default/hello_world_small.o
+ .text          0x0000105c      0x184 obj/default/hello_world_small.o
                 0x0000105c                itoa
                 0x000010c4                main
- .text          0x000011b8      0x14c c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
-                0x00001234                __divsi3
-                0x00001294                __modsi3
-                0x000012f4                __udivsi3
-                0x000012fc                __umodsi3
- .text          0x00001304       0x44 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
-                0x00001304                alt_getchar
- .text          0x00001348       0x8c ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
-                0x00001368                alt_load
- .text          0x000013d4       0x2c ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
-                0x000013d4                alt_main
- .text          0x00001400      0x144 ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
-                0x00001400                alt_printf
- .text          0x00001544       0x50 ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
-                0x00001544                alt_putchar
- .text          0x00001594       0x24 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x00001594                alt_sys_init
-                0x00001598                alt_irq_init
- .text          0x000015b8       0x60 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
-                0x000015b8                altera_avalon_jtag_uart_read
- .text          0x00001618       0x34 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x00001618                altera_avalon_jtag_uart_write
- .text          0x0000164c        0x4 ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000164c                alt_dcache_flush_all
- .text          0x00001650        0x8 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
- .text          0x00001658        0x4 ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x00001658                alt_icache_flush_all
- .text          0x0000165c        0x8 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
-                0x0000165c                altera_nios2_irq_init
+ .text          0x000011e0      0x14c c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x0000125c                __divsi3
+                0x000012bc                __modsi3
+                0x0000131c                __udivsi3
+                0x00001324                __umodsi3
+ .text          0x0000132c       0x44 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
+                0x0000132c                alt_getchar
+ .text          0x00001370       0x8c ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
+                0x00001390                alt_load
+ .text          0x000013fc       0x2c ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
+                0x000013fc                alt_main
+ .text          0x00001428      0x144 ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
+                0x00001428                alt_printf
+ .text          0x0000156c       0x50 ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
+                0x0000156c                alt_putchar
+ .text          0x000015bc       0x24 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x000015bc                alt_sys_init
+                0x000015c0                alt_irq_init
+ .text          0x000015e0       0x60 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x000015e0                altera_avalon_jtag_uart_read
+ .text          0x00001640       0x34 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x00001640                altera_avalon_jtag_uart_write
+ .text          0x00001674        0x4 ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x00001674                alt_dcache_flush_all
+ .text          0x00001678        0x8 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x00001680        0x4 ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x00001680                alt_icache_flush_all
+ .text          0x00001684        0x8 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                0x00001684                altera_nios2_irq_init
  *(.gnu.warning.*)
  *(.fini)
-                0x00001664                PROVIDE (__etext, ABSOLUTE (.))
-                0x00001664                PROVIDE (_etext, ABSOLUTE (.))
-                0x00001664                PROVIDE (etext, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__etext, ABSOLUTE (.))
+                0x0000168c                PROVIDE (_etext, ABSOLUTE (.))
+                0x0000168c                PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x00001664                . = ALIGN (0x4)
-                0x00001664                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+                0x0000168c                . = ALIGN (0x4)
+                0x0000168c                PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
-                0x00001664                PROVIDE (__preinit_array_end, ABSOLUTE (.))
-                0x00001664                PROVIDE (__init_array_start, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__init_array_start, ABSOLUTE (.))
  *(.init_array)
-                0x00001664                PROVIDE (__init_array_end, ABSOLUTE (.))
-                0x00001664                PROVIDE (__fini_array_start, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__fini_array_start, ABSOLUTE (.))
  *(.fini_array)
-                0x00001664                PROVIDE (__fini_array_end, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__fini_array_end, ABSOLUTE (.))
  *(.eh_frame)
  *(.gcc_except_table)
  *(.dynamic)
-                0x00001664                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
  *(.ctors)
  *(SORT(.ctors.*))
-                0x00001664                PROVIDE (__CTOR_END__, ABSOLUTE (.))
-                0x00001664                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
  *(.dtors)
  *(SORT(.dtors.*))
-                0x00001664                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x00001664                . = ALIGN (0x4)
+                0x0000168c                . = ALIGN (0x4)
 
-.rodata         0x00001664       0x1c
-                0x00001664                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x00001664                . = ALIGN (0x4)
+.rodata         0x0000168c       0x1c
+                0x0000168c                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000168c                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x00001664       0x10 obj/default/hello_world_small.o
+                0x0000168c       0x10 obj/default/hello_world_small.o
  .rodata.str1.4
-                0x00001674        0xc ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
+                0x0000169c        0xc ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
  *(.rodata1)
-                0x00001680                . = ALIGN (0x4)
-                0x00001680                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x00001664                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x000016a8                . = ALIGN (0x4)
+                0x000016a8                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000168c                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x00001680       0x70 load address 0x000016f0
-                0x00001680                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x00001680                . = ALIGN (0x4)
+.rwdata         0x000016a8       0x70 load address 0x00001718
+                0x000016a8                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x000016a8                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x00001680        0x0 ../UART2CORE_bsp//obj/HAL/src/crt0.o
- .data          0x00001680        0x0 obj/default/hello_world_small.o
- .data          0x00001680        0x0 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x00001680        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x00001680       0x58 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
-                0x00001680                alt_dev_null
-                0x000016a8                alt_fd_list
- .data          0x000016d8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x000016d8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
-                0x000096d8                _gp = ABSOLUTE ((. + 0x8000))
-                0x000096d8                PROVIDE (gp, _gp)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp//obj/HAL/src/crt0.o
+ .data          0x000016a8        0x0 obj/default/hello_world_small.o
+ .data          0x000016a8        0x0 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x000016a8        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x000016a8       0x58 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
+                0x000016a8                alt_dev_null
+                0x000016d0                alt_fd_list
+ .data          0x00001700        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x00001700        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                0x00009700                _gp = ABSOLUTE ((. + 0x8000))
+                0x00009700                PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x000016d8        0x4 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x000016d8                jtag_uart_0
- .sdata         0x000016dc       0x14 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
-                0x000016dc                alt_fs_list
-                0x000016e4                alt_dev_list
-                0x000016ec                alt_max_fd
+ .sdata         0x00001700        0x4 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00001700                jtag_uart_0
+ .sdata         0x00001704       0x14 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
+                0x00001704                alt_fs_list
+                0x0000170c                alt_dev_list
+                0x00001714                alt_max_fd
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x000016f0                . = ALIGN (0x4)
-                0x000016f0                _edata = ABSOLUTE (.)
-                0x000016f0                PROVIDE (edata, ABSOLUTE (.))
-                0x000016f0                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x000016f0                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x00001718                . = ALIGN (0x4)
+                0x00001718                _edata = ABSOLUTE (.)
+                0x00001718                PROVIDE (edata, ABSOLUTE (.))
+                0x00001718                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x00001718                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x00001760        0xc
-                0x00001760                __bss_start = ABSOLUTE (.)
-                0x00001760                PROVIDE (__sbss_start, ABSOLUTE (.))
-                0x00001760                PROVIDE (___sbss_start, ABSOLUTE (.))
+.bss            0x00001788        0xc
+                0x00001788                __bss_start = ABSOLUTE (.)
+                0x00001788                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x00001788                PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x00001760        0xc ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
-                0x00001760                alt_argc
-                0x00001764                alt_argv
-                0x00001768                alt_envp
+ .sbss          0x00001788        0xc ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
+                0x00001788                alt_argc
+                0x0000178c                alt_argv
+                0x00001790                alt_envp
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
-                0x0000176c                PROVIDE (__sbss_end, ABSOLUTE (.))
-                0x0000176c                PROVIDE (___sbss_end, ABSOLUTE (.))
+                0x00001794                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x00001794                PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp//obj/HAL/src/crt0.o
- .bss           0x0000176c        0x0 obj/default/hello_world_small.o
- .bss           0x0000176c        0x0 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000176c        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp//obj/HAL/src/crt0.o
+ .bss           0x00001794        0x0 obj/default/hello_world_small.o
+ .bss           0x00001794        0x0 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x00001794        0x0 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
  *(COMMON)
-                0x0000176c                . = ALIGN (0x4)
-                0x0000176c                __bss_end = ABSOLUTE (.)
+                0x00001794                . = ALIGN (0x4)
+                0x00001794                __bss_end = ABSOLUTE (.)
 
 .onchip_memory2_0
-                0x0000176c        0x0
-                0x0000176c                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+                0x00001794        0x0
+                0x00001794                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
  *(.onchip_memory2_0. onchip_memory2_0.*)
-                0x0000176c                . = ALIGN (0x4)
-                0x0000176c                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
-                0x0000176c                _end = ABSOLUTE (.)
-                0x0000176c                end = ABSOLUTE (.)
-                0x0000176c                __alt_stack_base = ABSOLUTE (.)
-                0x0000176c                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+                0x00001794                . = ALIGN (0x4)
+                0x00001794                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x00001794                _end = ABSOLUTE (.)
+                0x00001794                end = ABSOLUTE (.)
+                0x00001794                __alt_stack_base = ABSOLUTE (.)
+                0x00001794                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
 
 .stab
  *(.stab)
@@ -441,40 +441,40 @@ LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1
  .debug_abbrev  0x000008c8       0x3f ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
  .debug_abbrev  0x00000907       0x3f ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
 
-.debug_line     0x00000000     0x1f2d
+.debug_line     0x00000000     0x1f4d
  *(.debug_line)
  .debug_line    0x00000000       0x66 ../UART2CORE_bsp//obj/HAL/src/crt0.o
- .debug_line    0x00000066      0x18c obj/default/hello_world_small.o
- .debug_line    0x000001f2      0x24f c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_line    0x00000441      0x252 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
- .debug_line    0x00000693      0x211 ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x000008a4      0x2bc ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x00000b60      0x1ef ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_line    0x00000d4f      0x1ec ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_line    0x00000f3b      0x280 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x000011bb      0x31d ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .debug_line    0x000014d8      0x2ee ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_line    0x000017c6      0x1af ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x00001975      0x246 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_line    0x00001bbb      0x1af ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x00001d6a      0x1c3 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_line    0x00000066      0x1ac obj/default/hello_world_small.o
+ .debug_line    0x00000212      0x24f c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x00000461      0x252 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_line    0x000006b3      0x211 ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x000008c4      0x2bc ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000b80      0x1ef ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_line    0x00000d6f      0x1ec ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_line    0x00000f5b      0x280 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000011db      0x31d ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x000014f8      0x2ee ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x000017e6      0x1af ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00001995      0x246 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x00001bdb      0x1af ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00001d8a      0x1c3 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
 
-.debug_frame    0x00000000      0x28c
+.debug_frame    0x00000000      0x290
  *(.debug_frame)
- .debug_frame   0x00000000       0x44 obj/default/hello_world_small.o
- .debug_frame   0x00000044       0x70 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_frame   0x000000b4       0x28 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
- .debug_frame   0x000000dc       0x38 ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
- .debug_frame   0x00000114       0x28 ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
- .debug_frame   0x0000013c       0x2c ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
- .debug_frame   0x00000168       0x2c ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
- .debug_frame   0x00000194       0x38 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_frame   0x000001cc       0x20 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
- .debug_frame   0x000001ec       0x20 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_frame   0x0000020c       0x20 ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_frame   0x0000022c       0x20 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_frame   0x0000024c       0x20 ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_frame   0x0000026c       0x20 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_frame   0x00000000       0x48 obj/default/hello_world_small.o
+ .debug_frame   0x00000048       0x70 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x000000b8       0x28 ../UART2CORE_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_frame   0x000000e0       0x38 ../UART2CORE_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000118       0x28 ../UART2CORE_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000140       0x2c ../UART2CORE_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_frame   0x0000016c       0x2c ../UART2CORE_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_frame   0x00000198       0x38 ../UART2CORE_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x000001d0       0x20 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x000001f0       0x20 ../UART2CORE_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000210       0x20 ../UART2CORE_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x00000230       0x20 ../UART2CORE_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x00000250       0x20 ../UART2CORE_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000270       0x20 ../UART2CORE_bsp/\libhal_bsp.a(altera_nios2_irq.o)
 
 .debug_str      0x00000000      0x75a
  *(.debug_str)
@@ -542,8 +542,8 @@ LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1
                 0x00000000       0x10 ../UART2CORE_bsp//obj/HAL/src/crt0.o
                 0x00002000                __alt_data_end = 0x2000
                 0x00002000                PROVIDE (__alt_stack_pointer, __alt_data_end)
-                0x0000176c                PROVIDE (__alt_stack_limit, __alt_stack_base)
-                0x0000176c                PROVIDE (__alt_heap_start, end)
+                0x00001794                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x00001794                PROVIDE (__alt_heap_start, end)
                 0x00002000                PROVIDE (__alt_heap_limit, 0x2000)
 OUTPUT(UART2CORE.elf elf32-littlenios2)
 

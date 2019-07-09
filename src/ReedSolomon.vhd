@@ -18,12 +18,14 @@ architecture RTL of ReedSolomon is
 	end component;
 	component Synchronizer is port (
 		clk: in std_logic;
+		rst_a: in std_logic;
 		sym_ack: in std_logic;
 		hold: out std_logic);
 	end component;
 	component RSEncoder is port(
+		dbg: out data_bus;
 		clk: in std_logic;
-		rst: in std_logic;
+		rst_a: in std_logic;
 		hold: in std_logic;
 		in_bus: in data_bus;
 		out_bus: out data_bus);
@@ -36,6 +38,6 @@ architecture RTL of ReedSolomon is
 	
 begin
 	host_uart: HostBridge port map(CLOCK_50, KEY(0), uart_symbol_in, uart_symbol_out, uart_symbol_ack);
-	sync: Synchronizer port map(CLOCK_50, uart_symbol_ack, rs_hold);
-	encoder: RSEncoder port map(CLOCK_50, '0', rs_hold, uart_symbol_in, uart_symbol_out);
+	sync: Synchronizer port map(CLOCK_50, not KEY(0), uart_symbol_ack, rs_hold);
+	encoder: RSEncoder port map(LEDR, CLOCK_50, not KEY(0), rs_hold, uart_symbol_in, uart_symbol_out);
 end architecture;

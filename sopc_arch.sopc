@@ -74,35 +74,11 @@
          type = "int";
       }
    }
-   element symbol_strobe.s1
-   {
-      datum baseAddress
-      {
-         value = "12288";
-         type = "String";
-      }
-   }
-   element rs_in_symbol.s1
-   {
-      datum baseAddress
-      {
-         value = "12320";
-         type = "String";
-      }
-   }
    element symbol_ack.s1
    {
       datum baseAddress
       {
          value = "12304";
-         type = "String";
-      }
-   }
-   element rs_out_symbol.s1
-   {
-      datum baseAddress
-      {
-         value = "12336";
          type = "String";
       }
    }
@@ -114,19 +90,27 @@
          type = "String";
       }
    }
+   element rs_in_symbol.s1
+   {
+      datum baseAddress
+      {
+         value = "12320";
+         type = "String";
+      }
+   }
+   element rs_out_symbol.s1
+   {
+      datum baseAddress
+      {
+         value = "12336";
+         type = "String";
+      }
+   }
    element symbol_ack
    {
       datum _sortIndex
       {
          value = "6";
-         type = "int";
-      }
-   }
-   element symbol_strobe
-   {
-      datum _sortIndex
-      {
-         value = "7";
          type = "int";
       }
    }
@@ -144,8 +128,8 @@
  <parameter name="maxAdditionalLatency" value="0" />
  <parameter name="projectName" value="ReedSolomon.qpf" />
  <parameter name="sopcBorderPoints" value="true" />
- <parameter name="systemHash" value="5457006809" />
- <parameter name="timeStamp" value="1561336899032" />
+ <parameter name="systemHash" value="2949062979" />
+ <parameter name="timeStamp" value="1561910817028" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <module kind="clock_source" version="12.1" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="50000000" />
@@ -246,7 +230,7 @@
   <parameter name="dcache_numTCDM" value="_0" />
   <parameter name="dcache_lineSize" value="_32" />
   <parameter name="dcache_bursts" value="false" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x1000' end='0x2000' /><slave name='cpu_0.jtag_debug_module' start='0x2800' end='0x3000' /><slave name='symbol_strobe.s1' start='0x3000' end='0x3010' /><slave name='symbol_ack.s1' start='0x3010' end='0x3020' /><slave name='rs_in_symbol.s1' start='0x3020' end='0x3030' /><slave name='rs_out_symbol.s1' start='0x3030' end='0x3040' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x3040' end='0x3048' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x1000' end='0x2000' /><slave name='cpu_0.jtag_debug_module' start='0x2800' end='0x3000' /><slave name='symbol_ack.s1' start='0x3010' end='0x3020' /><slave name='rs_in_symbol.s1' start='0x3020' end='0x3030' /><slave name='rs_out_symbol.s1' start='0x3030' end='0x3040' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x3040' end='0x3048' /></address-map>]]></parameter>
   <parameter name="dataAddrWidth" value="14" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="cpuReset" value="false" />
@@ -348,24 +332,6 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="1" />
  </module>
- <module
-   kind="altera_avalon_pio"
-   version="12.1"
-   enabled="1"
-   name="symbol_strobe">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="1" />
- </module>
  <connection kind="clock" version="12.1" start="clk_0.clk" end="cpu_0.clk" />
  <connection
    kind="avalon"
@@ -446,14 +412,5 @@
    end="symbol_ack.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x3010" />
- </connection>
- <connection kind="clock" version="12.1" start="clk_0.clk" end="symbol_strobe.clk" />
- <connection
-   kind="avalon"
-   version="12.1"
-   start="cpu_0.data_master"
-   end="symbol_strobe.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x3000" />
  </connection>
 </system>

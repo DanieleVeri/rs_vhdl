@@ -430,14 +430,12 @@ entity cpu_0_data_master_arbitrator is
                  signal cpu_0_data_master_granted_rs_in_symbol_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_granted_rs_out_symbol_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_granted_symbol_ack_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_granted_symbol_strobe_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_onchip_memory2_0_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_rs_in_symbol_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_rs_out_symbol_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_qualified_request_symbol_ack_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_qualified_request_symbol_strobe_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_read : IN STD_LOGIC;
                  signal cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module : IN STD_LOGIC;
                  signal cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
@@ -445,14 +443,12 @@ entity cpu_0_data_master_arbitrator is
                  signal cpu_0_data_master_read_data_valid_rs_in_symbol_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_read_data_valid_rs_out_symbol_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_read_data_valid_symbol_ack_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_cpu_0_jtag_debug_module : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_onchip_memory2_0_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_rs_in_symbol_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_rs_out_symbol_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_requests_symbol_ack_s1 : IN STD_LOGIC;
-                 signal cpu_0_data_master_requests_symbol_strobe_s1 : IN STD_LOGIC;
                  signal cpu_0_data_master_write : IN STD_LOGIC;
                  signal cpu_0_jtag_debug_module_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal d1_cpu_0_jtag_debug_module_end_xfer : IN STD_LOGIC;
@@ -461,7 +457,6 @@ entity cpu_0_data_master_arbitrator is
                  signal d1_rs_in_symbol_s1_end_xfer : IN STD_LOGIC;
                  signal d1_rs_out_symbol_s1_end_xfer : IN STD_LOGIC;
                  signal d1_symbol_ack_s1_end_xfer : IN STD_LOGIC;
-                 signal d1_symbol_strobe_s1_end_xfer : IN STD_LOGIC;
                  signal jtag_uart_0_avalon_jtag_slave_irq_from_sa : IN STD_LOGIC;
                  signal jtag_uart_0_avalon_jtag_slave_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa : IN STD_LOGIC;
@@ -471,7 +466,6 @@ entity cpu_0_data_master_arbitrator is
                  signal rs_in_symbol_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal rs_out_symbol_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                  signal symbol_ack_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal symbol_strobe_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 
               -- outputs:
                  signal cpu_0_data_master_address_to_slave : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
@@ -498,11 +492,11 @@ begin
   --cascaded wait assignment, which is an e_assign
   cpu_0_data_master_run <= r_0 AND r_1;
   --r_1 master_run cascaded wait assignment, which is an e_assign
-  r_1 <= Vector_To_Std_Logic((((((((((((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_rs_out_symbol_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_requests_symbol_ack_s1)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_symbol_strobe_s1 OR NOT cpu_0_data_master_requests_symbol_strobe_s1)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_strobe_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_strobe_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))));
+  r_1 <= Vector_To_Std_Logic((((((((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_rs_out_symbol_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write))))))) AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(((cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_requests_symbol_ack_s1)))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_read)))) OR (((std_logic_vector'("00000000000000000000000000000001") AND std_logic_vector'("00000000000000000000000000000001")) AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_read)))))))) AND (((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR((NOT cpu_0_data_master_qualified_request_symbol_ack_s1 OR NOT cpu_0_data_master_write)))) OR ((std_logic_vector'("00000000000000000000000000000001") AND (std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(cpu_0_data_master_write)))))))));
   --optimize select-logic by passing only those address bits which matter.
   internal_cpu_0_data_master_address_to_slave <= cpu_0_data_master_address(13 DOWNTO 0);
   --cpu_0/data_master readdata mux, which is an e_mux
-  cpu_0_data_master_readdata <= (((((((A_REP(NOT cpu_0_data_master_requests_cpu_0_jtag_debug_module, 32) OR cpu_0_jtag_debug_module_readdata_from_sa)) AND ((A_REP(NOT cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave, 32) OR registered_cpu_0_data_master_readdata))) AND ((A_REP(NOT cpu_0_data_master_requests_onchip_memory2_0_s1, 32) OR onchip_memory2_0_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_rs_in_symbol_s1, 32) OR rs_in_symbol_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_rs_out_symbol_s1, 32) OR rs_out_symbol_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_symbol_ack_s1, 32) OR symbol_ack_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_symbol_strobe_s1, 32) OR symbol_strobe_s1_readdata_from_sa));
+  cpu_0_data_master_readdata <= ((((((A_REP(NOT cpu_0_data_master_requests_cpu_0_jtag_debug_module, 32) OR cpu_0_jtag_debug_module_readdata_from_sa)) AND ((A_REP(NOT cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave, 32) OR registered_cpu_0_data_master_readdata))) AND ((A_REP(NOT cpu_0_data_master_requests_onchip_memory2_0_s1, 32) OR onchip_memory2_0_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_rs_in_symbol_s1, 32) OR rs_in_symbol_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_rs_out_symbol_s1, 32) OR rs_out_symbol_s1_readdata_from_sa))) AND ((A_REP(NOT cpu_0_data_master_requests_symbol_ack_s1, 32) OR symbol_ack_s1_readdata_from_sa));
   --actual waitrequest port, which is an e_register
   process (clk, reset_n)
   begin
@@ -2086,244 +2080,6 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity symbol_strobe_s1_arbitrator is 
-        port (
-              -- inputs:
-                 signal clk : IN STD_LOGIC;
-                 signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
-                 signal cpu_0_data_master_read : IN STD_LOGIC;
-                 signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
-                 signal cpu_0_data_master_write : IN STD_LOGIC;
-                 signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal reset_n : IN STD_LOGIC;
-                 signal symbol_strobe_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-
-              -- outputs:
-                 signal cpu_0_data_master_granted_symbol_strobe_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_qualified_request_symbol_strobe_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 : OUT STD_LOGIC;
-                 signal cpu_0_data_master_requests_symbol_strobe_s1 : OUT STD_LOGIC;
-                 signal d1_symbol_strobe_s1_end_xfer : OUT STD_LOGIC;
-                 signal symbol_strobe_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-                 signal symbol_strobe_s1_chipselect : OUT STD_LOGIC;
-                 signal symbol_strobe_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-                 signal symbol_strobe_s1_reset_n : OUT STD_LOGIC;
-                 signal symbol_strobe_s1_write_n : OUT STD_LOGIC;
-                 signal symbol_strobe_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
-              );
-end entity symbol_strobe_s1_arbitrator;
-
-
-architecture europa of symbol_strobe_s1_arbitrator is
-                signal cpu_0_data_master_arbiterlock :  STD_LOGIC;
-                signal cpu_0_data_master_arbiterlock2 :  STD_LOGIC;
-                signal cpu_0_data_master_continuerequest :  STD_LOGIC;
-                signal cpu_0_data_master_saved_grant_symbol_strobe_s1 :  STD_LOGIC;
-                signal d1_reasons_to_wait :  STD_LOGIC;
-                signal enable_nonzero_assertions :  STD_LOGIC;
-                signal end_xfer_arb_share_counter_term_symbol_strobe_s1 :  STD_LOGIC;
-                signal in_a_read_cycle :  STD_LOGIC;
-                signal in_a_write_cycle :  STD_LOGIC;
-                signal internal_cpu_0_data_master_granted_symbol_strobe_s1 :  STD_LOGIC;
-                signal internal_cpu_0_data_master_qualified_request_symbol_strobe_s1 :  STD_LOGIC;
-                signal internal_cpu_0_data_master_requests_symbol_strobe_s1 :  STD_LOGIC;
-                signal shifted_address_to_symbol_strobe_s1_from_cpu_0_data_master :  STD_LOGIC_VECTOR (13 DOWNTO 0);
-                signal symbol_strobe_s1_allgrants :  STD_LOGIC;
-                signal symbol_strobe_s1_allow_new_arb_cycle :  STD_LOGIC;
-                signal symbol_strobe_s1_any_bursting_master_saved_grant :  STD_LOGIC;
-                signal symbol_strobe_s1_any_continuerequest :  STD_LOGIC;
-                signal symbol_strobe_s1_arb_counter_enable :  STD_LOGIC;
-                signal symbol_strobe_s1_arb_share_counter :  STD_LOGIC;
-                signal symbol_strobe_s1_arb_share_counter_next_value :  STD_LOGIC;
-                signal symbol_strobe_s1_arb_share_set_values :  STD_LOGIC;
-                signal symbol_strobe_s1_beginbursttransfer_internal :  STD_LOGIC;
-                signal symbol_strobe_s1_begins_xfer :  STD_LOGIC;
-                signal symbol_strobe_s1_end_xfer :  STD_LOGIC;
-                signal symbol_strobe_s1_firsttransfer :  STD_LOGIC;
-                signal symbol_strobe_s1_grant_vector :  STD_LOGIC;
-                signal symbol_strobe_s1_in_a_read_cycle :  STD_LOGIC;
-                signal symbol_strobe_s1_in_a_write_cycle :  STD_LOGIC;
-                signal symbol_strobe_s1_master_qreq_vector :  STD_LOGIC;
-                signal symbol_strobe_s1_non_bursting_master_requests :  STD_LOGIC;
-                signal symbol_strobe_s1_reg_firsttransfer :  STD_LOGIC;
-                signal symbol_strobe_s1_slavearbiterlockenable :  STD_LOGIC;
-                signal symbol_strobe_s1_slavearbiterlockenable2 :  STD_LOGIC;
-                signal symbol_strobe_s1_unreg_firsttransfer :  STD_LOGIC;
-                signal symbol_strobe_s1_waits_for_read :  STD_LOGIC;
-                signal symbol_strobe_s1_waits_for_write :  STD_LOGIC;
-                signal wait_for_symbol_strobe_s1_counter :  STD_LOGIC;
-
-begin
-
-  process (clk, reset_n)
-  begin
-    if reset_n = '0' then
-      d1_reasons_to_wait <= std_logic'('0');
-    elsif clk'event and clk = '1' then
-      d1_reasons_to_wait <= NOT symbol_strobe_s1_end_xfer;
-    end if;
-
-  end process;
-
-  symbol_strobe_s1_begins_xfer <= NOT d1_reasons_to_wait AND (internal_cpu_0_data_master_qualified_request_symbol_strobe_s1);
-  --assign symbol_strobe_s1_readdata_from_sa = symbol_strobe_s1_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
-  symbol_strobe_s1_readdata_from_sa <= symbol_strobe_s1_readdata;
-  internal_cpu_0_data_master_requests_symbol_strobe_s1 <= to_std_logic(((Std_Logic_Vector'(cpu_0_data_master_address_to_slave(13 DOWNTO 4) & std_logic_vector'("0000")) = std_logic_vector'("11000000000000")))) AND ((cpu_0_data_master_read OR cpu_0_data_master_write));
-  --symbol_strobe_s1_arb_share_counter set values, which is an e_mux
-  symbol_strobe_s1_arb_share_set_values <= std_logic'('1');
-  --symbol_strobe_s1_non_bursting_master_requests mux, which is an e_mux
-  symbol_strobe_s1_non_bursting_master_requests <= internal_cpu_0_data_master_requests_symbol_strobe_s1;
-  --symbol_strobe_s1_any_bursting_master_saved_grant mux, which is an e_mux
-  symbol_strobe_s1_any_bursting_master_saved_grant <= std_logic'('0');
-  --symbol_strobe_s1_arb_share_counter_next_value assignment, which is an e_assign
-  symbol_strobe_s1_arb_share_counter_next_value <= Vector_To_Std_Logic(A_WE_StdLogicVector((std_logic'(symbol_strobe_s1_firsttransfer) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_strobe_s1_arb_share_set_values))) - std_logic_vector'("000000000000000000000000000000001"))), A_WE_StdLogicVector((std_logic'(symbol_strobe_s1_arb_share_counter) = '1'), (((std_logic_vector'("00000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_strobe_s1_arb_share_counter))) - std_logic_vector'("000000000000000000000000000000001"))), std_logic_vector'("000000000000000000000000000000000"))));
-  --symbol_strobe_s1_allgrants all slave grants, which is an e_mux
-  symbol_strobe_s1_allgrants <= symbol_strobe_s1_grant_vector;
-  --symbol_strobe_s1_end_xfer assignment, which is an e_assign
-  symbol_strobe_s1_end_xfer <= NOT ((symbol_strobe_s1_waits_for_read OR symbol_strobe_s1_waits_for_write));
-  --end_xfer_arb_share_counter_term_symbol_strobe_s1 arb share counter enable term, which is an e_assign
-  end_xfer_arb_share_counter_term_symbol_strobe_s1 <= symbol_strobe_s1_end_xfer AND (((NOT symbol_strobe_s1_any_bursting_master_saved_grant OR in_a_read_cycle) OR in_a_write_cycle));
-  --symbol_strobe_s1_arb_share_counter arbitration counter enable, which is an e_assign
-  symbol_strobe_s1_arb_counter_enable <= ((end_xfer_arb_share_counter_term_symbol_strobe_s1 AND symbol_strobe_s1_allgrants)) OR ((end_xfer_arb_share_counter_term_symbol_strobe_s1 AND NOT symbol_strobe_s1_non_bursting_master_requests));
-  --symbol_strobe_s1_arb_share_counter counter, which is an e_register
-  process (clk, reset_n)
-  begin
-    if reset_n = '0' then
-      symbol_strobe_s1_arb_share_counter <= std_logic'('0');
-    elsif clk'event and clk = '1' then
-      if std_logic'(symbol_strobe_s1_arb_counter_enable) = '1' then 
-        symbol_strobe_s1_arb_share_counter <= symbol_strobe_s1_arb_share_counter_next_value;
-      end if;
-    end if;
-
-  end process;
-
-  --symbol_strobe_s1_slavearbiterlockenable slave enables arbiterlock, which is an e_register
-  process (clk, reset_n)
-  begin
-    if reset_n = '0' then
-      symbol_strobe_s1_slavearbiterlockenable <= std_logic'('0');
-    elsif clk'event and clk = '1' then
-      if std_logic'((((symbol_strobe_s1_master_qreq_vector AND end_xfer_arb_share_counter_term_symbol_strobe_s1)) OR ((end_xfer_arb_share_counter_term_symbol_strobe_s1 AND NOT symbol_strobe_s1_non_bursting_master_requests)))) = '1' then 
-        symbol_strobe_s1_slavearbiterlockenable <= symbol_strobe_s1_arb_share_counter_next_value;
-      end if;
-    end if;
-
-  end process;
-
-  --cpu_0/data_master symbol_strobe/s1 arbiterlock, which is an e_assign
-  cpu_0_data_master_arbiterlock <= symbol_strobe_s1_slavearbiterlockenable AND cpu_0_data_master_continuerequest;
-  --symbol_strobe_s1_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
-  symbol_strobe_s1_slavearbiterlockenable2 <= symbol_strobe_s1_arb_share_counter_next_value;
-  --cpu_0/data_master symbol_strobe/s1 arbiterlock2, which is an e_assign
-  cpu_0_data_master_arbiterlock2 <= symbol_strobe_s1_slavearbiterlockenable2 AND cpu_0_data_master_continuerequest;
-  --symbol_strobe_s1_any_continuerequest at least one master continues requesting, which is an e_assign
-  symbol_strobe_s1_any_continuerequest <= std_logic'('1');
-  --cpu_0_data_master_continuerequest continued request, which is an e_assign
-  cpu_0_data_master_continuerequest <= std_logic'('1');
-  internal_cpu_0_data_master_qualified_request_symbol_strobe_s1 <= internal_cpu_0_data_master_requests_symbol_strobe_s1 AND NOT (((NOT cpu_0_data_master_waitrequest) AND cpu_0_data_master_write));
-  --symbol_strobe_s1_writedata mux, which is an e_mux
-  symbol_strobe_s1_writedata <= cpu_0_data_master_writedata;
-  --master is always granted when requested
-  internal_cpu_0_data_master_granted_symbol_strobe_s1 <= internal_cpu_0_data_master_qualified_request_symbol_strobe_s1;
-  --cpu_0/data_master saved-grant symbol_strobe/s1, which is an e_assign
-  cpu_0_data_master_saved_grant_symbol_strobe_s1 <= internal_cpu_0_data_master_requests_symbol_strobe_s1;
-  --allow new arb cycle for symbol_strobe/s1, which is an e_assign
-  symbol_strobe_s1_allow_new_arb_cycle <= std_logic'('1');
-  --placeholder chosen master
-  symbol_strobe_s1_grant_vector <= std_logic'('1');
-  --placeholder vector of master qualified-requests
-  symbol_strobe_s1_master_qreq_vector <= std_logic'('1');
-  --symbol_strobe_s1_reset_n assignment, which is an e_assign
-  symbol_strobe_s1_reset_n <= reset_n;
-  symbol_strobe_s1_chipselect <= internal_cpu_0_data_master_granted_symbol_strobe_s1;
-  --symbol_strobe_s1_firsttransfer first transaction, which is an e_assign
-  symbol_strobe_s1_firsttransfer <= A_WE_StdLogic((std_logic'(symbol_strobe_s1_begins_xfer) = '1'), symbol_strobe_s1_unreg_firsttransfer, symbol_strobe_s1_reg_firsttransfer);
-  --symbol_strobe_s1_unreg_firsttransfer first transaction, which is an e_assign
-  symbol_strobe_s1_unreg_firsttransfer <= NOT ((symbol_strobe_s1_slavearbiterlockenable AND symbol_strobe_s1_any_continuerequest));
-  --symbol_strobe_s1_reg_firsttransfer first transaction, which is an e_register
-  process (clk, reset_n)
-  begin
-    if reset_n = '0' then
-      symbol_strobe_s1_reg_firsttransfer <= std_logic'('1');
-    elsif clk'event and clk = '1' then
-      if std_logic'(symbol_strobe_s1_begins_xfer) = '1' then 
-        symbol_strobe_s1_reg_firsttransfer <= symbol_strobe_s1_unreg_firsttransfer;
-      end if;
-    end if;
-
-  end process;
-
-  --symbol_strobe_s1_beginbursttransfer_internal begin burst transfer, which is an e_assign
-  symbol_strobe_s1_beginbursttransfer_internal <= symbol_strobe_s1_begins_xfer;
-  --~symbol_strobe_s1_write_n assignment, which is an e_mux
-  symbol_strobe_s1_write_n <= NOT ((internal_cpu_0_data_master_granted_symbol_strobe_s1 AND cpu_0_data_master_write));
-  shifted_address_to_symbol_strobe_s1_from_cpu_0_data_master <= cpu_0_data_master_address_to_slave;
-  --symbol_strobe_s1_address mux, which is an e_mux
-  symbol_strobe_s1_address <= A_EXT (A_SRL(shifted_address_to_symbol_strobe_s1_from_cpu_0_data_master,std_logic_vector'("00000000000000000000000000000010")), 2);
-  --d1_symbol_strobe_s1_end_xfer register, which is an e_register
-  process (clk, reset_n)
-  begin
-    if reset_n = '0' then
-      d1_symbol_strobe_s1_end_xfer <= std_logic'('1');
-    elsif clk'event and clk = '1' then
-      d1_symbol_strobe_s1_end_xfer <= symbol_strobe_s1_end_xfer;
-    end if;
-
-  end process;
-
-  --symbol_strobe_s1_waits_for_read in a cycle, which is an e_mux
-  symbol_strobe_s1_waits_for_read <= symbol_strobe_s1_in_a_read_cycle AND symbol_strobe_s1_begins_xfer;
-  --symbol_strobe_s1_in_a_read_cycle assignment, which is an e_assign
-  symbol_strobe_s1_in_a_read_cycle <= internal_cpu_0_data_master_granted_symbol_strobe_s1 AND cpu_0_data_master_read;
-  --in_a_read_cycle assignment, which is an e_mux
-  in_a_read_cycle <= symbol_strobe_s1_in_a_read_cycle;
-  --symbol_strobe_s1_waits_for_write in a cycle, which is an e_mux
-  symbol_strobe_s1_waits_for_write <= Vector_To_Std_Logic(((std_logic_vector'("0000000000000000000000000000000") & (A_TOSTDLOGICVECTOR(symbol_strobe_s1_in_a_write_cycle))) AND std_logic_vector'("00000000000000000000000000000000")));
-  --symbol_strobe_s1_in_a_write_cycle assignment, which is an e_assign
-  symbol_strobe_s1_in_a_write_cycle <= internal_cpu_0_data_master_granted_symbol_strobe_s1 AND cpu_0_data_master_write;
-  --in_a_write_cycle assignment, which is an e_mux
-  in_a_write_cycle <= symbol_strobe_s1_in_a_write_cycle;
-  wait_for_symbol_strobe_s1_counter <= std_logic'('0');
-  --vhdl renameroo for output signals
-  cpu_0_data_master_granted_symbol_strobe_s1 <= internal_cpu_0_data_master_granted_symbol_strobe_s1;
-  --vhdl renameroo for output signals
-  cpu_0_data_master_qualified_request_symbol_strobe_s1 <= internal_cpu_0_data_master_qualified_request_symbol_strobe_s1;
-  --vhdl renameroo for output signals
-  cpu_0_data_master_requests_symbol_strobe_s1 <= internal_cpu_0_data_master_requests_symbol_strobe_s1;
---synthesis translate_off
-    --symbol_strobe/s1 enable non-zero assertions, which is an e_register
-    process (clk, reset_n)
-    begin
-      if reset_n = '0' then
-        enable_nonzero_assertions <= std_logic'('0');
-      elsif clk'event and clk = '1' then
-        enable_nonzero_assertions <= std_logic'('1');
-      end if;
-
-    end process;
-
---synthesis translate_on
-
-end europa;
-
-
-
--- turn off superfluous VHDL processor warnings 
--- altera message_level Level1 
--- altera message_off 10034 10035 10036 10037 10230 10240 10030 
-
-library altera;
-use altera.altera_europa_support_lib.all;
-
-library altera_mf;
-use altera_mf.altera_mf_components.all;
-
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
-
 entity HostBridge_reset_clk_0_domain_synch_module is 
         port (
               -- inputs:
@@ -2398,10 +2154,7 @@ entity HostBridge is
                  signal in_port_to_the_rs_out_symbol : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 
               -- the_symbol_ack
-                 signal out_port_from_the_symbol_ack : OUT STD_LOGIC;
-
-              -- the_symbol_strobe
-                 signal out_port_from_the_symbol_strobe : OUT STD_LOGIC
+                 signal out_port_from_the_symbol_ack : OUT STD_LOGIC
               );
 end entity HostBridge;
 
@@ -2458,14 +2211,12 @@ component cpu_0_data_master_arbitrator is
                     signal cpu_0_data_master_granted_rs_in_symbol_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_granted_rs_out_symbol_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_granted_symbol_ack_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_granted_symbol_strobe_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_onchip_memory2_0_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_rs_in_symbol_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_rs_out_symbol_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_qualified_request_symbol_ack_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_qualified_request_symbol_strobe_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_read : IN STD_LOGIC;
                     signal cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module : IN STD_LOGIC;
                     signal cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
@@ -2473,14 +2224,12 @@ component cpu_0_data_master_arbitrator is
                     signal cpu_0_data_master_read_data_valid_rs_in_symbol_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_read_data_valid_rs_out_symbol_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_read_data_valid_symbol_ack_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_cpu_0_jtag_debug_module : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_onchip_memory2_0_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_rs_in_symbol_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_rs_out_symbol_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_requests_symbol_ack_s1 : IN STD_LOGIC;
-                    signal cpu_0_data_master_requests_symbol_strobe_s1 : IN STD_LOGIC;
                     signal cpu_0_data_master_write : IN STD_LOGIC;
                     signal cpu_0_jtag_debug_module_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal d1_cpu_0_jtag_debug_module_end_xfer : IN STD_LOGIC;
@@ -2489,7 +2238,6 @@ component cpu_0_data_master_arbitrator is
                     signal d1_rs_in_symbol_s1_end_xfer : IN STD_LOGIC;
                     signal d1_rs_out_symbol_s1_end_xfer : IN STD_LOGIC;
                     signal d1_symbol_ack_s1_end_xfer : IN STD_LOGIC;
-                    signal d1_symbol_strobe_s1_end_xfer : IN STD_LOGIC;
                     signal jtag_uart_0_avalon_jtag_slave_irq_from_sa : IN STD_LOGIC;
                     signal jtag_uart_0_avalon_jtag_slave_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa : IN STD_LOGIC;
@@ -2499,7 +2247,6 @@ component cpu_0_data_master_arbitrator is
                     signal rs_in_symbol_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal rs_out_symbol_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
                     signal symbol_ack_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal symbol_strobe_s1_readdata_from_sa : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 
                  -- outputs:
                     signal cpu_0_data_master_address_to_slave : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
@@ -2799,49 +2546,6 @@ component symbol_ack is
                  );
 end component symbol_ack;
 
-component symbol_strobe_s1_arbitrator is 
-           port (
-                 -- inputs:
-                    signal clk : IN STD_LOGIC;
-                    signal cpu_0_data_master_address_to_slave : IN STD_LOGIC_VECTOR (13 DOWNTO 0);
-                    signal cpu_0_data_master_read : IN STD_LOGIC;
-                    signal cpu_0_data_master_waitrequest : IN STD_LOGIC;
-                    signal cpu_0_data_master_write : IN STD_LOGIC;
-                    signal cpu_0_data_master_writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal reset_n : IN STD_LOGIC;
-                    signal symbol_strobe_s1_readdata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-
-                 -- outputs:
-                    signal cpu_0_data_master_granted_symbol_strobe_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_qualified_request_symbol_strobe_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 : OUT STD_LOGIC;
-                    signal cpu_0_data_master_requests_symbol_strobe_s1 : OUT STD_LOGIC;
-                    signal d1_symbol_strobe_s1_end_xfer : OUT STD_LOGIC;
-                    signal symbol_strobe_s1_address : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-                    signal symbol_strobe_s1_chipselect : OUT STD_LOGIC;
-                    signal symbol_strobe_s1_readdata_from_sa : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-                    signal symbol_strobe_s1_reset_n : OUT STD_LOGIC;
-                    signal symbol_strobe_s1_write_n : OUT STD_LOGIC;
-                    signal symbol_strobe_s1_writedata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
-                 );
-end component symbol_strobe_s1_arbitrator;
-
-component symbol_strobe is 
-           port (
-                 -- inputs:
-                    signal address : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
-                    signal chipselect : IN STD_LOGIC;
-                    signal clk : IN STD_LOGIC;
-                    signal reset_n : IN STD_LOGIC;
-                    signal write_n : IN STD_LOGIC;
-                    signal writedata : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-
-                 -- outputs:
-                    signal out_port : OUT STD_LOGIC;
-                    signal readdata : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
-                 );
-end component symbol_strobe;
-
 component HostBridge_reset_clk_0_domain_synch_module is 
            port (
                  -- inputs:
@@ -2865,7 +2569,6 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal cpu_0_data_master_granted_rs_in_symbol_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_granted_rs_out_symbol_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_granted_symbol_ack_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_granted_symbol_strobe_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_irq :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module :  STD_LOGIC;
                 signal cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave :  STD_LOGIC;
@@ -2873,7 +2576,6 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal cpu_0_data_master_qualified_request_rs_in_symbol_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_qualified_request_rs_out_symbol_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_qualified_request_symbol_ack_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_qualified_request_symbol_strobe_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_read :  STD_LOGIC;
                 signal cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module :  STD_LOGIC;
                 signal cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave :  STD_LOGIC;
@@ -2881,7 +2583,6 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal cpu_0_data_master_read_data_valid_rs_in_symbol_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_read_data_valid_rs_out_symbol_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_read_data_valid_symbol_ack_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_read_data_valid_symbol_strobe_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
                 signal cpu_0_data_master_requests_cpu_0_jtag_debug_module :  STD_LOGIC;
                 signal cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave :  STD_LOGIC;
@@ -2889,7 +2590,6 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal cpu_0_data_master_requests_rs_in_symbol_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_requests_rs_out_symbol_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_requests_symbol_ack_s1 :  STD_LOGIC;
-                signal cpu_0_data_master_requests_symbol_strobe_s1 :  STD_LOGIC;
                 signal cpu_0_data_master_waitrequest :  STD_LOGIC;
                 signal cpu_0_data_master_write :  STD_LOGIC;
                 signal cpu_0_data_master_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -2924,10 +2624,8 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal d1_rs_in_symbol_s1_end_xfer :  STD_LOGIC;
                 signal d1_rs_out_symbol_s1_end_xfer :  STD_LOGIC;
                 signal d1_symbol_ack_s1_end_xfer :  STD_LOGIC;
-                signal d1_symbol_strobe_s1_end_xfer :  STD_LOGIC;
                 signal internal_out_port_from_the_rs_in_symbol :  STD_LOGIC_VECTOR (7 DOWNTO 0);
                 signal internal_out_port_from_the_symbol_ack :  STD_LOGIC;
-                signal internal_out_port_from_the_symbol_strobe :  STD_LOGIC;
                 signal jtag_uart_0_avalon_jtag_slave_address :  STD_LOGIC;
                 signal jtag_uart_0_avalon_jtag_slave_chipselect :  STD_LOGIC;
                 signal jtag_uart_0_avalon_jtag_slave_dataavailable :  STD_LOGIC;
@@ -2974,13 +2672,6 @@ end component HostBridge_reset_clk_0_domain_synch_module;
                 signal symbol_ack_s1_reset_n :  STD_LOGIC;
                 signal symbol_ack_s1_write_n :  STD_LOGIC;
                 signal symbol_ack_s1_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal symbol_strobe_s1_address :  STD_LOGIC_VECTOR (1 DOWNTO 0);
-                signal symbol_strobe_s1_chipselect :  STD_LOGIC;
-                signal symbol_strobe_s1_readdata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal symbol_strobe_s1_readdata_from_sa :  STD_LOGIC_VECTOR (31 DOWNTO 0);
-                signal symbol_strobe_s1_reset_n :  STD_LOGIC;
-                signal symbol_strobe_s1_write_n :  STD_LOGIC;
-                signal symbol_strobe_s1_writedata :  STD_LOGIC_VECTOR (31 DOWNTO 0);
 
 begin
 
@@ -3037,14 +2728,12 @@ begin
       cpu_0_data_master_granted_rs_in_symbol_s1 => cpu_0_data_master_granted_rs_in_symbol_s1,
       cpu_0_data_master_granted_rs_out_symbol_s1 => cpu_0_data_master_granted_rs_out_symbol_s1,
       cpu_0_data_master_granted_symbol_ack_s1 => cpu_0_data_master_granted_symbol_ack_s1,
-      cpu_0_data_master_granted_symbol_strobe_s1 => cpu_0_data_master_granted_symbol_strobe_s1,
       cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module => cpu_0_data_master_qualified_request_cpu_0_jtag_debug_module,
       cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave => cpu_0_data_master_qualified_request_jtag_uart_0_avalon_jtag_slave,
       cpu_0_data_master_qualified_request_onchip_memory2_0_s1 => cpu_0_data_master_qualified_request_onchip_memory2_0_s1,
       cpu_0_data_master_qualified_request_rs_in_symbol_s1 => cpu_0_data_master_qualified_request_rs_in_symbol_s1,
       cpu_0_data_master_qualified_request_rs_out_symbol_s1 => cpu_0_data_master_qualified_request_rs_out_symbol_s1,
       cpu_0_data_master_qualified_request_symbol_ack_s1 => cpu_0_data_master_qualified_request_symbol_ack_s1,
-      cpu_0_data_master_qualified_request_symbol_strobe_s1 => cpu_0_data_master_qualified_request_symbol_strobe_s1,
       cpu_0_data_master_read => cpu_0_data_master_read,
       cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module => cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module,
       cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave => cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave,
@@ -3052,14 +2741,12 @@ begin
       cpu_0_data_master_read_data_valid_rs_in_symbol_s1 => cpu_0_data_master_read_data_valid_rs_in_symbol_s1,
       cpu_0_data_master_read_data_valid_rs_out_symbol_s1 => cpu_0_data_master_read_data_valid_rs_out_symbol_s1,
       cpu_0_data_master_read_data_valid_symbol_ack_s1 => cpu_0_data_master_read_data_valid_symbol_ack_s1,
-      cpu_0_data_master_read_data_valid_symbol_strobe_s1 => cpu_0_data_master_read_data_valid_symbol_strobe_s1,
       cpu_0_data_master_requests_cpu_0_jtag_debug_module => cpu_0_data_master_requests_cpu_0_jtag_debug_module,
       cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave => cpu_0_data_master_requests_jtag_uart_0_avalon_jtag_slave,
       cpu_0_data_master_requests_onchip_memory2_0_s1 => cpu_0_data_master_requests_onchip_memory2_0_s1,
       cpu_0_data_master_requests_rs_in_symbol_s1 => cpu_0_data_master_requests_rs_in_symbol_s1,
       cpu_0_data_master_requests_rs_out_symbol_s1 => cpu_0_data_master_requests_rs_out_symbol_s1,
       cpu_0_data_master_requests_symbol_ack_s1 => cpu_0_data_master_requests_symbol_ack_s1,
-      cpu_0_data_master_requests_symbol_strobe_s1 => cpu_0_data_master_requests_symbol_strobe_s1,
       cpu_0_data_master_write => cpu_0_data_master_write,
       cpu_0_jtag_debug_module_readdata_from_sa => cpu_0_jtag_debug_module_readdata_from_sa,
       d1_cpu_0_jtag_debug_module_end_xfer => d1_cpu_0_jtag_debug_module_end_xfer,
@@ -3068,7 +2755,6 @@ begin
       d1_rs_in_symbol_s1_end_xfer => d1_rs_in_symbol_s1_end_xfer,
       d1_rs_out_symbol_s1_end_xfer => d1_rs_out_symbol_s1_end_xfer,
       d1_symbol_ack_s1_end_xfer => d1_symbol_ack_s1_end_xfer,
-      d1_symbol_strobe_s1_end_xfer => d1_symbol_strobe_s1_end_xfer,
       jtag_uart_0_avalon_jtag_slave_irq_from_sa => jtag_uart_0_avalon_jtag_slave_irq_from_sa,
       jtag_uart_0_avalon_jtag_slave_readdata_from_sa => jtag_uart_0_avalon_jtag_slave_readdata_from_sa,
       jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa => jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa,
@@ -3077,8 +2763,7 @@ begin
       reset_n => clk_0_reset_n,
       rs_in_symbol_s1_readdata_from_sa => rs_in_symbol_s1_readdata_from_sa,
       rs_out_symbol_s1_readdata_from_sa => rs_out_symbol_s1_readdata_from_sa,
-      symbol_ack_s1_readdata_from_sa => symbol_ack_s1_readdata_from_sa,
-      symbol_strobe_s1_readdata_from_sa => symbol_strobe_s1_readdata_from_sa
+      symbol_ack_s1_readdata_from_sa => symbol_ack_s1_readdata_from_sa
     );
 
 
@@ -3348,45 +3033,6 @@ begin
     );
 
 
-  --the_symbol_strobe_s1, which is an e_instance
-  the_symbol_strobe_s1 : symbol_strobe_s1_arbitrator
-    port map(
-      cpu_0_data_master_granted_symbol_strobe_s1 => cpu_0_data_master_granted_symbol_strobe_s1,
-      cpu_0_data_master_qualified_request_symbol_strobe_s1 => cpu_0_data_master_qualified_request_symbol_strobe_s1,
-      cpu_0_data_master_read_data_valid_symbol_strobe_s1 => cpu_0_data_master_read_data_valid_symbol_strobe_s1,
-      cpu_0_data_master_requests_symbol_strobe_s1 => cpu_0_data_master_requests_symbol_strobe_s1,
-      d1_symbol_strobe_s1_end_xfer => d1_symbol_strobe_s1_end_xfer,
-      symbol_strobe_s1_address => symbol_strobe_s1_address,
-      symbol_strobe_s1_chipselect => symbol_strobe_s1_chipselect,
-      symbol_strobe_s1_readdata_from_sa => symbol_strobe_s1_readdata_from_sa,
-      symbol_strobe_s1_reset_n => symbol_strobe_s1_reset_n,
-      symbol_strobe_s1_write_n => symbol_strobe_s1_write_n,
-      symbol_strobe_s1_writedata => symbol_strobe_s1_writedata,
-      clk => clk_0,
-      cpu_0_data_master_address_to_slave => cpu_0_data_master_address_to_slave,
-      cpu_0_data_master_read => cpu_0_data_master_read,
-      cpu_0_data_master_waitrequest => cpu_0_data_master_waitrequest,
-      cpu_0_data_master_write => cpu_0_data_master_write,
-      cpu_0_data_master_writedata => cpu_0_data_master_writedata,
-      reset_n => clk_0_reset_n,
-      symbol_strobe_s1_readdata => symbol_strobe_s1_readdata
-    );
-
-
-  --the_symbol_strobe, which is an e_ptf_instance
-  the_symbol_strobe : symbol_strobe
-    port map(
-      out_port => internal_out_port_from_the_symbol_strobe,
-      readdata => symbol_strobe_s1_readdata,
-      address => symbol_strobe_s1_address,
-      chipselect => symbol_strobe_s1_chipselect,
-      clk => clk_0,
-      reset_n => symbol_strobe_s1_reset_n,
-      write_n => symbol_strobe_s1_write_n,
-      writedata => symbol_strobe_s1_writedata
-    );
-
-
   --reset is asserted asynchronously and deasserted synchronously
   HostBridge_reset_clk_0_domain_synch : HostBridge_reset_clk_0_domain_synch_module
     port map(
@@ -3404,8 +3050,6 @@ begin
   out_port_from_the_rs_in_symbol <= internal_out_port_from_the_rs_in_symbol;
   --vhdl renameroo for output signals
   out_port_from_the_symbol_ack <= internal_out_port_from_the_symbol_ack;
-  --vhdl renameroo for output signals
-  out_port_from_the_symbol_strobe <= internal_out_port_from_the_symbol_strobe;
 
 end europa;
 
@@ -3447,10 +3091,7 @@ component HostBridge is
                     signal in_port_to_the_rs_out_symbol : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 
                  -- the_symbol_ack
-                    signal out_port_from_the_symbol_ack : OUT STD_LOGIC;
-
-                 -- the_symbol_strobe
-                    signal out_port_from_the_symbol_strobe : OUT STD_LOGIC
+                    signal out_port_from_the_symbol_ack : OUT STD_LOGIC
                  );
 end component HostBridge;
 
@@ -3461,7 +3102,6 @@ end component HostBridge;
                 signal jtag_uart_0_avalon_jtag_slave_readyfordata_from_sa :  STD_LOGIC;
                 signal out_port_from_the_rs_in_symbol :  STD_LOGIC_VECTOR (7 DOWNTO 0);
                 signal out_port_from_the_symbol_ack :  STD_LOGIC;
-                signal out_port_from_the_symbol_strobe :  STD_LOGIC;
                 signal reset_n :  STD_LOGIC;
 
 
@@ -3477,7 +3117,6 @@ begin
     port map(
       out_port_from_the_rs_in_symbol => out_port_from_the_rs_in_symbol,
       out_port_from_the_symbol_ack => out_port_from_the_symbol_ack,
-      out_port_from_the_symbol_strobe => out_port_from_the_symbol_strobe,
       clk_0 => clk_0,
       in_port_to_the_rs_out_symbol => in_port_to_the_rs_out_symbol,
       reset_n => reset_n
