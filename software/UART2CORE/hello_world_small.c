@@ -22,9 +22,6 @@ int main() {
 		alt_printf("sym %s:", itoa((unsigned char)(i+1)));
 		alt_printf("%s\n", itoa(*rs_out));
 	}
-	alt_getchar();
-	alt_getchar();
-
 	*ack = 1; *ack = 0;
 	for (i = 0; i < 32; i++) {
 		alt_printf("sym %s:", itoa((unsigned char)(i+224)));

@@ -6,7 +6,7 @@ entity RSEncoder is port(
 	dbg: out data_bus;
 	clk: in std_logic;
 	rst_a: in std_logic;
-	hold: in std_logic;
+	enable: in std_logic;
 	in_bus: in data_bus;
 	out_bus: out data_bus);
 end entity;
@@ -16,12 +16,13 @@ architecture RTL of RSEncoder is
 		rst_a: in std_logic;
 		clk: in std_logic;
 	   enable: in std_logic;
-		parity2: out std_logic;
-		parity: out std_logic);
+		out_selector: out std_logic;
+		feedback_selector: out std_logic);
 	end component;
 	component SymbolRegister is port(
-		rst_a: in std_logic;
 		clk: in std_logic;
+		rst_a: in std_logic;
+		enable: in std_logic;
 		d_bus: in data_bus;
 		q_bus: out data_bus);
 	end component;
@@ -42,43 +43,36 @@ architecture RTL of RSEncoder is
 		out_bus: out data_bus);
 	end component;
 
-	signal parity_hold: data_bus;
-	signal parity2: std_logic;
+	signal feedback_selector: std_logic;
+	signal out_selector: std_logic;
 	signal parity_symbol: data_bus;
-	signal parity_count: std_logic;
 	signal feedback: data_bus;
-	signal feedback_sum: data_bus;
+	signal sum: data_bus;
 	signal ffd: parity_bus;
 	signal ffq: parity_bus;
 	signal products: parity_bus;
-	signal ffhold: parity_bus;
 	
 begin
-	ffholds: for i in 0 to parity_bus'length-1 generate
-		ffhold(i) <= ffd(i) when hold = '0' else ffq(i);
-	end generate;
-
 	regs: for i in 0 to parity_bus'length-1 generate
-		ff: SymbolRegister port map(rst_a, clk, ffhold(i), ffq(i));
+		ff: SymbolRegister port map(clk, rst_a, enable, ffd(i), ffq(i));
 	end generate;
 
-	galois_multipliers: for i in 0 to parity_bus'length-1 generate
+	gfmuls: for i in 0 to parity_bus'length-1 generate
 		gf_mul: GfMul port map(generator_polynomial(i), feedback, products(i));
 	end generate;
 	
 	ffd(0) <= products(0);
-	galois_adders: for i in 1 to parity_bus'length-1 generate
+	gfadds: for i in 1 to parity_bus'length-1 generate
 		gf_sum: GfSum port map(products(i), ffq(i-1), ffd(i));
 	end generate;
 	
-	fb_sum: GfSum port map(ffq(parity_bus'length-1), in_bus, feedback_sum);
+	fb_sum: GfSum port map(ffq(parity_bus'length-1), in_bus, sum);
 	
-	parity_hold <= ffq(parity_bus'length-1) when hold='0' else parity_symbol;
-	parity_reg: SymbolRegister port map(rst_a, clk, parity_hold, parity_symbol);
+	parity_reg: SymbolRegister port map(clk, rst_a, enable, ffq(parity_bus'length-1), parity_symbol);
 	
-	parity_counter: ParityCounter port map(rst_a, clk, not hold, parity2, parity_count);
-	feedback_mux: Mux port map(feedback_sum, (others => '0'), parity_count, feedback);
-	out_mux: Mux port map(in_bus, parity_symbol, parity2, out_bus);
+	parity_counter: ParityCounter port map(rst_a, clk, enable, out_selector, feedback_selector);
+	feedback_mux: Mux port map(sum, (others => '0'), feedback_selector, feedback);
+	out_mux: Mux port map(in_bus, parity_symbol, out_selector, out_bus);
 	
 	dbg <= ffq(parity_bus'length-1);
 end architecture;
