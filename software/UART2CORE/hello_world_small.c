@@ -17,7 +17,7 @@ int main() {
 	int i;
 	for (i = 0; i < 223; i++) {
 		int c = alt_getchar() - '0';
-		*rs_in = c < 0 ? 0 : c > 255 ? 255 : c;
+		*rs_in = i;
 		*ack = 1; *ack = 0;
 		alt_printf("sym %s:", itoa((unsigned char)(i+1)));
 		alt_printf("%s\n", itoa(*rs_out));
@@ -29,7 +29,6 @@ int main() {
 	for (i = 0; i < 32; i++) {
 		alt_printf("sym %s:", itoa((unsigned char)(i+224)));
 		alt_printf("%s\n", itoa(*rs_out));
-		alt_getchar();
 		*ack = 1; *ack = 0;
 	}
 	return 0;

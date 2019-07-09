@@ -20,13 +20,17 @@ begin
 		if(rst_a = '1') then
 			counter <= (others => '0');
 			parity <= '0';
+			parity2 <= '0';
 		elsif(rising_edge(clk)) then
 			if enable = '1' then
 				counter <= std_logic_vector(unsigned(counter)+1);
 				if to_integer(unsigned(counter)) = K then
+					parity2 <= '1';
+				elsif to_integer(unsigned(counter)) = K-1 then
 					parity <= '1';
 				elsif to_integer(unsigned(counter)) = N then
 					parity <= '0';
+					parity2 <= '0';
 					counter <= (others => '0');
 				end if;
 			end if;

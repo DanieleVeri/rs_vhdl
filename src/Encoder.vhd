@@ -16,6 +16,7 @@ architecture RTL of RSEncoder is
 		rst_a: in std_logic;
 		clk: in std_logic;
 	   enable: in std_logic;
+		parity2: out std_logic;
 		parity: out std_logic);
 	end component;
 	component SymbolRegister is port(
@@ -41,6 +42,9 @@ architecture RTL of RSEncoder is
 		out_bus: out data_bus);
 	end component;
 
+	signal parity_hold: data_bus;
+	signal parity2: std_logic;
+	signal parity_symbol: data_bus;
 	signal parity_count: std_logic;
 	signal feedback: data_bus;
 	signal feedback_sum: data_bus;
@@ -69,9 +73,12 @@ begin
 	
 	fb_sum: GfSum port map(ffq(parity_bus'length-1), in_bus, feedback_sum);
 	
-	parity_counter: ParityCounter port map(rst_a, clk, not hold, parity_count);
-	feedback_mux: Mux port map(feedback_sum, (others => '0'), parity_count, feedback);
-	out_mux: Mux port map(in_bus, ffq(parity_bus'length-1), parity_count, out_bus);
+	parity_hold <= ffq(parity_bus'length-1) when hold='0' else parity_symbol;
+	parity_reg: SymbolRegister port map(rst_a, clk, parity_hold, parity_symbol);
 	
-	dbg <= ffd(parity_bus'length-1);
+	parity_counter: ParityCounter port map(rst_a, clk, not hold, parity2, parity_count);
+	feedback_mux: Mux port map(feedback_sum, (others => '0'), parity_count, feedback);
+	out_mux: Mux port map(in_bus, parity_symbol, parity2, out_bus);
+	
+	dbg <= ffq(parity_bus'length-1);
 end architecture;
