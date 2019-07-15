@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/dan/Desktop/rs_vhdl/RSEncoder.xst" -ofn "/home/dan/Desktop/rs_vhdl/RSEncoder.syr" 
+xst -intstyle ise -ifn "/home/dan/Desktop/rs_vhdl/RSEncoder.xst" -ofn "/home/dan/Desktop/rs_vhdl/RSEncoder.syr" 

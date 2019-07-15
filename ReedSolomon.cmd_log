@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/dan/Desktop/rs_vhdl/ReedSolomon.xst" -ofn "/home/dan/Desktop/rs_vhdl/ReedSolomon.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700a-fg484-4 ReedSolomon.ngc ReedSolomon.ngd  

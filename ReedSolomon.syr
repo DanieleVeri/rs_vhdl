@@ -1,0 +1,710 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: ReedSolomon.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ReedSolomon.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ReedSolomon"
+Output Format                      : NGC
+Target Device                      : xc3s700a-4-fg484
+
+---- Source Options
+Top Module Name                    : ReedSolomon
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/ReedSolomon_package.vhd" in Library work.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/FullAdder.vhd" in Library work.
+Architecture rtl of Entity fulladder is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/Mux.vhd" in Library work.
+Architecture rtl of Entity mux is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/SymbolPowerEncoder.vhd" in Library work.
+Architecture rtl of Entity symbolpowerencoder is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/AdderModulo.vhd" in Library work.
+Architecture rtl of Entity addermodulo is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/SymbolPowerDecoder.vhd" in Library work.
+Architecture rtl of Entity symbolpowerdecoder is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/SymbolRegister.vhd" in Library work.
+Architecture rtl of Entity symbolregister is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/GfMul.vhd" in Library work.
+Architecture rtl of Entity gfmul is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/ParityCounter.vhd" in Library work.
+Architecture rtl of Entity paritycounter is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/datapath/GfSum.vhd" in Library work.
+Architecture rtl of Entity gfsum is up to date.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/Synchronizer.vhd" in Library work.
+Entity <Synchronizer> compiled.
+Entity <Synchronizer> (Architecture <RTL>) compiled.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/Decoder.vhd" in Library work.
+Entity <RSDecoder> compiled.
+Entity <RSDecoder> (Architecture <RTL>) compiled.
+Compiling vhdl file "/home/dan/Desktop/rs_vhdl/src/ReedSolomon.vhd" in Library work.
+Entity <ReedSolomon> compiled.
+Entity <ReedSolomon> (Architecture <RTL>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ReedSolomon> in library <work> (architecture <RTL>).
+
+Analyzing hierarchy for entity <Synchronizer> in library <work> (architecture <RTL>).
+
+Analyzing hierarchy for entity <RSDecoder> in library <work> (architecture <RTL>).
+
+Analyzing hierarchy for entity <SymbolRegister> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <GfMul> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <ParityCounter> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <GfSum> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <SymbolPowerEncoder> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <AdderModulo> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <SymbolPowerDecoder> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Mux> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <FullAdder> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ReedSolomon> in library <work> (Architecture <RTL>).
+WARNING:Xst:2211 - "/home/dan/Desktop/rs_vhdl/src/ReedSolomon.vhd" line 40: Instantiating black box module <HostBridge>.
+Entity <ReedSolomon> analyzed. Unit <ReedSolomon> generated.
+
+Analyzing Entity <Synchronizer> in library <work> (Architecture <RTL>).
+WARNING:Xst:819 - "/home/dan/Desktop/rs_vhdl/src/Synchronizer.vhd" line 17: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <rst_a>
+Entity <Synchronizer> analyzed. Unit <Synchronizer> generated.
+
+Analyzing Entity <RSDecoder> in library <work> (Architecture <RTL>).
+Entity <RSDecoder> analyzed. Unit <RSDecoder> generated.
+
+Analyzing Entity <SymbolRegister> in library <work> (Architecture <rtl>).
+Entity <SymbolRegister> analyzed. Unit <SymbolRegister> generated.
+
+Analyzing Entity <GfMul> in library <work> (Architecture <rtl>).
+Entity <GfMul> analyzed. Unit <GfMul> generated.
+
+Analyzing Entity <SymbolPowerEncoder> in library <work> (Architecture <rtl>).
+Entity <SymbolPowerEncoder> analyzed. Unit <SymbolPowerEncoder> generated.
+
+Analyzing Entity <AdderModulo> in library <work> (Architecture <rtl>).
+Entity <AdderModulo> analyzed. Unit <AdderModulo> generated.
+
+Analyzing Entity <FullAdder> in library <work> (Architecture <rtl>).
+Entity <FullAdder> analyzed. Unit <FullAdder> generated.
+
+Analyzing Entity <SymbolPowerDecoder> in library <work> (Architecture <rtl>).
+Entity <SymbolPowerDecoder> analyzed. Unit <SymbolPowerDecoder> generated.
+
+Analyzing Entity <Mux> in library <work> (Architecture <rtl>).
+Entity <Mux> analyzed. Unit <Mux> generated.
+
+Analyzing Entity <ParityCounter> in library <work> (Architecture <rtl>).
+Entity <ParityCounter> analyzed. Unit <ParityCounter> generated.
+
+Analyzing Entity <GfSum> in library <work> (Architecture <rtl>).
+Entity <GfSum> analyzed. Unit <GfSum> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Synchronizer>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/Synchronizer.vhd".
+    Found 1-bit register for signal <enable_rs>.
+    Found 1-bit register for signal <prev_ack>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <Synchronizer> synthesized.
+
+
+Synthesizing Unit <SymbolRegister>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/SymbolRegister.vhd".
+    Found 8-bit register for signal <q_bus>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <SymbolRegister> synthesized.
+
+
+Synthesizing Unit <ParityCounter>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/ParityCounter.vhd".
+    Found 1-bit register for signal <finish>.
+    Found 8-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <ParityCounter> synthesized.
+
+
+Synthesizing Unit <GfSum>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/GfSum.vhd".
+    Found 8-bit xor2 for signal <out_bus>.
+Unit <GfSum> synthesized.
+
+
+Synthesizing Unit <SymbolPowerEncoder>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/SymbolPowerEncoder.vhd".
+    Found 256x8-bit ROM for signal <out_enc>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <SymbolPowerEncoder> synthesized.
+
+
+Synthesizing Unit <SymbolPowerDecoder>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/SymbolPowerDecoder.vhd".
+    Found 256x8-bit ROM for signal <out_dec>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <SymbolPowerDecoder> synthesized.
+
+
+Synthesizing Unit <Mux>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/Mux.vhd".
+Unit <Mux> synthesized.
+
+
+Synthesizing Unit <FullAdder>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/FullAdder.vhd".
+    Found 1-bit xor3 for signal <out_sum>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <FullAdder> synthesized.
+
+
+Synthesizing Unit <AdderModulo>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/AdderModulo.vhd".
+WARNING:Xst:646 - Signal <sub<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <carry_sum<9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <carry_sum<0>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <carry_sub<9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <carry_sub<0>> is used but never assigned. This sourceless signal will be automatically connected to value 1.
+    Found 9-bit comparator greater for signal <overflow$cmp_gt0000> created at line 48.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <AdderModulo> synthesized.
+
+
+Synthesizing Unit <GfMul>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/datapath/GfMul.vhd".
+Unit <GfMul> synthesized.
+
+
+Synthesizing Unit <RSDecoder>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/Decoder.vhd".
+WARNING:Xst:1305 - Output <out_bus> is never assigned. Tied to value 00000000.
+WARNING:Xst:1780 - Signal <parity_symbol> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <out_selector> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <RSDecoder> synthesized.
+
+
+Synthesizing Unit <ReedSolomon>.
+    Related source file is "/home/dan/Desktop/rs_vhdl/src/ReedSolomon.vhd".
+Unit <ReedSolomon> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 99
+ 256x8-bit ROM                                         : 99
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 36
+ 1-bit register                                        : 3
+ 8-bit register                                        : 33
+# Comparators                                          : 33
+ 9-bit comparator greater                              : 33
+# Xors                                                 : 858
+ 1-bit xor2                                            : 264
+ 1-bit xor3                                            : 594
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <full_adders_mod[8].fa> is unconnected in block <adder_modulo>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 99
+ 256x8-bit ROM                                         : 99
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 267
+ Flip-Flops                                            : 267
+# Comparators                                          : 33
+ 9-bit comparator greater                              : 33
+# Xors                                                 : 858
+ 1-bit xor2                                            : 264
+ 1-bit xor3                                            : 594
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <RSDecoder>: instances <gfmuls[10].gf_mul>, <gfmuls[11].gf_mul> of unit <GfMul> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <RSDecoder>: instances <gfmuls[18].gf_mul>, <gfmuls[30].gf_mul> of unit <GfMul> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <RSDecoder>: instances <gfmuls[19].gf_mul>, <gfmuls[27].gf_mul> of unit <GfMul> are equivalent, second instance is removed
+INFO:Xst:2146 - In block <RSDecoder>, ROM <gfmuls[32].gf_mul/encode_1/Mrom_out_enc> <gfmuls[31].gf_mul/encode_1/Mrom_out_enc> <gfmuls[29].gf_mul/encode_1/Mrom_out_enc> <gfmuls[28].gf_mul/encode_1/Mrom_out_enc> <gfmuls[26].gf_mul/encode_1/Mrom_out_enc> <gfmuls[25].gf_mul/encode_1/Mrom_out_enc> <gfmuls[24].gf_mul/encode_1/Mrom_out_enc> <gfmuls[23].gf_mul/encode_1/Mrom_out_enc> <gfmuls[22].gf_mul/encode_1/Mrom_out_enc> <gfmuls[21].gf_mul/encode_1/Mrom_out_enc> <gfmuls[20].gf_mul/encode_1/Mrom_out_enc> <gfmuls[19].gf_mul/encode_1/Mrom_out_enc> <gfmuls[18].gf_mul/encode_1/Mrom_out_enc> <gfmuls[17].gf_mul/encode_1/Mrom_out_enc> <gfmuls[16].gf_mul/encode_1/Mrom_out_enc> <gfmuls[15].gf_mul/encode_1/Mrom_out_enc> <gfmuls[14].gf_mul/encode_1/Mrom_out_enc> <gfmuls[13].gf_mul/encode_1/Mrom_out_enc> <gfmuls[12].gf_mul/encode_1/Mrom_out_enc> <gfmuls[10].gf_mul/encode_1/Mrom_out_enc> <gfmuls[9].gf_mul/encode_1/Mrom_out_enc> <gfmuls[8].gf_mul/encode_1/Mrom_out_enc> <gfmuls[7].gf_mul/encode_1/Mrom_out_enc> <gfmuls[6].gf_mul/encode_1/Mrom_out_enc> <gfmuls[5].gf_mul/encode_1/Mrom_out_enc> <gfmuls[4].gf_mul/encode_1/Mrom_out_enc> <gfmuls[3].gf_mul/encode_1/Mrom_out_enc> <gfmuls[2].gf_mul/encode_1/Mrom_out_enc> <gfmuls[1].gf_mul/encode_1/Mrom_out_enc> <gfmuls[0].gf_mul/encode_1/Mrom_out_enc> are equivalent, XST will keep only <gfmuls[32].gf_mul/encode_1/Mrom_out_enc>.
+
+Optimizing unit <ReedSolomon> ...
+
+Optimizing unit <SymbolRegister> ...
+
+Optimizing unit <AdderModulo> ...
+
+Optimizing unit <RSDecoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ReedSolomon, actual ratio is 41.
+FlipFlop encoder/regs[32].ff/q_bus_0 has been replicated 4 time(s)
+FlipFlop encoder/regs[32].ff/q_bus_1 has been replicated 4 time(s)
+FlipFlop encoder/regs[32].ff/q_bus_2 has been replicated 4 time(s)
+FlipFlop encoder/regs[32].ff/q_bus_3 has been replicated 4 time(s)
+FlipFlop encoder/regs[32].ff/q_bus_4 has been replicated 2 time(s)
+FlipFlop encoder/regs[32].ff/q_bus_5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 294
+ Flip-Flops                                            : 294
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ReedSolomon.ngr
+Top Level Output File Name         : ReedSolomon
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 10586
+#      BUF                         : 11
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 7
+#      LUT2                        : 93
+#      LUT2_D                      : 12
+#      LUT2_L                      : 5
+#      LUT3                        : 1365
+#      LUT3_D                      : 44
+#      LUT3_L                      : 28
+#      LUT4                        : 5083
+#      LUT4_D                      : 102
+#      LUT4_L                      : 66
+#      MUXCY                       : 7
+#      MUXF5                       : 2014
+#      MUXF6                       : 992
+#      MUXF7                       : 496
+#      MUXF8                       : 248
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 294
+#      FDC                         : 2
+#      FDCE                        : 292
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 10
+#      IBUF                        : 2
+#      OBUF                        : 8
+# Others                           : 1
+#      HostBridge                  : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700afg484-4 
+
+ Number of Slices:                     3573  out of   5888    60%  
+ Number of Slice Flip Flops:            294  out of  11776     2%  
+ Number of 4 input LUTs:               6808  out of  11776    57%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    372     2%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLOCK_50                           | IBUF+BUFG              | 285   |
+KEY<0>                             | IBUF+BUFG              | 9     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------+---------------------------------+-------+
+Control Signal                          | Buffer(FF name)                 | Load  |
+----------------------------------------+---------------------------------+-------+
+KEY_0_IBUF_LUT1(KEY_0_IBUF_LUT1_INV_0:O)| NONE(encoder/regs[0].ff/q_bus_0)| 285   |
+CLOCK_50                                | IBUF                            | 9     |
+----------------------------------------+---------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 15.460ns (Maximum Frequency: 64.684MHz)
+   Minimum input arrival time before clock: 1.490ns
+   Maximum output required time after clock: 6.384ns
+   Maximum combinational path delay: 3.294ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK_50'
+  Clock period: 15.460ns (frequency: 64.684MHz)
+  Total number of paths / destination ports: 48556381 / 567
+-------------------------------------------------------------------------
+Delay:               15.460ns (Levels of Logic = 16)
+  Source:            encoder/regs[32].ff/q_bus_3_1 (FF)
+  Destination:       encoder/regs[32].ff/q_bus_0 (FF)
+  Source Clock:      CLOCK_50 rising
+  Destination Clock: CLOCK_50 rising
+
+  Data Path: encoder/regs[32].ff/q_bus_3_1 to encoder/regs[32].ff/q_bus_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.591   1.177  encoder/regs[32].ff/q_bus_3_1 (encoder/regs[32].ff/q_bus_3_1)
+     LUT4:I0->O            1   0.648   0.000  encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc1416 (encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc1416)
+     MUXF5:I0->O           1   0.276   0.000  encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc4_f5_6 (encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc4_f57)
+     MUXF6:I0->O           1   0.291   0.000  encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc4_f6_2 (encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc4_f63)
+     MUXF7:I0->O           1   0.291   0.000  encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc4_f7_0 (encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc4_f71)
+     MUXF8:I0->O         489   0.291   1.487  encoder/gfmuls[32].gf_mul/encode_1/Mrom_out_enc4_f8 (encoder/gfmuls[0].gf_mul/adder_modulo/sum<2>)
+     LUT4_D:I1->O         12   0.643   0.993  encoder/gfmuls[0].gf_mul/adder_modulo/overflow29 (encoder/gfmuls[0].gf_mul/adder_modulo/overflow29)
+     LUT3_L:I2->LO         1   0.648   0.103  encoder/gfmuls[32].gf_mul/adder_modulo/full_adders[6].fa/Mxor_out_sum_xo<0>1_SW0_SW1 (N4856)
+     LUT4:I3->O            9   0.648   0.823  encoder/gfmuls[32].gf_mul/adder_modulo/overflow224 (encoder/gfmuls[32].gf_mul/adder_modulo/overflow224)
+     LUT4_D:I3->O          7   0.648   0.740  encoder/gfmuls[32].gf_mul/adder_modulo/overflow239_1 (encoder/gfmuls[32].gf_mul/adder_modulo/overflow239)
+     LUT3:I2->O          121   0.648   1.370  encoder/gfmuls[32].gf_mul/adder_modulo/out_mux/out_bus<3>1 (encoder/gfmuls[32].gf_mul/to_decode<3>)
+     LUT4:I1->O            1   0.643   0.000  encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec44 (encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec)
+     MUXF5:I1->O           1   0.276   0.000  encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec_f5 (encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec_f5)
+     MUXF6:I1->O           1   0.291   0.000  encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec_f6 (encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec_f6)
+     MUXF7:I1->O           1   0.291   0.000  encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec_f7 (encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec_f7)
+     MUXF8:I1->O           1   0.291   0.452  encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec_f8 (encoder/gfmuls[32].gf_mul/decode/Mrom_out_dec16)
+     LUT3:I2->O            5   0.648   0.000  encoder/gfadds[32].gf_sum/Mxor_out_bus<0>_Result1 (encoder/ffd<32><0>)
+     FDCE:D                    0.252          encoder/regs[32].ff/q_bus_0
+    ----------------------------------------
+    Total                     15.460ns (8.315ns logic, 7.145ns route)
+                                       (53.8% logic, 46.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'KEY<0>'
+  Clock period: 5.093ns (frequency: 196.348MHz)
+  Total number of paths / destination ports: 108 / 9
+-------------------------------------------------------------------------
+Delay:               5.093ns (Levels of Logic = 9)
+  Source:            encoder/parity_counter/counter_1 (FF)
+  Destination:       encoder/parity_counter/counter_7 (FF)
+  Source Clock:      KEY<0> falling
+  Destination Clock: KEY<0> falling
+
+  Data Path: encoder/parity_counter/counter_1 to encoder/parity_counter/counter_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.590  encoder/parity_counter/counter_1 (encoder/parity_counter/counter_1)
+     LUT1:I0->O            1   0.648   0.000  encoder/parity_counter/Mcount_counter_cy<1>_rt (encoder/parity_counter/Mcount_counter_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  encoder/parity_counter/Mcount_counter_cy<1> (encoder/parity_counter/Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  encoder/parity_counter/Mcount_counter_cy<2> (encoder/parity_counter/Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  encoder/parity_counter/Mcount_counter_cy<3> (encoder/parity_counter/Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  encoder/parity_counter/Mcount_counter_cy<4> (encoder/parity_counter/Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  encoder/parity_counter/Mcount_counter_cy<5> (encoder/parity_counter/Mcount_counter_cy<5>)
+     MUXCY:CI->O           0   0.065   0.000  encoder/parity_counter/Mcount_counter_cy<6> (encoder/parity_counter/Mcount_counter_cy<6>)
+     XORCY:CI->O           1   0.844   0.563  encoder/parity_counter/Mcount_counter_xor<7> (encoder/Result<7>)
+     LUT3:I0->O            1   0.648   0.000  encoder/parity_counter/Mcount_counter_eqn_71 (encoder/parity_counter/Mcount_counter_eqn_7)
+     FDCE:D                    0.252          encoder/parity_counter/counter_7
+    ----------------------------------------
+    Total                      5.093ns (3.940ns logic, 1.153ns route)
+                                       (77.4% logic, 22.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK_50'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              1.490ns (Levels of Logic = 1)
+  Source:            host_uart:out_port_from_the_symbol_ack (PAD)
+  Destination:       sync/enable_rs (FF)
+  Destination Clock: CLOCK_50 rising
+
+  Data Path: host_uart:out_port_from_the_symbol_ack to sync/enable_rs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    HostBridge:out_port_from_the_symbol_ack    2   0.000   0.590  host_uart (uart_symbol_ack)
+     LUT2:I0->O            1   0.648   0.000  sync/enable_rs_and00001 (sync/enable_rs_and0000)
+     FDC:D                     0.252          sync/enable_rs
+    ----------------------------------------
+    Total                      1.490ns (0.900ns logic, 0.590ns route)
+                                       (60.4% logic, 39.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK_50'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              6.384ns (Levels of Logic = 1)
+  Source:            encoder/regs[32].ff/q_bus_3 (FF)
+  Destination:       LEDR<3> (PAD)
+  Source Clock:      CLOCK_50 rising
+
+  Data Path: encoder/regs[32].ff/q_bus_3 to LEDR<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            66   0.591   1.273  encoder/regs[32].ff/q_bus_3 (encoder/regs[32].ff/q_bus_3)
+     OBUF:I->O                 4.520          LEDR_3_OBUF (LEDR<3>)
+    ----------------------------------------
+    Total                      6.384ns (5.111ns logic, 1.273ns route)
+                                       (80.1% logic, 19.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               3.294ns (Levels of Logic = 2)
+  Source:            CLOCK_50 (PAD)
+  Destination:       host_uart:clk_0 (PAD)
+
+  Data Path: CLOCK_50 to host_uart:clk_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   0.849   0.882  CLOCK_50_IBUF (CLOCK_50_IBUF1)
+     BUFG:I->O           285   0.221   1.342  CLOCK_50_IBUF_BUFG (CLOCK_50_IBUF)
+    HostBridge:clk_0           0.000          host_uart
+    ----------------------------------------
+    Total                      3.294ns (1.070ns logic, 2.224ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 108.00 secs
+Total CPU time to Xst completion: 106.81 secs
+ 
+--> 
+
+
+Total memory usage is 641296 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   46 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
