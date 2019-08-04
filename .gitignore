@@ -14,7 +14,9 @@ output_files/
 *.ptf
 *.hex
 
+# SOPC
 sopc/*
+!sopc/*.vhd
 !sopc/software/
 !sopc/sopc_arch.sopc
 !sopc/HostBridge.sopcinfo
