@@ -3,7 +3,6 @@ use ieee.std_logic_1164.all;
 use work.ReedSolomon_package.all;
 
 entity RSEncoder is port(
-	dbg: out data_bus;
 	clk: in std_logic;
 	rst_a: in std_logic;
 	enable: in std_logic;
@@ -73,6 +72,4 @@ begin
 	parity_counter: ParityCounter port map(rst_a, clk, enable, out_selector, feedback_selector);
 	feedback_mux: Mux port map(sum, (others => '0'), feedback_selector, feedback);
 	out_mux: Mux port map(in_bus, parity_symbol, out_selector, out_bus);
-	
-	dbg <= ffq(parity_bus'length-1);
-end architecture;
+	end architecture;

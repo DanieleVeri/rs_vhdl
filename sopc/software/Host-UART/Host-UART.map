@@ -1,0 +1,551 @@
+Archive member included because of file (symbol)
+
+c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                              obj/default/main.o (__udivsi3)
+../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+                              obj/default/main.o (alt_getchar)
+../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+                              ../Host-UART_bsp//obj/HAL/src/crt0.o (alt_load)
+../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+                              ../Host-UART_bsp//obj/HAL/src/crt0.o (alt_main)
+../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+                              obj/default/main.o (alt_printf)
+../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+                              ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o) (alt_putchar)
+../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              ../Host-UART_bsp/\libhal_bsp.a(alt_main.o) (alt_sys_init)
+../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                              ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o) (altera_avalon_jtag_uart_read)
+../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o) (altera_avalon_jtag_uart_write)
+../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../Host-UART_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+                              ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o) (alt_fd_list)
+../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              ../Host-UART_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                              ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_irq_init)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x00001000         0x00000020
+onchip_memory2_0 0x00001020         0x00000fe0
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ../Host-UART_bsp//obj/HAL/src/crt0.o
+                0x0000100c                exit = _exit
+LOAD obj/default/main.o
+LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a
+LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+LOAD ../Host-UART_bsp/\libhal_bsp.a
+END GROUP
+LOAD c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+                0x00001000                __alt_mem_onchip_memory2_0 = 0x1000
+
+.entry          0x00001000       0x20
+ *(.entry)
+ .entry         0x00001000       0x20 ../Host-UART_bsp//obj/HAL/src/crt0.o
+                0x00001000                __reset
+                0x0000100c                _exit
+
+.exceptions     0x00001020        0x0
+                0x00001020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x00001020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ *(.exceptions.entry.user)
+ *(.exceptions.entry)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ *(.exceptions.notirq.label)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ *(.exceptions.exit.label)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ *(.exceptions)
+                0x00001020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x00001020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x00001020      0x614
+                0x00001020                PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00001020       0x3c ../Host-UART_bsp//obj/HAL/src/crt0.o
+                0x00001020                _start
+ .text          0x0000105c      0x12c obj/default/main.o
+                0x0000105c                itoa
+                0x000010c4                main
+ .text          0x00001188      0x14c c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x00001204                __divsi3
+                0x00001264                __modsi3
+                0x000012c4                __udivsi3
+                0x000012cc                __umodsi3
+ .text          0x000012d4       0x44 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+                0x000012d4                alt_getchar
+ .text          0x00001318       0x8c ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+                0x00001338                alt_load
+ .text          0x000013a4       0x2c ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+                0x000013a4                alt_main
+ .text          0x000013d0      0x144 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+                0x000013d0                alt_printf
+ .text          0x00001514       0x50 ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+                0x00001514                alt_putchar
+ .text          0x00001564       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00001564                alt_sys_init
+                0x00001568                alt_irq_init
+ .text          0x00001588       0x60 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x00001588                altera_avalon_jtag_uart_read
+ .text          0x000015e8       0x34 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x000015e8                altera_avalon_jtag_uart_write
+ .text          0x0000161c        0x4 ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000161c                alt_dcache_flush_all
+ .text          0x00001620        0x8 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x00001628        0x4 ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x00001628                alt_icache_flush_all
+ .text          0x0000162c        0x8 ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                0x0000162c                altera_nios2_irq_init
+ *(.gnu.warning.*)
+ *(.fini)
+                0x00001634                PROVIDE (__etext, ABSOLUTE (.))
+                0x00001634                PROVIDE (_etext, ABSOLUTE (.))
+                0x00001634                PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x00001634                . = ALIGN (0x4)
+                0x00001634                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                0x00001634                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x00001634                PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                0x00001634                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x00001634                PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                0x00001634                PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.dynamic)
+                0x00001634                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x00001634                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x00001634                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x00001634                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x00001634                . = ALIGN (0x4)
+
+.rodata         0x00001634       0x14
+                0x00001634                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x00001634                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00001634        0x8 obj/default/main.o
+ .rodata.str1.4
+                0x0000163c        0xc ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ *(.rodata1)
+                0x00001648                . = ALIGN (0x4)
+                0x00001648                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x00001634                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x00001648       0x70 load address 0x000016b8
+                0x00001648                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x00001648                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00001648        0x0 ../Host-UART_bsp//obj/HAL/src/crt0.o
+ .data          0x00001648        0x0 obj/default/main.o
+ .data          0x00001648        0x0 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x00001648        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x00001648       0x58 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+                0x00001648                alt_dev_null
+                0x00001670                alt_fd_list
+ .data          0x000016a0        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x000016a0        0x0 ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                0x000096a0                _gp = ABSOLUTE ((. + 0x8000))
+                0x000096a0                PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000016a0        0x4 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x000016a0                jtag_uart_0
+ .sdata         0x000016a4       0x14 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+                0x000016a4                alt_fs_list
+                0x000016ac                alt_dev_list
+                0x000016b4                alt_max_fd
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x000016b8                . = ALIGN (0x4)
+                0x000016b8                _edata = ABSOLUTE (.)
+                0x000016b8                PROVIDE (edata, ABSOLUTE (.))
+                0x000016b8                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x000016b8                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x00001728        0xc
+                0x00001728                __bss_start = ABSOLUTE (.)
+                0x00001728                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x00001728                PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x00001728        0xc ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+                0x00001728                alt_argc
+                0x0000172c                alt_argv
+                0x00001730                alt_envp
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x00001734                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x00001734                PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00001734        0x0 ../Host-UART_bsp//obj/HAL/src/crt0.o
+ .bss           0x00001734        0x0 obj/default/main.o
+ .bss           0x00001734        0x0 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x00001734        0x0 ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ *(COMMON)
+                0x00001734                . = ALIGN (0x4)
+                0x00001734                __bss_end = ABSOLUTE (.)
+
+.onchip_memory2_0
+                0x00001734        0x0
+                0x00001734                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+ *(.onchip_memory2_0. onchip_memory2_0.*)
+                0x00001734                . = ALIGN (0x4)
+                0x00001734                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x00001734                _end = ABSOLUTE (.)
+                0x00001734                end = ABSOLUTE (.)
+                0x00001734                __alt_stack_base = ABSOLUTE (.)
+                0x00001734                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x23
+ *(.comment)
+ .comment       0x00000000       0x23 obj/default/main.o
+                                 0x24 (size before relaxing)
+ .comment       0x00000000       0x24 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x00000000       0x24 ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x1e8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 ../Host-UART_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000028       0x20 obj/default/main.o
+ .debug_aranges
+                0x00000048       0x20 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x00000068       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_aranges
+                0x00000088       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x000000a8       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x000000c8       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_aranges
+                0x000000e8       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_aranges
+                0x00000108       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000128       0x20 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x00000148       0x20 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x00000168       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x00000188       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x000001a8       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x000001c8       0x20 ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+
+.debug_pubnames
+                0x00000000      0x2c6
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x24 obj/default/main.o
+ .debug_pubnames
+                0x00000024       0x48 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_pubnames
+                0x0000006c       0x22 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_pubnames
+                0x0000008e       0x1f ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_pubnames
+                0x000000ad       0x46 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_pubnames
+                0x000000f3       0x21 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_pubnames
+                0x00000114       0x22 ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_pubnames
+                0x00000136       0x44 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_pubnames
+                0x0000017a       0x33 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_pubnames
+                0x000001ad       0x34 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_pubnames
+                0x000001e1       0x2b ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_pubnames
+                0x0000020c       0x63 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_pubnames
+                0x0000026f       0x2b ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_pubnames
+                0x0000029a       0x2c ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+
+.debug_info     0x00000000     0x15a1
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0x6c ../Host-UART_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000006c       0xa8 obj/default/main.o
+ .debug_info    0x00000114      0x21c c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x00000330      0x300 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_info    0x00000630      0x12e ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000075e      0x125 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000883      0x11d ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_info    0x000009a0       0xc5 ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_info    0x00000a65      0x17d ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000be2      0x1ac ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x00000d8e      0x18f ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x00000f1d       0x8d ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000faa      0x4dd ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_info    0x00001487       0x8d ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00001514       0x8d ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+
+.debug_abbrev   0x00000000      0x93d
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x12 ../Host-UART_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x00000012       0x99 obj/default/main.o
+ .debug_abbrev  0x000000ab       0xe0 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x0000018b       0xdd ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_abbrev  0x00000268       0x97 ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x000002ff       0xa6 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x000003a5       0xc7 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_abbrev  0x0000046c       0x7b ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_abbrev  0x000004e7       0xe3 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x000005ca       0xf0 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x000006ba       0xf0 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x000007aa       0x3f ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x000007e9       0xd6 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x000008bf       0x3f ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x000008fe       0x3f ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+
+.debug_line     0x00000000     0x1f10
+ *(.debug_line)
+ .debug_line    0x00000000       0x66 ../Host-UART_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x00000066      0x16f obj/default/main.o
+ .debug_line    0x000001d5      0x24f c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x00000424      0x252 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_line    0x00000676      0x211 ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000887      0x2bc ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000b43      0x1ef ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_line    0x00000d32      0x1ec ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_line    0x00000f1e      0x280 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x0000119e      0x31d ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x000014bb      0x2ee ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x000017a9      0x1af ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00001958      0x246 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x00001b9e      0x1af ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00001d4d      0x1c3 ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+
+.debug_frame    0x00000000      0x290
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x48 obj/default/main.o
+ .debug_frame   0x00000048       0x70 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x000000b8       0x28 ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_frame   0x000000e0       0x38 ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000118       0x28 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000140       0x2c ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_frame   0x0000016c       0x2c ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_frame   0x00000198       0x38 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x000001d0       0x20 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x000001f0       0x20 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000210       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x00000230       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x00000250       0x20 ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000270       0x20 ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+
+.debug_str      0x00000000      0x750
+ *(.debug_str)
+ .debug_str     0x00000000       0x62 obj/default/main.o
+                                 0x73 (size before relaxing)
+ .debug_str     0x00000062      0x14a c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                                0x1b1 (size before relaxing)
+ .debug_str     0x000001ac      0x11f ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+                                0x1ca (size before relaxing)
+ .debug_str     0x000002cb       0xf1 ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+                                0x1c1 (size before relaxing)
+ .debug_str     0x000003bc       0x44 ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+                                0x145 (size before relaxing)
+ .debug_str     0x00000400       0x46 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+                                 0xac (size before relaxing)
+ .debug_str     0x00000446       0x22 ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+                                0x11e (size before relaxing)
+ .debug_str     0x00000468       0x85 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                0x1ba (size before relaxing)
+ .debug_str     0x000004ed       0x5a ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                                0x1c7 (size before relaxing)
+ .debug_str     0x00000547       0x50 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                0x1bd (size before relaxing)
+ .debug_str     0x00000597       0x34 ../Host-UART_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                0x104 (size before relaxing)
+ .debug_str     0x000005cb      0x120 ../Host-UART_bsp/\libhal_bsp.a(alt_dev.o)
+                                0x2b4 (size before relaxing)
+ .debug_str     0x000006eb       0x34 ../Host-UART_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                0x104 (size before relaxing)
+ .debug_str     0x0000071f       0x31 ../Host-UART_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                                0x101 (size before relaxing)
+
+.debug_loc      0x00000000      0x4ef
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x85 obj/default/main.o
+ .debug_loc     0x00000085      0x1d2 c:/altera/12.1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_loc     0x00000257       0x1f ../Host-UART_bsp/\libhal_bsp.a(alt_getchar.o)
+ .debug_loc     0x00000276       0x1f ../Host-UART_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_loc     0x00000295       0x1f ../Host-UART_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_loc     0x000002b4      0x175 ../Host-UART_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_loc     0x00000429       0x3d ../Host-UART_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_loc     0x00000466       0x32 ../Host-UART_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x00000498       0x31 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_loc     0x000004c9       0x26 ../Host-UART_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x10 ../Host-UART_bsp//obj/HAL/src/crt0.o
+                0x00002000                __alt_data_end = 0x2000
+                0x00002000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x00001734                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x00001734                PROVIDE (__alt_heap_start, end)
+                0x00002000                PROVIDE (__alt_heap_limit, 0x2000)
+OUTPUT(Host-UART.elf elf32-littlenios2)
+
+.debug_ranges   0x00000000       0x20
+ .debug_ranges  0x00000000       0x20 ../Host-UART_bsp//obj/HAL/src/crt0.o

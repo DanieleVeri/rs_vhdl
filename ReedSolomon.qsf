@@ -497,22 +497,21 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE sopc/cpu_0_jtag_debug_module_tck.vhd
+set_global_assignment -name VHDL_FILE sopc/cpu_0_jtag_debug_module_sysclk.vhd
+set_global_assignment -name VHDL_FILE sopc/cpu_0_test_bench.vhd
+set_global_assignment -name VHDL_FILE sopc/cpu_0_oci_test_bench.vhd
+set_global_assignment -name VHDL_FILE sopc/cpu_0_jtag_debug_module_wrapper.vhd
+set_global_assignment -name VHDL_FILE sopc/symbol_ack.vhd
+set_global_assignment -name VHDL_FILE sopc/rs_out_symbol.vhd
+set_global_assignment -name VHDL_FILE sopc/rs_in_symbol.vhd
+set_global_assignment -name VHDL_FILE sopc/onchip_memory2_0.vhd
+set_global_assignment -name VHDL_FILE sopc/jtag_uart_0.vhd
+set_global_assignment -name VHDL_FILE sopc/cpu_0.vhd
+set_global_assignment -name VHDL_FILE sopc/HostBridge.vhd
 set_global_assignment -name VHDL_FILE src/Synchronizer.vhd
 set_global_assignment -name VHDL_FILE src/datapath/SymbolRegister.vhd
 set_global_assignment -name VHDL_FILE src/datapath/AdderModulo.vhd
-set_global_assignment -name QIP_FILE software/UART2CORE/mem_init/meminit.qip
-set_global_assignment -name VHDL_FILE cpu_0_test_bench.vhd
-set_global_assignment -name VHDL_FILE cpu_0_oci_test_bench.vhd
-set_global_assignment -name VHDL_FILE cpu_0_jtag_debug_module_wrapper.vhd
-set_global_assignment -name VHDL_FILE cpu_0_jtag_debug_module_tck.vhd
-set_global_assignment -name VHDL_FILE cpu_0_jtag_debug_module_sysclk.vhd
-set_global_assignment -name VHDL_FILE pio_1.vhd
-set_global_assignment -name VHDL_FILE pio_0.vhd
-set_global_assignment -name VHDL_FILE onchip_memory2_0.vhd
-set_global_assignment -name VHDL_FILE jtag_uart_0.vhd
-set_global_assignment -name VHDL_FILE HostBridge.vhd
-set_global_assignment -name VHDL_FILE cpu_0.vhd
-set_global_assignment -name VHDL_FILE src/datapath/SyndromeToError.vhd
 set_global_assignment -name VHDL_FILE src/datapath/SymbolPowerEncoder.vhd
 set_global_assignment -name VHDL_FILE src/datapath/SymbolPowerDecoder.vhd
 set_global_assignment -name VHDL_FILE src/datapath/ParityCounter.vhd
@@ -523,7 +522,4 @@ set_global_assignment -name VHDL_FILE src/datapath/FullAdder.vhd
 set_global_assignment -name VHDL_FILE src/ReedSolomon_package.vhd
 set_global_assignment -name VHDL_FILE src/ReedSolomon.vhd
 set_global_assignment -name VHDL_FILE src/Encoder.vhd
-set_global_assignment -name VHDL_FILE src/Decoder.vhd
-set_global_assignment -name QIP_FILE HostBridge.qip
-set_global_assignment -name CDF_FILE output_files/Chain2.cdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

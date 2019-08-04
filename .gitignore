@@ -2,9 +2,19 @@
 .vscode/
 .sopc_builder/
 db/
-HostBridge_sim/
+*_sim/
 incremental_db/
 output_files/
 
 # Files
 *.bak
+*.jdi
+*.mif
+*.bsf
+*.ptf
+*.hex
+
+sopc/*
+!sopc/software/
+!sopc/sopc_arch.sopc
+!sopc/HostBridge.sopcinfo

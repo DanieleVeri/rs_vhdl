@@ -3,9 +3,8 @@ use ieee.std_logic_1164.all;
 use work.ReedSolomon_package.all;
 
 entity ReedSolomon is port(
-	 CLOCK_50: in std_logic;
-	 LEDR: out std_logic_vector(7 downto 0);
-	 KEY : in std_logic_vector(0 downto 0));
+	CLOCK_50: in std_logic;
+	KEY : in std_logic_vector(0 downto 0));
 end entity;
 
 architecture RTL of ReedSolomon is
@@ -23,7 +22,6 @@ architecture RTL of ReedSolomon is
 		enable_rs: out std_logic);
 	end component;
 	component RSEncoder is port(
-		dbg: out data_bus;
 		clk: in std_logic;
 		rst_a: in std_logic;
 		enable: in std_logic;
@@ -39,5 +37,5 @@ architecture RTL of ReedSolomon is
 begin
 	host_uart: HostBridge port map(CLOCK_50, KEY(0), uart_symbol_in, uart_symbol_out, uart_symbol_ack);
 	sync: Synchronizer port map(CLOCK_50, not KEY(0), uart_symbol_ack, enable_rs);
-	encoder: RSEncoder port map(LEDR, CLOCK_50, not KEY(0), enable_rs, uart_symbol_in, uart_symbol_out);
+	encoder: RSEncoder port map(CLOCK_50, not KEY(0), enable_rs, uart_symbol_in, uart_symbol_out);
 end architecture;
