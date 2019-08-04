@@ -1,5 +1,9 @@
 # Reed Solomon encoder attraverso il modulo UART - JTAG
 
+## Index
+.................................................
+
+## 1. Introduzione
 Target board: Altera CycloneII - EP2C20F484C7
 
 N: 255
@@ -71,6 +75,8 @@ ___
 - Usare 2 flip-flop in cascata per trasferire singoli bit (non bus) da un dominio di clock all'altro
 ___
 ## 4. Encoder Hardware design
+Il sistema è stato progettato in modo da poter cambiare i parametri che sono localizzati in un unico file (`ReedSolomon_package`) senza dover modificare altri sorgenti.
+
 
 Top level module:
 ```vhdl
@@ -315,7 +321,7 @@ int main() {
         alt_printf("%s\n", itoa(*rs_out));
         *ack = 1; *ack = 0;
     }
-	
+
     return 0;
 }
 ```
@@ -368,3 +374,7 @@ begin
     end process;
 end architecture;
 ```
+Synchronizer schematic
+![sync_schematic](doc/img/syncronizer_schematic.png)
+
+![encode_schematic](doc/img/encode_schematic.png)
