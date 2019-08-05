@@ -17,7 +17,7 @@ Generator polynomial: g(z) =
     45 + 216z + 239z<sup>2</sup> + 24z<sup>3</sup> + 253z<sup>4</sup> + 104z<sup>5</sup> + 27z<sup>6</sup> + 40z<sup>7</sup> + 107z<sup>8</sup> + 50z<sup>9</sup> + 163z<sup>10</sup> + 210z<sup>11</sup> + 227z<sup>12</sup> + 134z<sup>13</sup> +
     224z<sup>14</sup> + 158z<sup>15</sup> + 119z<sup>16</sup> + 13z<sup>17</sup> + 158z<sup>18</sup> + z<sup>19</sup> + 238z<sup>20</sup> + 164z<sup>21</sup> + 82z<sup>22</sup> + 43z<sup>23</sup> + 15z<sup>24</sup> + 232z<sup>25</sup> +
     246z<sup>26</sup> + 142z<sup>27</sup> + 50z<sup>28</sup> + 189z<sup>29</sup> + 29z<sup>30</sup> + 232z<sup>31</sup> + z<sup>32</sup>
-___
+
 ## 2. Reed Solomon
 Reed Solomon è un codice a correzione di errore usato in molte applicazioni: dalle comunicazioni dei satelliti ai codici a barre ai CDROM.
 
@@ -30,7 +30,7 @@ In matematica, un campo è un insieme di elementi nel quale sono definite le ope
 Un campo ha anche valori identità alla somma e prodotto, da cui deriva che gli elementi di un campo hanno inversi additivi e moltiplicativi.
 
 I campi finiti di Galois esistono con m elementi per ogni  p primo: dato che i numeri binari possono essere rappresentati con 2 valori possibili (0 o 1) e che 2 è un numero primo, è possibile trovare un campo finito per un insieme di numeri binari.
-___
+
 ## 3. Convenzioni e principi di design utilizzati
 ### 3.1 Organizzazione del codice
 - Entities, architectures e configurations dello stesso design appartengono allo stesso file `<DesignName>.vhd`
@@ -73,7 +73,7 @@ ___
 - Non usare clocks e resets generati internamente
 - Evitare clock gating (è comprensibile solo per motivi di power efficiency)
 - Usare 2 flip-flop in cascata per trasferire singoli bit (non bus) da un dominio di clock all'altro
-___
+
 ## 4. Encoder Hardware design
 Il sistema è stato progettato in modo da poter cambiare i parametri che sono localizzati in un unico file (`ReedSolomon_package`) senza dover modificare altri sorgenti.
 
@@ -153,8 +153,6 @@ begin
     parity_counter: ParityCounter port map(rst_a, clk, enable, out_selector, feedback_selector);
     feedback_mux: Mux port map(sum, (others => '0'), feedback_selector, feedback);
     out_mux: Mux port map(in_bus, parity_symbol, out_selector, out_bus);
-
-    dbg <= ffq(parity_bus'length-1);
 end architecture;
 ```
 
@@ -306,22 +304,17 @@ Il modulo SOCP(system-on-a-programmable-chip) builder messo a disposizione dall�
 #define ack (volatile char *) 0x0003010
 
 int main() {
-
     int i;
     for (i = 0; i < 223; i++) {
         *rs_in = alt_getchar();
         *ack = 1; *ack = 0;
-        alt_printf("sym %s:", itoa((unsigned char)(i+1)));
         alt_printf("%s\n", itoa(*rs_out));
     }
     *ack = 1; *ack = 0;
-
     for (i = 0; i < 32; i++) {
-        alt_printf("sym %s:", itoa((unsigned char)(i+224)));
         alt_printf("%s\n", itoa(*rs_out));
         *ack = 1; *ack = 0;
     }
-
     return 0;
 }
 ```
