@@ -1,8 +1,5 @@
 # Reed Solomon encoder attraverso il modulo UART - JTAG
 
-## Index
-.................................................
-
 ## 1. Introduzione
 Target board: Altera CycloneII - EP2C20F484C7
 
